@@ -1,0 +1,127 @@
+
+//-------------------------
+// 🚀 Variables
+//-------------------------
+
+$feature-flags: (
+  grid-columns-16: true,
+);
+
+$css--font-face: true;
+$css--helpers: true;
+$css--body: true;
+$css--reset: true;
+$css--default-type: true;
+$css--plex: true;
+$css--use-experimental-grid: false;
+$css--use-experimental-grid-fallback: false;
+
+//-------------------------
+// 🔄 Resets
+//-------------------------
+
+// rtl directives must be imported when wrapping an imported stylesheet so 
+// that they are positioned correctly in the compiled css
+// https://github.com/MohammadYounes/rtlcss/issues/113#issuecomment-379907981
+
+@import 'carbon-components/scss/globals/scss/css--reset';
+
+
+//-------------------------
+// 🎨 Themes
+//-------------------------
+
+@import 'carbon-components/scss/globals/scss/theme';
+
+$carbon--theme: $carbon--theme--g10;
+@include carbon--theme();
+
+// overwrite box-sizing from css--reset to original Curam styling
+* {
+  box-sizing: content-box;
+}
+
+// Temporary until Carbon fix is applied for date picker opening event.
+html.spm-modal--html {
+  overflow: visible;
+}
+
+.spm-custom-component {
+
+  // re-apply Carbon box-boxing after overwrite above
+  * {
+    box-sizing: border-box;
+  }
+
+  //-------------------------
+  // 🌍 Globals
+  //-------------------------
+  @import 'carbon-components/scss/globals/scss/theme-tokens';
+  @import 'carbon-components/scss/globals/scss/layout';
+  @import 'carbon-components/scss/globals/scss/layer';
+  @import 'carbon-components/scss/globals/scss/typography';
+  @import 'carbon-components/scss/globals/scss/css--font-face';
+  @import 'carbon-components/scss/globals/scss/css--helpers';
+  @import 'carbon-components/scss/globals/scss/css--body';
+  @import 'carbon-components/scss/globals/grid/grid';
+
+  //-------------------------
+  // 🍕 Components
+  //-------------------------
+
+  @import 'carbon-components/scss/components/button/button';
+  @import 'carbon-components/scss/components/copy-button/copy-button';
+  @import 'carbon-components/scss/components/file-uploader/file-uploader';
+  @import 'carbon-components/scss/components/checkbox/checkbox';
+  @import 'carbon-components/scss/components/combo-box/combo-box';
+  @import 'carbon-components/scss/components/radio-button/radio-button';
+  @import 'carbon-components/scss/components/toggle/toggle';
+  @import 'carbon-components/scss/components/search/search';
+  @import 'carbon-components/scss/components/select/select';
+  @import 'carbon-components/scss/components/text-input/text-input';
+  @import 'carbon-components/scss/components/text-area/text-area';
+  @import 'carbon-components/scss/components/number-input/number-input';
+  @import 'carbon-components/scss/components/form/form';
+  @import 'carbon-components/scss/components/link/link';
+  @import 'carbon-components/scss/components/list-box/list-box';
+  @import 'carbon-components/scss/components/list/list';
+  @import 'carbon-components/scss/components/data-table/data-table';
+  @import 'carbon-components/scss/components/structured-list/structured-list';
+  @import 'carbon-components/scss/components/code-snippet/code-snippet';
+  @import 'carbon-components/scss/components/overflow-menu/overflow-menu';
+  @import 'carbon-components/scss/components/content-switcher/content-switcher';
+  @import 'carbon-components/scss/components/date-picker/date-picker';
+  @import 'carbon-components/scss/components/dropdown/dropdown';
+  @import 'carbon-components/scss/components/loading/loading';
+  @import 'carbon-components/scss/components/modal/modal';
+  @import 'carbon-components/scss/components/multi-select/multi-select';
+  @import 'carbon-components/scss/components/notification/inline-notification';
+  @import 'carbon-components/scss/components/notification/toast-notification';
+  @import 'carbon-components/scss/components/tooltip/tooltip';
+  @import 'carbon-components/scss/components/tabs/tabs';
+  @import 'carbon-components/scss/components/tag/tag';
+  @import 'carbon-components/scss/components/pagination/pagination';
+  @import 'carbon-components/scss/components/accordion/accordion';
+  @import 'carbon-components/scss/components/progress-indicator/progress-indicator';
+  @import 'carbon-components/scss/components/breadcrumb/breadcrumb';
+  @import 'carbon-components/scss/components/toolbar/toolbar';
+  @import 'carbon-components/scss/components/time-picker/time-picker';
+  @import 'carbon-components/scss/components/slider/slider';
+  @import 'carbon-components/scss/components/tile/tile';
+  @import 'carbon-components/scss/components/skeleton/skeleton';
+  @import 'carbon-components/scss/components/inline-loading/inline-loading';
+  @import 'carbon-components/scss/components/pagination-nav/pagination-nav';
+
+  // type utilities
+  @import '@carbon/type/scss/classes';
+  @include carbon--type-classes();
+
+  //-------------------------
+  // ✨ Addons
+  //-------------------------
+
+
+  @import './variables.scss';
+  @import './logo.scss';
+  @import './personfolio.scss';
+}
