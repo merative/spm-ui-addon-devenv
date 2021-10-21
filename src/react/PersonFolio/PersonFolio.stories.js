@@ -2,10 +2,10 @@ import React from 'react';
 import PersonFolio from './PersonFolio';
 
 
-//👇 We create a “template” of how args map to rendering
-const Template = (args) => <div className="spm-custom-component"> <PersonFolio firstname="Mary" surname="Bloggs" {...args} ></PersonFolio></div>;
+// 👇 We create a “template” of how args map to rendering
+const Template = (args) => <div className="spm-custom-component"> <PersonFolio firstname="Mary" surname="Bloggs" {...args}  /></div>;
 
-//👇 Each story then reuses that template
+// 👇 Each story then reuses that template
 
 export const Child = Template.bind({});
 
@@ -37,29 +37,25 @@ export const PersonFolioStory = () => {
         <div className="bx--grid">
           <div className="bx--row">
             <div className="bx--col">            
-                <PersonFolio firstname="Dave" surname="Bloggs" age="12" >
-                </PersonFolio>          
+                <PersonFolio firstname="Dave" surname="Bloggs" age="12"  />          
             </div>
           </div>
 
           <div className="bx--row">
             <div className="bx--col">        
-                <PersonFolio firstname="Mary" surname="Bloggs" age="24" >
-                </PersonFolio>
+                <PersonFolio firstname="Mary" surname="Bloggs" age="24"  />
             </div>
           </div>
 
           <div className="bx--row">
             <div className="bx--col">
-                <PersonFolio firstname="Ann" surname="Bloggs" age="47" >
-                </PersonFolio>
+                <PersonFolio firstname="Ann" surname="Bloggs" age="47"  />
             </div>
           </div>
 
           <div className="bx--row">
             <div className="bx--col">
-                <PersonFolio firstname="Peter" surname="Smith" age="73" >
-                </PersonFolio>
+                <PersonFolio firstname="Peter" surname="Smith" age="73"  />
             </div>
           </div>
         </div>

@@ -8,10 +8,7 @@ export default {
   component: Logo,
 }
 
-//👇 We create a “template” of how args map to rendering
 const Template = (args) => <div className="spm-custom-component"> <Logo {...args} ><img src={Example} alt="logo" /></Logo></div>;
-
-//👇 Each story then reuses that template
 
 export const Small = Template.bind({});
 

@@ -21,5 +21,5 @@ const render = ({
   );
 };
 
-export  { render };
+export default { render };
 

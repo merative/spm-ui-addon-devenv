@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import cx from 'classnames';
 import settings from '../settings';
 
@@ -32,15 +32,23 @@ const PersonFolio = ({ children, className, age, ...other }) => {
      * Pass in the image that will be rendered within the Avatar
      */
     children: PropTypes.node,
+    
     /**
      * Additional styling
      */
     className: PropTypes.string,
+ 
+    /**
+     * Additional styling
+     */
+     age: PropTypes.number,
 
   };
   
   PersonFolio.defaultProps = {
     className: undefined,
+    children: undefined,
+    age: undefined,
   };
 
 export default PersonFolio;

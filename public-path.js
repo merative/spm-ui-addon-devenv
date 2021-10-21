@@ -19,4 +19,4 @@ const spmUIComponentsRootURL = serverRootURL
 // Concatenate the correct public path for use in webpack bundles.
 const publicPath = `${serverRootURL}${spmUIComponentsRootURL}`;
 
-export default __webpack_public_path__ = publicPath;
+export default __webpack_public_path__ = publicPath; // eslint-disable-line

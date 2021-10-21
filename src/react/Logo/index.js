@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import Logo from './Logo';
 
 const getWrapper = (iframeWindow, containerID) => {
-    console.log(`${containerID}`);
   return iframeWindow.document.getElementById(`${containerID}`);
 }
 
@@ -23,4 +22,4 @@ const render = ({
   );
 };
 
-export  { render };
+export default { render };
