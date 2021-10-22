@@ -1,0 +1,15 @@
+node_modules
+
+.publish
+
+.editorconfig
+.eslintignore
+.eslintrc
+.travis.yml
+
+gulpfile.js
+index.js
+webpack.config.js
+
+CONTRIBUTING.md
+README.md
