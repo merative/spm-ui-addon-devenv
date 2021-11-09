@@ -1,4 +1,7 @@
 const path = require("path");
+var webpack = require('webpack');
+
+
 
 module.exports = {
   entry: ['./public-path.js', "./src/index.js"],
@@ -26,14 +29,17 @@ module.exports = {
       },
     ]
   },
+  plugins: [
+    new webpack.EnvironmentPlugin(['RELATIVE_PATH_TO_BUNDLE'])
+  ],
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     path: path.resolve(__dirname, "dist/"),
     library: 'spmcustom',
     libraryExport: 'default',
     publicPath: "/dist/",
-    filename: "custom-carbon-addons-[name].bundle.js",
-    chunkFilename: 'custom-carbon-addons-[name].chunk.js',
+    filename: "spm-custom-carbon-addons-[name].bundle.js",
+    chunkFilename: 'spm-custom-carbon-addons-[name].chunk.js',
   },
   devServer: {
     contentBase: path.join(__dirname, "public/"),

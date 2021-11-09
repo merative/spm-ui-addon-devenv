@@ -1,5 +1,7 @@
+
+
 // Path to SPMUIComponents directory (relative to WebContent folder).
-const spmUIComponentsBaseURL = 'CDEJ/jscript/SPMUIComponents/';
+const spmUIComponentsBaseURL =  process.env.RELATIVE_PATH_TO_BUNDLE;
 
 // Retrieves Static Content Server from SPM.
 //

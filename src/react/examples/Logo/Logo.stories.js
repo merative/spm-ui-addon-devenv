@@ -1,5 +1,5 @@
 import React from 'react';
-import Example from '../../examples/images/sample-logo.jpg';
+import Example from '../../../examples/images/sample-logo.jpg';
 import Logo from './Logo';
 
 
