@@ -1,8 +1,35 @@
+/*
+ * Licensed Materials - Property of IBM
+ *
+ * PID 5725-H26
+ *
+ * Copyright IBM Corporation 2021. All Rights Reserved.
+ *
+ * US Government Users Restricted Rights - Use, duplication or disclosure
+ * restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
 import React from 'react';
 import PropTypes from "prop-types";
 import cx from 'classnames';
-import settings from '../settings';
+import settings from '../../settings';
 
+/**
+  * An Example component.
+  * <p>
+  * A PersonFolio component that renders a list of people.
+  * @namespace PersonFolio
+  */
+
+/**
+ * @typedef {Object} PersonFolio
+ * @memberof PersonFolio
+ * @property {node} children Child node(s). This is optional.
+ * @property {string} className CSS class name to be added to class list. This is optional.
+ * @property {number} age The person's age. This is optional and there iss no default value.
+ * @property {Object} other Addtional properties that can be added to a rendered person. The attributes
+ * will be passed straigh through and added to the rendered ouput.
+ */
 const PersonFolio = ({ children, className, age, ...other }) => {
     const styleClass = cx(
       `${settings.prefix}--personfolio`,
@@ -26,10 +53,9 @@ const PersonFolio = ({ children, className, age, ...other }) => {
     );
   };
 
-
   PersonFolio.propTypes = {
     /**
-     * Pass in the image that will be rendered within the Avatar
+     * Pass in the image that will be rendered within the Logo.
      */
     children: PropTypes.node,
     
@@ -51,4 +77,11 @@ const PersonFolio = ({ children, className, age, ...other }) => {
     age: undefined,
   };
 
+  /**
+ * Group
+ * @typedef {Object} PortFolio
+ * @memberof PortFolio
+ * @property {node} childeren
+ * @property {string} className
+ */
 export default PersonFolio;
