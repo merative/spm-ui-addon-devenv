@@ -9,9 +9,11 @@
  * restricted by GSA ADP Schedule Contract with IBM Corp.
  */
 
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from "prop-types";
+
 import cx from 'classnames';
+import InlContext from '../../core/InlContext';
 import settings from '../../settings';
 
 /**
@@ -31,6 +33,7 @@ import settings from '../../settings';
  * will be passed straigh through and added to the rendered ouput.
  */
 const PersonFolio = ({ children, className, age, ...other }) => {
+  const { labels } = useContext(InlContext);
     const styleClass = cx(
       `${settings.prefix}--personfolio`,
       {
@@ -43,11 +46,14 @@ const PersonFolio = ({ children, className, age, ...other }) => {
     );
 
     const {firstname, surname} = other;
+    const firstnameLabel = labels && labels.firstnameLabel || "First name";
+    const surnameLabel = labels && labels.surnameLabel || "Surname";
+    const ageLabel = labels && labels.ageLabel || "Age";
     return (
       <div className={styleClass} {...other}>
-          <p>First name:  {firstname}</p>
-          <p>Surname:  {surname}</p>
-          <p>Age: {age}</p>
+          <p>{firstnameLabel}:  {firstname}</p>
+          <p>{surnameLabel}:  {surname}</p>
+          <p>{ageLabel}: {age}</p>
         {children}
       </div>
     );

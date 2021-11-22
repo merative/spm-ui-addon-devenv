@@ -32,7 +32,7 @@ import settings from '../../settings';
  * @property {Object} other Addtional properties that can be added to the rendered logo. The attributes
  * will be passed straigh through and added to the rendered ouput.
  */
-const Logo = ({ children, className, size, ...other }) => {
+const Logo = ({ children, className, imageName, size, ...other }) => {
   const styleClass = cx(
     `${settings.prefix}--logo`,
     {
@@ -42,9 +42,10 @@ const Logo = ({ children, className, size, ...other }) => {
     },
     className
   );
+  const pathToImage = `../Images/${imageName}`;
   return (
     <div className={styleClass} {...other}>
-      {children}
+      {imageName ? (<img src={pathToImage} alt="a logo" />) : <>{children}</>}
     </div>
   );
 };
@@ -58,6 +59,8 @@ Logo.propTypes = {
    * Additional styling
    */
   className: PropTypes.string,
+
+  imageName: PropTypes.string,
   /**
    * Specify an optional size for the Logo. Defaults to 'medium'
    */
@@ -67,6 +70,7 @@ Logo.propTypes = {
 Logo.defaultProps = {
   size: 'medium',
   className: undefined,
+  imageName: undefined
 };
 
 export default Logo;
