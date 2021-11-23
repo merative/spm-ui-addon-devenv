@@ -4,14 +4,14 @@ var webpack = require('webpack');
 
 
 module.exports = {
-  entry: ['./public-path.js', "./src/index.js"],
+  entry: ['./public-path.js', "./packages/ui-components-devenv/src/index.js"],
   mode: "development",
   module: {
     rules: [
       {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader'],
-        include: path.resolve(__dirname, './src/scss'),
+        include: path.resolve(__dirname, './packages/ui-components-devenv/src/scss'),
       },
       {
         test: /\.(js|jsx)$/,

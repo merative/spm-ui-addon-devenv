@@ -13,7 +13,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Logo  from '../../../../react/examples/Logo/Logo';
 import ApolloClientQueryProvider from '../../core/ApolloClientQueryProvider';
-import { useGetLogo } from '../../queries/LogoQuery';
+import { useGetLogo } from './LogoQuery';
 
 const LogoQueryProvider = ({ configuration }) => {
 

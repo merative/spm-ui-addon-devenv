@@ -42,7 +42,7 @@ class ApolloClientConfig {
    * @private
    */
   static getCSRFToken = async  () => {  
-    const response = await fetch('/Rest/v1/csrf/tokens', {});
+    const response = await fetch(this.csrfTokenEndpoint, {});
     const token = await response.headers.get(this.csrfTokenHeader);
     return token;
   }

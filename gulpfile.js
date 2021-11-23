@@ -53,7 +53,7 @@ gulp.task('prod:spm', (done) => {
 
   shell.exec(
     `webpack --mode production`,
-    { fatal: true, silent: true }
+    { fatal: true}
   );
   done();
 });

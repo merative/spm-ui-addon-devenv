@@ -16,7 +16,7 @@
     "test": "jest src/* --config ./config/jest.config.js",
     "gen-doc": "jsdoc -c ./config/jsdoc-config.json -d ./reports/doc",
     "coverage": "npm run test -- --coverage --coverageDirectory ./reports/coverage",
-    "lint": "./node_modules/.bin/eslint ./src",
+    "lint": "./node_modules/.bin/eslint packages",
     "start": "webpack-dev-server --mode development",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
