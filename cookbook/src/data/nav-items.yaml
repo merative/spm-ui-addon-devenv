@@ -1,0 +1,10 @@
+- title: Introduction
+  pages:
+    - path: /introduction
+- title: Feedback
+  pages:
+    - title: Contact Us
+      path: /feedback/
+- title: Disclaimer
+  pages:
+    - path: /disclaimer/
