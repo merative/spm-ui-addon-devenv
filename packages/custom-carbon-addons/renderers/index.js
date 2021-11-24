@@ -8,6 +8,8 @@
  * US Government Users Restricted Rights - Use, duplication or disclosure
  * restricted by GSA ADP Schedule Contract with IBM Corp.
  */
-import { RenderLogoWithApolloClient, RenderPersonWithApolloClient } from '../../../../carbon-addons-devenv/src/data-hooks/apollo-client';
 
-export { RenderLogoWithApolloClient, RenderPersonWithApolloClient };
+import PersonFolio from '../../carbon-addons-devenv/sample_renderers/PersonFolio';
+import Logo from '../../carbon-addons-devenv/sample_renderers/Logo';
+
+export default { PersonFolio, Logo };

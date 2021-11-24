@@ -1,4 +1,5 @@
-import "./scss/index.scss";
+
+import "../../custom-carbon-addons/src/scss/index.scss";
 import 'regenerator-runtime/runtime';
 import { renderers } from './staticExports';
 
@@ -6,9 +7,6 @@ import { renderers } from './staticExports';
     requireCustomCarbonAddons,
   } from './dynamicExports';
 
-
   export default  { requireCustomCarbonAddons, renderers };
-
-  // export { default as requireCustomCarbonAddons } from requireCustomCarbonAddons;
 
   

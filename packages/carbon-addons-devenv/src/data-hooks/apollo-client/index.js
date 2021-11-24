@@ -11,8 +11,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PeopleDataProvider from './samples/Person';
-import LogoDataProvider from './samples/Logo';
+import PeopleDataProvider from './hook_samples/Person';
+import LogoDataProvider from './hook_samples/Logo';
 import ApolloClientConfig from './core/ApolloClientConfig';
 
 const RenderWithApolloClient = (container, configuration, DataProvider) => {

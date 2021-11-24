@@ -4,14 +4,15 @@ var webpack = require('webpack');
 
 
 module.exports = {
-  entry: ['./public-path.js', "./packages/ui-components-devenv/src/index.js"],
+  entry: ['./public-path.js', "./packages/carbon-addons-devenv/src/index.js"],
   mode: "development",
   module: {
     rules: [
       {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader'],
-        include: path.resolve(__dirname, './packages/ui-components-devenv/src/scss'),
+        include: path.resolve(__dirname, './packages/custom-carbon-addons/src/scss'),
+        //include: path.resolve(__dirname, '../../custom-carbon-addons/src/scss/index.scss'),
       },
       {
         test: /\.(js|jsx)$/,

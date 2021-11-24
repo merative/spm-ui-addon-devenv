@@ -1,0 +1,17 @@
+@import '../../../carbon-addons-devenv/src/scss/app.scss';
+
+.spm-custom-component {
+  //-------------------------
+  // Variable overrides
+  //------------------------- 
+  @import './variables.scss';
+  //-------------------------
+  // Carbon-Components
+  //------------------------- 
+  @import '../../../carbon-addons-devenv/src/scss/carbon-components.scss';
+  //-------------------------
+  // Custom addons scss here
+  //------------------------- 
+  // Sample component addons
+  @import '../../../carbon-addons-devenv/src/scss/addon-samples.scss';
+}

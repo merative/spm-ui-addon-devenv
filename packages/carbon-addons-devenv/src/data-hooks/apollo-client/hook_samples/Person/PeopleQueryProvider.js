@@ -11,7 +11,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import PersonFolio  from '../../../../react/examples/PersonFolio/PersonFolio';
+import PersonFolio  from '../../../../react/component_samples/PersonFolio/PersonFolio';
 import ApolloClientQueryProvider from '../../core/ApolloClientQueryProvider';
 import { useGetPersons } from './PersonQuery';
 

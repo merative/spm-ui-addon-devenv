@@ -11,7 +11,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import Logo  from '../../../../react/examples/Logo/Logo';
+import Logo  from '../../../../react/component_samples/Logo/Logo';
 import ApolloClientQueryProvider from '../../core/ApolloClientQueryProvider';
 import { useGetLogo } from './LogoQuery';
 

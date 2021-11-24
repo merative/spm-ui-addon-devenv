@@ -15,4 +15,4 @@
  * These are commonly used imports that should be part of the main bundle.
  */
 // eslint-disable-next-line import/prefer-default-export
-export { default as renderers } from '../../../renderers';
+export { default as renderers } from '../../custom-carbon-addons/renderers';

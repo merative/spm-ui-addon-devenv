@@ -1,0 +1,10 @@
+
+@import './app.scss';
+
+.spm-custom-component {
+  //-------------------------
+  // Carbon-Components
+  //-------------------------
+  @import './carbon-components.scss';
+  @import './addon-samples.scss';
+}

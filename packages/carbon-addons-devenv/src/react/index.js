@@ -1,6 +1,6 @@
 import 'regenerator-runtime/runtime';
-import * as  Logo from './examples/Logo';
-import * as  PersonFolio from './examples/PersonFolio/PersonFolio';
+import * as  Logo from './component_samples/Logo';
+import * as  PersonFolio from './component_samples/PersonFolio/PersonFolio';
 import { RenderLogoWithApolloClient, RenderPersonWithApolloClient } from '../data-hooks/apollo-client';
 
 export { Logo };
