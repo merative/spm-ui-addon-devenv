@@ -23,7 +23,7 @@ This command builds the deliverable artefacts from the installed codebase.
 npm run dev
 ```
 
-This command tests the integration with SPM. It requires the `DEV_BUNDLE_OUTPUT` environment variable to be set, preferably in `.env.development` file.
+This command tests the integration with SPM. It requires the `CLIENT_DIR` environment variable to be set.
 It copies the generated artefects from `npm run build` to the location where they can be picked up by SPM.
 Any JavaScript or SCSS files that are updated are automatically generated when integrated with SPM.
 
@@ -56,3 +56,9 @@ npm run storybook
 ```
 
 This command starts Storybook and show how to use the components with examples.
+
+```
+npm run deploy
+```
+
+This command copies the compiled JavaScript to the specified webclient custom component for deployment.

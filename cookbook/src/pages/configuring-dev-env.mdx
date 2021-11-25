@@ -11,24 +11,44 @@ The `.env` file contains the environment variables for production. The `.env.dev
 ### GRAPHQL_SERVER_URL
 
 Specifies the relative location for the GraphQL server. For example, the following value sets the full URL for the GrpahQL server to `https://<server>:<port>/Rest/graphql`.
+If this value if not set a default value of '/Rest/grpahql' will be used.
 
 ```
-GRAPHQL_SERVER_URL='/Rest/graphql'
+GRAPHQL_SERVER_URL=/Rest/graphql
 ```
 
 Where `server` is the domain name or ipaddress of the server and `port` is the port number for the application server.
 
 You can set a different value in the `.env.development` file, to point a mock server for GraphQL during development.
 
-### DEV_BUNDLE_OUTPUT
+### CLIENT_DIR
 
-(Development only) Specifies the location of the `webclient` directory in the development installation. This value is used to test the integration of the Carbon custom widgets with custom pages (UIM/VIM) in SPM. For example:
+Specifies the location of the `webclient` directory in the development installation. This value is used to test the integration of the Carbon custom widgets with custom pages (UIM/VIM) in SPM. For example:
 
 ```
-DEV_BUNDLE_OUTPUT=<CLIENT_DIR> 
+CLIENT_DIR=<CLIENT_DIR> 
 ```
 
 Where `CLIENT_DIR` is the location of the `webclient` directory in the development installation.
+
+### RELATIVE_PATH_TO_BUNDLE
+
+Specifies the location of the compiled JavaScript relative to the server. This is only needed if configuring the static content server. For example:
+
+```
+RELATIVE_PATH_TO_BUNDLE=CDEJ/jscript/SPMUIComponents
+```
+If omiited a default location will be used.
+
+### CUSTOM_COMPONENT_NAME
+
+Specifies the location of the webclient component that the compiled JavaScript needs to be copied fro deployment. For example:
+
+```
+CUSTOM_COMPONENT_NAME=custom
+```
+
+If omiited the default of 'custom' compponent will be used.
 
 ### Security Configuration
 
