@@ -1,4 +1,4 @@
-const siteTitle = 'IBM Curam SPM Virtual Assistant'
+const siteTitle = 'IBM Curam SPM UI Addon Development Environment'
 
 var sitePrefix = process.env.SITE_PREFIX || "/"
 console.log(`Using SITE_PREFIX: '${sitePrefix}'`)
@@ -6,7 +6,7 @@ console.log(`Using SITE_PREFIX: '${sitePrefix}'`)
 module.exports = {
   siteMetadata: {
     title: siteTitle,
-    description: 'IBM Curam Social Program Management Virtual Assistant Cookbook',
+    description: 'IBM Curam Social Program Management UI Addon Development Environment',
     keywords: 'ibm,curam,containers',
   },
   pathPrefix: sitePrefix,

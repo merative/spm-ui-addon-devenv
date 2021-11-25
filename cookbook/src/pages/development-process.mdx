@@ -1,0 +1,58 @@
+---
+title: Development Process
+description: Development Process
+---
+
+A Carbon addon is a custom component that conforms to the IBM Carbon Design System guidelines. You can develop your own Carbon Addons and use both Carbon components and addons in your custom views.
+To develop Carbon addon, that you can place on UIM pages, you must do some front-end and back-end work.
+
+* The front end development is where user interface components are developed to present the data. For front-end development it is recommended to use React components from the Carbon Design System.
+Some examples of these components are provided in the repository. You can do your front-end development in parallel with your back-end development or in isolation.
+Become familiar with the development methodology and adhere to it as much as possible. The Carbon Design System provides design guidance for the development of user interface components based on Carbon and implemented in React, see [https://www.carbondesignsystem.com](https://www.carbondesignsystem.com).
+* The back-end data development is where you develop services (business logic) to create/update/get the data. GraphQL is recommended for the back-end data service, especially for data intensive screens, see [https://www.ibm.com/docs/en/spm/?topic=apis-graphql](https://www.ibm.com/docs/en/spm/?topic=apis-graphql).
+
+After the code is installed and configured, the following commands are available:
+
+```
+npm run build
+```
+
+This command builds the deliverable artefacts from the installed codebase.
+
+```
+npm run dev
+```
+
+This command tests the integration with SPM. It requires the `DEV_BUNDLE_OUTPUT` environment variable to be set, preferably in `.env.development` file.
+It copies the generated artefects from `npm run build` to the location where they can be picked up by SPM.
+Any JavaScript or SCSS files that are updated are automatically generated when integrated with SPM.
+
+```
+npm run test
+```
+
+This command runs the JavaScript unit tests for React components that you have created. Some sample tests are provided in the code base.
+
+```
+npm run coverage
+```
+
+This command generates a report on JavaScript code coverage. There is certain threshold that is specified for code coverage. If coverage falls below this level the report fails to be generated.
+
+```
+npm run gen-doc
+```
+
+This command generates the documentation for React components that are being developed. It is based on js-doc [https://jsdoc.app/](https://jsdoc.app/) and more information on it's usage can be found there.
+
+```
+npm run lint
+```
+
+This command enforces coding best practices for React components in JavaScript and SCSS.
+
+```
+npm run storybook
+```
+
+This command starts Storybook and show how to use the components with examples.
