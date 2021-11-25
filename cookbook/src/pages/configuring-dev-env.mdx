@@ -3,7 +3,7 @@ title: Configuring your development environment for Carbon custom widgets
 description: Configuring your development environment for Carbon custom widgets
 ---
 
-Before you start to develop Carbon custom widgets, you must set node environment variables in the `.env` and `.env.development` files.
+Before you start to develop with React components, you must set node environment variables in the `.env` and `.env.development` files.
 The `.env` file contains the environment variables for production. The `.env.development` file supersedes the environment variables in `.env` and sets specific environment variables for development.
 
 ## Basic configuration
@@ -22,17 +22,17 @@ You can set a different value in the `.env.development` file, to point a mock se
 
 ### DEV_BUNDLE_OUTPUT
 
-(Development only) Specifies the location of the `webclient` directory in the development installation. This value is used to test the integration of the Carbon custom widgets with custom pages (UIM/VIM) in SPM. For example:
+(Development only) Specifies the location of the `webclient` directory in the development installation. This value is used to test the integration of the Carbon custom widgets with custom pages (UIM/VIM) in Social Program Management. For example:
 
 ```
 DEV_BUNDLE_OUTPUT=<CLIENT_DIR> 
 ```
 
-Where `CLIENT_DIR` is the location of the `webclient` directory in the development installation.
+Where `CLIENT_DIR` is the location of the `webclient` directory in the Java development environment.
 
 ### Security Configuration
 
-If you have enabled CSRF protection in SPM, you must set the following environment variables for production (.env). For more information about CSRF in a React environment, see [https://www.ibm.com/docs/en/spm/8.0.0?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access](https://www.ibm.com/docs/en/spm/8.0.0?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access).
+If you have enabled Cross-Site Request Forgery (CSRF) protection in SPM, you must set the following environment variables for production (.env). For more information about CSRF in a React environment, see [https://www.ibm.com/docs/en/spm/8.0.0?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access](https://www.ibm.com/docs/en/spm/8.0.0?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access).
 
 ### CSRF_TOKEN_ENPOINT
 
