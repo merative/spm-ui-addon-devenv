@@ -9,6 +9,10 @@
   pages:
     - title: Setting up your development environment
       path: /setup
+- title: Configuration
+  pages:
+    - title: Configuring your development environment for Carbon custom widgets
+      path: /configuring-dev-env
 - title: Development Process
   pages:
     - title: Development Process
