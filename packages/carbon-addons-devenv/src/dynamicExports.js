@@ -13,7 +13,7 @@ export const usePublicPath = async (path) => {
 /* Imports Carbon Addons dynamically */
 export const requireCustomCarbonAddons = async () => {
     const customCarbonAddons = await import(
-        /* webpackChunkName: "simple" */ '../../custom-carbon-addons/src/data-hooks/apollo-client'
+        /* webpackChunkName: "simple" */ '../../custom-carbon-addons/src/apollo-client-hooks'
     );
     return customCarbonAddons;
   };

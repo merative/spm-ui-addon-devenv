@@ -11,7 +11,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import InlContext from '../../../react/core/InlContext';
+import InlContext from '../../react/core/InlContext';
 
 const ApolloClientQueryProvider = ({configuration, children}) => {
 
