@@ -9,7 +9,7 @@ The repository consists of two packages:
 
 - The `carbon-addon-devenv` package contains the development environment to work with Carbon components and 
 to develop custom Carbon add-on components.
-It contains two sample add-on components to help you to get started, which just need a Java renderer and a GraphQL query to integrate them.
+It contains two sample add-on components to help you to get started, which need a Java renderer and a GraphQL query to integrate them onto a UIM page.
 - The `custom-carbon-addons` package is where you must place all of your custom files, to ensure that upgrades do not affect your custom content.
 
 The following procedure creates a Carbon add-on component, called `addonX`, and integrates it onto a custom UIM page. The steps do not necessarily need to be done in this order, but this is currently the recommended order.
@@ -25,7 +25,7 @@ The following procedure creates a Carbon add-on component, called `addonX`, and 
     - Add the JavaScript files to the directory. Import Carbon components from the `carbon-components` node module when you need to compose new add-on components based on Carbon components.
     - Unit tests can be done in parallel to test the generated HTML output from the implemented component.
 
-3. Implement the look and feel of the component in SCSS. Ensure that you follow the design guidance of 
+3. Implement the look and feel of the component with SCSS. Ensure that you follow the design guidance of 
    both Carbon and Social Program Management.
 
     * In the `scss` directory of the `custom-carbon-addon` directory, create an SCSS file for the component and import it into the `index.scss` file. For example, `addonX.scss`.
