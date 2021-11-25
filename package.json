@@ -13,6 +13,7 @@
     "clean": "rm -rf node_modules/",
     "build": "gulp prod:spm",
     "dev": "gulp dev:spm",
+    "deploy": "gulp deploy:spm",
     "test": "jest src/* --config ./config/jest.config.js",
     "gen-doc": "jsdoc -c ./config/jsdoc-config.json -d ./reports/doc",
     "coverage": "npm run test -- --coverage --coverageDirectory ./reports/coverage",

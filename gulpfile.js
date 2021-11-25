@@ -15,7 +15,7 @@ require('dotenv').config();
  * the file that was changed.
  *
  * - The output folder is defined in the .env file
- * through the variable: DEV_BUNDLE_OUTPUT
+ * through the variable: CLIENT_DIR
  * If not variable is defined, it defaults to /dist
  *
  * - The development bundle uses the source maps strategy "eval-source-map"
@@ -24,13 +24,29 @@ require('dotenv').config();
  * before it is transpiled by Babel.
  */
 
+gulp.task('deploy:spm', () => {
+  if (process.env.CLIENT_DIR) {
+    const customComponentName = process.env.CUSTOM_COMPONENT_NAME || "custom";
+    const customComponentLocation = process.env.CLIENT_DIR + "/components/" + customComponentName + "/WebContent/CDEJ/jscript/SPMUIComponents";
+    shell.echo(`\n[INFO] Copying the generated files to custom component: ${customComponentLocation}
+    [INFO] Any changes to the files will automatically trigger a new bundle generation.`);
+    shell.exec(
+      `webpack --mode=development --devtool=eval-source-map\
+      --output-path=${customComponentLocation} --watch=true --hide-modules=true\
+      --build-delimiter="\n\n[INFO] Bundle Generated into ${customComponentLocation} \n[INFO] Watching for file changes."`,
+      { fatal: true }
+    );
+  }
+});
+
 gulp.task('dev:spm', () => {
+  const cdejLocation = process.env.RELATIVE_PATH_TO_BUNDLE || "CDEJ/jscript/SPMUIComponents";
   const output =
-    process.env.DEV_BUNDLE_OUTPUT ||
+    process.env.CLIENT_DIR + "/WebContent/" + cdejLocation ||
     path.resolve(__dirname, '/dist');
-  if (!process.env.DEV_BUNDLE_OUTPUT) {
+  if (!process.env.CLIENT_DIR) {
     shell.echo(
-      `\n[WARNING] Env var DEV_BUNDLE_OUTPUT not defined in the .env file.
+      `\n[WARNING] Env var CLIENT_DIR not defined in the .env file.
 Using Default Output: ${output}`
     );
   }
@@ -44,6 +60,7 @@ Using Default Output: ${output}`
     --build-delimiter="\n\n[INFO] Bundle Generated into ${output} \n[INFO] Watching for file changes."`,
     { fatal: true }
   );
+ 
 });
 
 gulp.task('prod:spm', (done) => {

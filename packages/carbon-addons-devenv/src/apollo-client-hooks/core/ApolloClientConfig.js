@@ -15,11 +15,11 @@ import { setContext } from '@apollo/client/link/context';
 let csrfToken;
 
 class ApolloClientConfig {
-  static serverURL = process.env.GRAPHQL_SERVER_URL || 'http://localhost:4000/graphql';
+  static serverURL = process.env.GRAPHQL_SERVER_URL || '/Rest/graphql';
 
-  static csrfTokenHeader = process.env.CSRF_TOKEN_REQUEST_HEADER || 'X-IBM-SPM-CSRF';
+  static csrfTokenHeader = process.env.CSRF_TOKEN_REQUEST_HEADER;
 
-  static csrfTokenEndpoint = process.env.CSRF_TOKEN_ENPOINT || 'Rest/v1/csrf/tokens';
+  static csrfTokenEndpoint = process.env.CSRF_TOKEN_ENPOINT;
 
   /**
    * Gets the CSRF HTTP Header name as configured and to be added to GraphQL requests with tokens.
