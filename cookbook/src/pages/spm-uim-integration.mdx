@@ -3,19 +3,19 @@ title: SPM UIM Integration
 description: SPM UIM Integration
 ---
 
-When a Carbon addon component has been developed and adequately tested, it can be integrated with a Java Renderer.
+When your component is developed and adequately tested, it can be integrated with a Java Renderer.
 
 Complete two basic steps to integrate the component into a Java renderer:
 
-1. In the renderer, create a HTML element to host the output from the Carbon component. This HTML element must have the `spm-custom-component` CSS class name present. For example,
+1. In the renderer, create a HTML element to host the output from the Carbon component. This HTML element must have the `spm-custom-component` CSS class name. For example,
 
     ```
     <div id="<someId>" class="spm-custom-component"> 
     ```
 
-2. Make a call to the `includeCarbonComponent()` function in the Java renderer framework to enable the integration of a Carbon component. For more information, see the the Java documentation.
+2. Make a call to the `includeCarbonComponent()` function in the Java renderer framework to enable the integration of the component. For more information, see the the Java documentation.
 
-An example of integrating the sample PersonFolio component into a domain Java renderer on a  UIM page is shown.
+An example of integrating the sample PersonFolio component into a domain Java renderer on a UIM page is shown.
 
 ```
 // labels to be used within the Person Folio compoonent. Hardcoding to English here as this is for demo and no concerned with globalaization
@@ -36,5 +36,5 @@ includeCarbonComponent(context, hostElementID, labels, "{}",
       map);
 ```
 
-* In this example the label were just hard-coded as globalization was not a concern.
-However in order to get properly translated labels, they would need to be put into a `*.properties` file and look them up using the `context.getDataAccessor()` function.
+* In this example, labels were hard-coded as globalization is not a concern.
+However, for properly translated labels, you must put them into a `*.properties` file and look them up using the `context.getDataAccessor()` function.
