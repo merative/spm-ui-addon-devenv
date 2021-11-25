@@ -1,6 +1,35 @@
-- title: Introduction
+- title: Overview
   pages:
-    - path: /introduction
+    - path: /overview
+- title: Prerequisites
+  pages:
+    - title: Prerequisites and supported software
+      path: /prerequisites
+- title: Setup
+  pages:
+    - title: Setting up your development environment
+      path: /setup
+- title: Development Process
+  pages:
+    - title: Development Process
+      path: /development-process
+- title: Create custom component
+  pages:
+    - title: Adding a new custom Carbon addon component
+      path: /new-custom-component
+- title: Integrate with UIM
+  pages:
+    - title: Integrating the sample addon into UIM
+      path: /integrate-addon-in-uim
+- title: SPM UIM Integration
+  pages:
+    - title: SPM UIM Integration
+      path: /spm-uim-integration
+- title: Deployment
+  pages:
+    - title: Deployment
+      path: /deployment
+  hasDivider: true
 - title: Feedback
   pages:
     - title: Contact Us

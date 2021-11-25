@@ -1,0 +1,47 @@
+---
+title: Adding a custom Carbon addon component
+description: Adding a custom Carbon addon component
+---
+
+This procedure assumes that you are already familiar with the design guidance from Carbon Design System and IBM Social Program Management.
+
+The repository consists of 2 packages. The <b>carbon-addon-devenv</b> package contains the development environment for the development of custom Carbon addons.
+It contains two sample components to help you to get started, which just need a Java renderer and a GraphQL query to integrate them.
+The `custom-carbon-addons` package is where you must place all of your custom files, to ensure that upgrades do not affect your custom content.
+
+The following procedure creates a Carbon component, called addonX, and integrates it onto a custom UIM page. The steps do not necessarily need to be done in this order, but this is currently the recommended order.
+
+1. Implement a GraphQL query.
+    The GraphQL query provides the data access between the service layer with the business logic for a new feature and the UI components on a custom page that presents the data to the user.
+    For more information about how to implement a GraphQL query, see [https://www.ibm.com/docs/en/spm/8.0.1?topic=apis-graphql](https://www.ibm.com/docs/en/spm/8.0.1?topic=apis-graphql).
+    GraphQL queries can be large and used to serve data for many carbon addons, or they can be more granular where they are used for a specific addon, such as addonX.
+
+2. Implement the carbon addon in React.
+    Complete the following steps:
+
+    * Create a new directory in the react/addons directory. For example, `addonX`.
+    * Add the JavaScript files to the directory. Import addons from the `carbon-components` node module where you need to compose new components based on Carbon components.
+    * Unit tests can be done in parallel to test the generated HTML output from the implemented addon.
+
+3. Implement the look and feel of the addon in Sass.
+    When implementing the look and feel in Sass, it is important to follow the design guidance of both Carbon and Social Program Management.
+
+    Complete the following steps:
+
+    * Within the scss directory of the custom-carbon-addon directory, create a new Sass file for this addonand import it into the index.scss file. For example, `addonX.scss`.
+
+4. Test the addon in Storybook.
+    Ensure that your components meet the business requirements by testing them in isolation before it is integrated into Social Program Management.
+    Complete the following steps:
+    In the stories directory of the `custom-carbon-addon` package, add a seperate directory for each carbon component.
+
+5. Implement a query provider in Apollo Client.
+    An Apollo Client query provider enables the cached data from GraphQL to be integrated with <b>addonX</b> implemented in React.
+    Complete the following steps:
+    * Create a new directory in the `apollo-client/hooks` directory. For example, `addonX`.
+    * Create a query that accesses the data from the backend by importing `gql` and `useQuery` from `@apollo/client`. This is not necessary if a query is being done to serve several addons.
+
+6. Implement a Renderer function.
+    This is not necessarily needed, but is a convenience helper function to integrate an addon into a Java Renderer on a UIM page.
+    There is a `renderers` directory available in the `custom-carbon-addon` package that can be used to create renderer functions.
+    There is also a helper function available called `Renderer.create()` to create a renderer function that can be used on a Java Renderer to integrate the addon into UIM.
