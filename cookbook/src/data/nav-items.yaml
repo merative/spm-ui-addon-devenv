@@ -21,17 +21,17 @@
   pages:
     - title: Creating a custom Carbon add-on component
       path: /new-custom-component
-- title: Integrate with Java Renderer
+- title: Integrating with Java Renderers
   pages:
-    - title: Integrate with the Java Renderer on a UIM page
+    - title: Integrating with the Java Renderer on a UIM page
       path: /spm-uim-integration
-- title: Integrate components with UIM
+- title: Integrating components with UIM
   pages:
     - title: Integrating components with the UIM page
       path: /integrate-addon-in-uim
-- title: Deployment
+- title: Deploying components
   pages:
-    - title: Deployment
+    - title: Deploying components
       path: /deployment
   hasDivider: true
 - title: Feedback
