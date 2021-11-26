@@ -1,7 +1,7 @@
 {
-  "name": "custom-carbon-addons",
-  "version": "0.0.1",
-  "description": "Enable customers to develop the content within the package, Carbon Components, and GraphQl using the apollo client. It also enables customer to build and deploy this new package.",
+  "name": "spm-ui-addon-devenv",
+  "version": "1.0.0",
+  "description": "Enable the development of Carbon Components, and can be integrated with GraphQl and apollo client.",
   "main": "index.js",
   "husky": {
     "hooks": {
@@ -22,7 +22,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "Tom Delahunty",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.1.0",

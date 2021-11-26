@@ -13,7 +13,8 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import PersonFolio from '../PersonFolio';
-import settings from '../../../settings';
+import settings from '../../../core/settings';
+import InlContext from '../../../core/InlContext';
 
 const testParagraphElement = (wrapperElement, text) => {
   expect(wrapperElement.type()).toBe("p");
@@ -76,6 +77,30 @@ describe('personfolio tests', () => {
         <span>child node</span>
       </PersonFolio> 
     );
+    const portFolioDiv = personWithChildNode.find('div');
+    // check child nodes present
+    expect(portFolioDiv.at(0).children().length).toBe(4);
+
+    // juts check the last (child node). Firsts 3 have been checked before
+    expect(portFolioDiv.at(0).childAt(3).type()).toBe("span");
+    expect(portFolioDiv.at(0).childAt(3).text()).toBe("child node");
+  });
+
+  it('tests labels passed to the component', () => {
+    const  labels = {firstnameLabel: "firstNom", surnameLabel: "surNom"}
+    const personWithChildNode = mount(
+      <InlContext.Provider
+      value={{
+        labels
+      }}
+    >
+      <PersonFolio firstname="Sandra" surname="Bloggs">
+        <span>child node</span>
+      </PersonFolio>
+    </InlContext.Provider>
+    );
+
+
     const portFolioDiv = personWithChildNode.find('div');
     // check child nodes present
     expect(portFolioDiv.at(0).children().length).toBe(4);

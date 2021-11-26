@@ -11,13 +11,13 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import PeopleQueryProvider from './PeopleQueryProvider';
+import PersonFolioQueryProvider from './PersonFolioQueryProvider';
 import ApolloClientDataProvider from '../../core/ApolloClientDataProvider';
 
 const PeopleDataProvider = ({ configuration, apolloClient }) => {
   return (
     <ApolloClientDataProvider apolloClient={apolloClient} >
-      <PeopleQueryProvider configuration={configuration}/>
+      <PersonFolioQueryProvider configuration={configuration}/>
     </ApolloClientDataProvider>
   );
 };
