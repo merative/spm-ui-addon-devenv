@@ -2,7 +2,7 @@
 
 ## 1.0.0 - 26/11/2021 ![SPM 8.0.1](https://img.shields.io/badge/-SPM_8.0.1-green)
 ### Added
-This initial release enables the rapid development of custom application pages based on the IBM Carbon components.
+This is the initial release. It enables the rapid development of custom application pages based on the IBM Carbon components.
 
 ### Removed 
 Not applicable
