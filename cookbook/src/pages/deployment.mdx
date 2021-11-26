@@ -3,6 +3,13 @@ title: Deployment
 description: Deployment
 ---
 
-When development has been completed on new Carbon components and you are ready to deploy them to a test environment, there is nothing additional that needs to be done.
+When development is complete on your custom Carbon component, redeploy the component artefacts and place them under source control
 
-The only thing to note is that when the integation command is running e.g `npm run dev`. The generated compiled resources are copied over to your custom component. Ensure that you place these resources under source control.
+1. Run the following command to to copy the generated compiled resources to your web client custom component. 
+
+```
+npm run deploy
+```
+
+2. Ensure that you place these artefact under source control.
+3. Deploy the application EAR file as usual.
