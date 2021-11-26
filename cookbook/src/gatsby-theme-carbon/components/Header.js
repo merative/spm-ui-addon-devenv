@@ -76,7 +76,7 @@ const Header = ({ children }) => {
 
 const DefaultHeaderText = () => (
   <>
-    IBM Cúram&nbsp;<span>SPM UI Add-ons</span>
+    IBM Cúram&nbsp;<span>SPM UI Addon Development Environment</span>
   </>
 );
 
