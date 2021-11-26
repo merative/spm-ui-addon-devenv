@@ -6,7 +6,8 @@ description: Configuring your development environment
 Before you start to work with React components, you must set node environment variables in the `.env` and `.env.development` files.
 The `.env` file contains the environment variables for production. The `.env.development` file supersedes the environment variables in `.env` and sets specific environment variables for development.
 
-## Basic configuration
+
+# Basic configuration
 
 #### GRAPHQL_SERVER_URL
 
@@ -34,7 +35,7 @@ Where `CLIENT_DIR` is the location of the `webclient` directory in the Java deve
 (Mandatory) Specifies the location of the compiled JavaScript relative to the server.
 
 ```
-RELATIVE_PATH_TO_BUNDLE=CDEJ/jscript/SPMUIComponents
+RELATIVE_PATH_TO_BUNDLE=CDEJ/jscript/SPMUIComponents/
 ```
 
 #### CUSTOM_COMPONENT_NAME
@@ -47,7 +48,8 @@ CUSTOM_COMPONENT_NAME=custom
 
 If omitted, the default value 'custom' is used.
 
-## Security Configuration
+
+# Security Configuration
 
 If you have enabled Cross-Site Request Forgery (CSRF) protection in Social Program Management, you must set the following environment variables for production (.env). For more information about CSRF in a React environment, see [https://www.ibm.com/docs/en/spm/8.0.0?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access](https://www.ibm.com/docs/en/spm/8.0.1?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access).
 
