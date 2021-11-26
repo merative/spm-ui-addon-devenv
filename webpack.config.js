@@ -31,7 +31,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.EnvironmentPlugin(['RELATIVE_PATH_TO_BUNDLE'])
+    new webpack.EnvironmentPlugin(['RELATIVE_PATH_TO_BUNDLE', 'GRAPHQL_SERVER_URL', 'CUSTOM_COMPONENT_NAME', 'CSRF_TOKEN_REQUEST_HEADER', 'CSRF_TOKEN_ENPOINT'])
   ],
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {

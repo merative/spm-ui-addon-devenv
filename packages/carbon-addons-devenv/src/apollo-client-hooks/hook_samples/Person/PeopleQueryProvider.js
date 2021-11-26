@@ -19,7 +19,7 @@ const PeopleQueryProvider = ({ configuration }) => {
 
   const { data } = useGetPersons();
   const personToRender = (<>{data && data.persons.map(person => (
-    <PersonFolio firstname={person.firstname} surname={person.surname} age={person.age}/>
+    <PersonFolio key={person.id} firstname={person.firstname} surname={person.surname} age={person.age}/>
    ))}</>);
 
   if (!data) return <></>;
