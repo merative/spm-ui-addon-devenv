@@ -24,10 +24,22 @@ export default class Renderer {
    *
    * @private
    */
-  static create = async (containerId, config, dataProvider) => {
+  static create = async (containerId, config, dataProvider, nameofUpdatedRendererList) => {
   window.spmcustom.requireCustomCarbonAddons()
     .then(async (RenderWithApolloClient) => {
-      RenderWithApolloClient[dataProvider](document.getElementById(containerId), {
+
+      let apolloClientDataProvider;
+      try {
+        const nameOfRendererList = nameofUpdatedRendererList ? nameofUpdatedRendererList : 'RendererListWithApolloClient';
+        const rendererList = RenderWithApolloClient[nameOfRendererList];
+        apolloClientDataProvider = rendererList[dataProvider];
+      } catch (e) {
+        throw new Error('The apollo data provider : ' + dataProvider + " does not exist. This is the list of available ones: " + rendererList);
+      }
+      if (!apolloClientDataProvider) {
+        throw new Error('The apollo data provider : ' + dataProvider + " does not exist. This is the list of available ones: " + rendererList);
+      }
+      apolloClientDataProvider(document.getElementById(containerId), {
         ...config,
         labels: {
           ...config.labels,

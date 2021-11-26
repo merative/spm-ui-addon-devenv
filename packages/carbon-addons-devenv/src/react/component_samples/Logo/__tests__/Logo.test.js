@@ -11,7 +11,7 @@
 
 import { mount } from 'enzyme';
 import React from 'react';import Logo from '../Logo';
-import settings from '../../../settings';
+import settings from '../../../core/settings';
 
 
 describe('Logo tests', () => {
@@ -43,7 +43,7 @@ describe('Logo tests', () => {
     expect(logoDiv.at(0).childAt(0).props().alt).toBe("small logo");  
   });
 
-  it('tests Logo all attributes', () => {
+  it('tests size and className attributes', () => {
     const largeLogo = mount(
       <Logo size="large" className="settings.prefix--logo--extraextra" id="logo_123">
           <img src="../sample-logo.jpg" alt="small logo" />
@@ -65,6 +65,18 @@ describe('Logo tests', () => {
     expect(logoDiv.at(0).children().length).toBe(1);
 
     // child node already tested previoussly
+  });
+
+  it('tests optional attributes', () => {
+    const logoWithImageName = mount(
+      <Logo size="large" imageName="image123.jpeg">
+        <span>child</span>
+       </Logo>
+    );
+
+    const logoDiv = logoWithImageName.find('div');
+    // check that the root div exists
+    expect(logoDiv.exists()).toBeTruthy();
   });
 
 });

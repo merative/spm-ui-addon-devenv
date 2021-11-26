@@ -14,7 +14,7 @@ import PropTypes from "prop-types";
 
 import cx from 'classnames';
 import InlContext from '../../core/InlContext';
-import settings from '../../settings';
+import settings from '../../core/settings';
 
 /**
   * An Example component.
@@ -50,10 +50,12 @@ const PersonFolio = ({ children, className, age, ...other }) => {
     const surnameLabel = labels && labels.surnameLabel || "Surname";
     const ageLabel = labels && labels.ageLabel || "Age";
     return (
+        // the renderer usually sets the 'data-testid' attribute but where
+        // there is a large composition of components it may need to be added at this level
       <div className={styleClass} {...other}>
-          <p>{firstnameLabel}:  {firstname}</p>
-          <p>{surnameLabel}:  {surname}</p>
-          <p>{ageLabel}: {age}</p>
+          <p data-testid="personfolio_firstnameLabel">{firstnameLabel}:  {firstname}</p>
+          <p data-testid="personfolio_surnnameLabel">{surnameLabel}:  {surname}</p>
+          <p data-testid="personfolio_ageLabel">{ageLabel}: {age}</p>
         {children}
       </div>
     );

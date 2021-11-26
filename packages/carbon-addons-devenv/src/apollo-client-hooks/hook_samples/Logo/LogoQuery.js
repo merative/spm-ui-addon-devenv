@@ -13,14 +13,16 @@ import { gql, useQuery } from '@apollo/client';
 
 const GetLogo = gql`
   query GetLogo {
-    logo(logoId: "id_2") {
+    logo(logoId: $logoId) {
       name
     }
   }
 `;
 
-const useGetLogo = () => {
-  return useQuery(GetLogo);
+const useGetLogo = (logoIdValue) => {
+  return useQuery(GetLogo, {
+    variables: { logoId: logoIdValue },
+  });
 }
 
 export {

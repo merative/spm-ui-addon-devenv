@@ -15,7 +15,7 @@ import PersonFolio  from '../../../react/component_samples/PersonFolio/PersonFol
 import ApolloClientQueryProvider from '../../core/ApolloClientQueryProvider';
 import { useGetPersons } from './PersonQuery';
 
-const PeopleQueryProvider = ({ configuration }) => {
+const PersonFolioQueryProvider = ({ configuration }) => {
 
   const { data } = useGetPersons();
   const personToRender = (<>{data && data.persons.map(person => (
@@ -32,8 +32,8 @@ const PeopleQueryProvider = ({ configuration }) => {
 
 };
 
-PeopleQueryProvider.propTypes = {
+PersonFolioQueryProvider.propTypes = {
   configuration: PropTypes.object.isRequired,
 };
 
-export default PeopleQueryProvider;
+export default PersonFolioQueryProvider;

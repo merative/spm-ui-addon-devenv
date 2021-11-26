@@ -9,7 +9,7 @@
  * restricted by GSA ADP Schedule Contract with IBM Corp.
  */
 
-//import PersonFolio from '../../carbon-addons-devenv/sample_renderers/PersonFolio';
-//import Logo from '../../carbon-addons-devenv/sample_renderers/Logo';
+// renderers added here will be added to the window.spmcustom.renderers object
+// Note: the sample are added to the window.spmcustom.sampleRenderers object
 
 export default { };
