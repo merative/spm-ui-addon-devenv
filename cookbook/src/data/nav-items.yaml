@@ -29,9 +29,9 @@
   pages:
     - title: Integrating components with the UIM page
       path: /integrate-addon-in-uim
-- title: Deployment
+- title: Deploying
   pages:
-    - title: Deployment
+    - title: Deploying
       path: /deployment
   hasDivider: true
 - title: Feedback
