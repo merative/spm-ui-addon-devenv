@@ -5,30 +5,30 @@
   pages:
     - title: Prerequisites and supported software
       path: /prerequisites
-- title: Setup
+- title: Setting up
   pages:
     - title: Setting up your development environment
       path: /setup
-- title: Configuration
+- title: Configuring
   pages:
-    - title: Configuring your development environment for Carbon custom widgets
+    - title: Configuring your development environment
       path: /configuring-dev-env
 - title: Development Process
   pages:
     - title: Development Process
       path: /development-process
-- title: Create custom component
+- title: Creating custom components
   pages:
-    - title: Adding a new custom Carbon addon component
+    - title: Creating a custom Carbon add-on component
       path: /new-custom-component
-- title: Integrate with UIM
+- title: Integrate with Java Renderer
   pages:
-    - title: Integrating the sample addon into UIM
-      path: /integrate-addon-in-uim
-- title: SPM UIM Integration
-  pages:
-    - title: SPM UIM Integration
+    - title: Integrate with the Java Renderer on a UIM page
       path: /spm-uim-integration
+- title: Integrate components with UIM
+  pages:
+    - title: Integrating components with the UIM page
+      path: /integrate-addon-in-uim
 - title: Deployment
   pages:
     - title: Deployment
