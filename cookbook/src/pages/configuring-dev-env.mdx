@@ -3,57 +3,55 @@ title: Configuring your development environment for Carbon custom widgets
 description: Configuring your development environment for Carbon custom widgets
 ---
 
-Before you start to develop Carbon custom widgets, you must set node environment variables in the `.env` and `.env.development` files.
+Before you start to develop with React components, you must set node environment variables in the `.env` and `.env.development` files.
 The `.env` file contains the environment variables for production. The `.env.development` file supersedes the environment variables in `.env` and sets specific environment variables for development.
 
-## Basic configuration
+### Basic configuration
 
-### GRAPHQL_SERVER_URL
+## GRAPHQL_SERVER_URL
 
 Specifies the relative location for the GraphQL server. For example, the following value sets the full URL for the GrpahQL server to `https://<server>:<port>/Rest/graphql`.
-If this value if not set a default value of '/Rest/grpahql' will be used.
+If this value if not set, a default value of `/Rest/grpahql` is used.
 
 ```
 GRAPHQL_SERVER_URL=/Rest/graphql
 ```
 
-Where `server` is the domain name or ipaddress of the server and `port` is the port number for the application server.
+Where `server` is the domain name or IP address of the server and `port` is the port number for the application server.
 
-### CLIENT_DIR
+## CLIENT_DIR
 
-Specifies the location of the `webclient` directory in the development installation. This value is used to test the integration of the Carbon custom widgets with custom pages (UIM/VIM) in SPM. For example:
+Specifies the location of the `webclient` directory in the development installation. This value is used to test the integration of components with custom UIM or VIM pages in Social Program Management.
 
 ```
 CLIENT_DIR=<CLIENT_DIR> 
 ```
 
-Where `CLIENT_DIR` is the location of the `webclient` directory in the development installation.
+Where `CLIENT_DIR` is the location of the `webclient` directory in the Java development environment.
 
-### RELATIVE_PATH_TO_BUNDLE
+## RELATIVE_PATH_TO_BUNDLE
 
-Specifies the location of the compiled JavaScript relative to the server. This is only needed if configuring the static content server. For example:
+(Mandatory) Specifies the location of the compiled JavaScript relative to the server.
 
 ```
 RELATIVE_PATH_TO_BUNDLE=CDEJ/jscript/SPMUIComponents
 ```
 
-If omiited a default location will be used.
+## CUSTOM_COMPONENT_NAME
 
-### CUSTOM_COMPONENT_NAME
-
-Specifies the location of the webclient component that the compiled JavaScript needs to be copied fro deployment. For example:
+Specifies the location of the web client component to copy the compiled JavaScript to during deployment. For example:
 
 ```
 CUSTOM_COMPONENT_NAME=custom
 ```
 
-If omiited the default of 'custom' compponent will be used.
+If omitted, the default value 'custom' is used.
 
 ### Security Configuration
 
-If you have enabled CSRF protection in SPM, you must set the following environment variables for production (.env). For more information about CSRF in a React environment, see [https://www.ibm.com/docs/en/spm/8.0.0?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access](https://www.ibm.com/docs/en/spm/8.0.0?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access).
+If you have enabled Cross-Site Request Forgery (CSRF) protection in Socia Program Management, you must set the following environment variables for production (.env). For more information about CSRF in a React environment, see [https://www.ibm.com/docs/en/spm/8.0.0?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access](https://www.ibm.com/docs/en/spm/8.0.0?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access).
 
-### CSRF_TOKEN_ENPOINT
+## CSRF_TOKEN_ENPOINT
 
 Specifies the REST endpoint that generates a security token to be sent with each GraphQL HTTP request. Set the following value:
 
@@ -61,7 +59,7 @@ Specifies the REST endpoint that generates a security token to be sent with each
 CSRF_TOKEN_ENPOINT=/Rest/v1/csrf/tokens
 ```
 
-### CSRF_TOKEN_REQUEST_HEADER
+## CSRF_TOKEN_REQUEST_HEADER
 
 Specifies the custom HTTP request header to be sent with each GraphQL request. It is also used to get the security token from the response to the REST endpoint used to generate the token. Set the following value:
 
