@@ -3,17 +3,22 @@ title: Integrating components with the UIM page
 description: Integrating components with the UIM page
 ---
 
-The `carbon-addon-devenv` package contains two sample add-on components. You can view the components in Storybook by running the `npm` command to run Storybook.
+The `carbon-addon-devenv` package contains two sample add-on components. The following steps explain how to integrate a component with a UIM page with referece to the sample components.
+
 However, you must complete some steps to test their integration with a UIM page.
 
-1. Implement GraphQL to match the sample query. A GraphQL backend service is needed to provide the data access for the sample components that are to be integrated into a UIM page.
-    The GraphQL query can be implemented in Social Program Management. It must match the data expected in the queries that are currently written for the sample components to display properly when integrated in a UIM page.
+You can view the components in Storybook by running the `npm` command to run Storybook.
+
+1. Implement GraphQL to match the sample query. A GraphQL back-end service is needed to provide the data access for the sample components.
+    For the components to display properly when integrated in a UIM page, You must implement a GraphQL query in Social Program Management. 
+    The query must match the data expected in the front-end queries of the sample components.
 2. Reference the sample Query Providers, which are available in the `apollo-client-hooks/index.sample` file. 
     You must reference them in a `index.js` file in this directory to be able to integrate them.
-4. Reference the sample SCSS.
+4. Reference the sample Sass.
     To enable the look and feel for the sample components, uncomment the commented line in the `scss/index.scss` file.
-4. Build and integrate with renderer. The commands to build and integrate are describe in the previous development process section.
-    
-When these steps are completed, the code needs to be built and integrated with UIM. 
-The next step after that is to integrate the components with Java Renderer as described in the next section.
-    
+4. Build and integrate with the renderer. 
+
+```
+npm run build
+npm run dev
+```
