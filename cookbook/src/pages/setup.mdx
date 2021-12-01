@@ -1,0 +1,32 @@
+---
+title: Setting up your development environment
+description: Setting up your development environment
+---
+
+1. Download and install Node.js from [https://nodejs.org](https://nodejs.org). The installation includes the npm (Node package manager), which you can use to install your Node packages.
+2. Download and install your IDE, Microsoft Visual Studio Code [https://code.visualstudio.com/download](https://code.visualstudio.com/download) is the recommended IDE.  Then install any extensions, such as ESLint or Prettier.
+3. Download the release branch of the code for SPM UI Addon Development Environment from [https://github.com/IBM/spm-ui-addon-devenv](https://github.com/IBM/spm-ui-addon-devenv).
+
+    <InlineNotification>
+
+    Note: Do not download or clone the main or develop branches as they are intended for active IBM development.
+
+    </InlineNotification>
+
+    There are several options to get the code from this repository onto your machine:
+    1. Download as Zip. Select the Code dropdown and from that select the `Download Zip` option.
+    2. Open with GitHub Desktop.
+    3. Clone the repository.
+    If you have Git set up, you can clone the repository by opening a command prompt and running the command:
+
+    ```
+    git clone https://github.com/IBM/spm-ui-addon-devenv.git
+    ```
+
+4. Install the SPM UI Addon Development Environment on your computer by using npm. To install the code, run the command:
+
+    ```
+    npm ci
+    ```
+
+5.  You can now open the repository in your IDE. For example, Microsoft Visual Studio Code.

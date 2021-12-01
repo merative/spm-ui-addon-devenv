@@ -1,0 +1,43 @@
+- title: Overview
+  pages:
+    - path: /overview
+- title: Prerequisites
+  pages:
+    - title: Prerequisites and supported software
+      path: /prerequisites
+- title: Setting up
+  pages:
+    - title: Setting up your development environment
+      path: /setup
+- title: Configuring
+  pages:
+    - title: Configuring your development environment
+      path: /configuring-dev-env
+- title: Development Process
+  pages:
+    - title: Development Process
+      path: /development-process
+- title: Creating custom components
+  pages:
+    - title: Creating a custom Carbon add-on component
+      path: /new-custom-component
+- title: Integrating with Java Renderers
+  pages:
+    - title: Integrating with the Java Renderer on a UIM page
+      path: /spm-uim-integration
+- title: Integrating components with UIM
+  pages:
+    - title: Integrating components with the UIM page
+      path: /integrate-addon-in-uim
+- title: Deploying components
+  pages:
+    - title: Deploying components
+      path: /deployment
+  hasDivider: true
+- title: Feedback
+  pages:
+    - title: Contact Us
+      path: /feedback/
+- title: Disclaimer
+  pages:
+    - path: /disclaimer/

@@ -1,0 +1,45 @@
+---
+title: Integrate with the Java Renderer on a UIM page
+description: Integrate with the Java Renderer on a UIM page
+---
+
+When your component is developed and adequately tested, it can be integrated with a Java Renderer.
+
+The only supported integration point of a Carbon component onto a UIM page is by using a Java renderer.
+This procedure assumes that a custom UIM page with a configured Java renderer exists, which is available to host a Carbon component so that it can be integrated and displayed to the user.
+For more information about configuring renderers, see [https://www.ibm.com/docs/en/spm/8.0.1?topic=widgets-configuring-renderers](https://www.ibm.com/docs/en/spm/8.0.1?topic=widgets-configuring-renderers).
+
+Complete two basic steps to integrate the component into a Java renderer:
+
+1. In the renderer, create a HTML element to host the output from the Carbon component. This HTML element must have the `spm-custom-component` CSS class name. For example,
+
+    ```
+    <div id="<someId>" class="spm-custom-component"> 
+    ```
+
+2. Make a call to the `includeCarbonComponent()` function in the Java renderer framework to enable the integration of the component. For more information, see the the Java documentation.
+
+An example of integrating the sample PersonFolio component into a domain Java renderer on a UIM page is shown.
+Note that "sampleRenderers" is used here but for a real custom example it would be "renderers" instead.
+
+```
+// labels to be used within the Person Folio compoonent. Hardcoding to English here as this is for demo and no concerned with globalaization
+final String labels =
+      "{firstnameLabel: 'First name', surnameLabel: 'Surname', ageLabel: 'Age'}";
+// the id of the HTML element on the renderer that will host the HTML content from the Carbon component
+final String hostElementID = "PersonFolio";
+// extra configuration here needed. The logoId needed as a varibable to be passed into the query to retrieve a //logo
+final Map<String, String> extraConfig = new HashMap<String, String>();
+    map.put("logoId", String.valueOf(logoID));
+```
+
+```
+// making the call to integrate the PersonFolio component into the renderer using the 
+// PersonFolioRenderer helper function
+includeCarbonComponent(context, hostElementID, labels, "{}",
+      "window.spmcustom.sampleRenderers.PersonFolio.PersonFolioRenderer",
+      map);
+```
+
+In this example, labels were hard-coded as globalization is not a concern.
+However, for properly translated labels, you must put them into a `*.properties` file and look them up using the `context.getDataAccessor()` function.
