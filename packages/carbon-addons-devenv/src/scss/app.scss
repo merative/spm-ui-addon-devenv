@@ -1,0 +1,47 @@
+
+//-------------------------
+// 🚀 Variables
+//-------------------------
+
+$feature-flags: (
+  grid-columns-16: true,
+);
+
+$css--font-face: true;
+$css--helpers: true;
+$css--body: true;
+$css--reset: true;
+$css--default-type: true;
+$css--plex: true;
+$css--use-experimental-grid: false;
+$css--use-experimental-grid-fallback: false;
+
+//-------------------------
+// 🔄 Resets
+//-------------------------
+
+// rtl directives must be imported when wrapping an imported stylesheet so 
+// that they are positioned correctly in the compiled css
+// https://github.com/MohammadYounes/rtlcss/issues/113#issuecomment-379907981
+
+@import 'carbon-components/scss/globals/scss/css--reset';
+
+
+//-------------------------
+// 🎨 Themes
+//-------------------------
+
+@import 'carbon-components/scss/globals/scss/theme';
+
+$carbon--theme: $carbon--theme--g10;
+@include carbon--theme();
+
+// overwrite box-sizing from css--reset to original Curam styling
+* {
+  box-sizing: content-box;
+}
+
+// Temporary until Carbon fix is applied for date picker opening event.
+html.spm-modal--html {
+  overflow: visible;
+}

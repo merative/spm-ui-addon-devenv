@@ -1,0 +1,8 @@
+{
+  "name": "custom-carbon-addons",
+  "version": "1.0.0",
+  "description": "Location for custom carbon components",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+}

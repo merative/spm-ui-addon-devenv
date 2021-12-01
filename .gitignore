@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules/
+dist/
+coverage/
+reports/
+config/
+
+# storybook
+storybook-static/
+
+.DS_STORE
