@@ -33,6 +33,7 @@
     "@storybook/addon-essentials": "^6.3.8",
     "@storybook/addon-links": "^6.3.8",
     "@storybook/react": "^6.3.8",
+    "@webpack-cli/serve": "^1.6.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.0.2",
@@ -57,7 +58,7 @@
     "jsdoc": "^3.6.7",
     "node-sass": "^6.0.1",
     "sass-loader": "^10.0.3",
-    "shelljs": "^0.8.4",
+    "shelljs": "^0.8.5",
     "style-loader": "^0.23.0",
     "webpack": "4.42.1",
     "webpack-cli": "3.3.11",
@@ -89,6 +90,15 @@
     "immer": "9.0.6",
     "set-value": "4.0.1",
     "glob-parent": "5.1.2",
-    "trim": "0.0.3"
+    "trim": "0.0.3",
+    "prismjs": "1.27.0",
+    "async": "3.2.2",
+    "ssri": "6.0.2",
+    "node-fetch": "3.1.1",
+    "follow-redirects": "1.14.7",
+    "minimist": "1.2.6",
+    "marked": "4.0.10",
+    "ansi-html": "0.0.8",
+    "node-forge": "1.3.0"
   }
 }
