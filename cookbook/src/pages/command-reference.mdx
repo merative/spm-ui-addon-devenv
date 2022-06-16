@@ -1,0 +1,56 @@
+---
+title: Command reference
+description: Command reference
+---
+
+After the code is installed and configured, the following commands are available:
+
+```
+npm run build
+```
+
+This command builds the deliverable artefacts from the installed codebase.
+
+```
+npm run dev
+```
+
+This command tests the integration with Social Program Management. It requires the `CLIENT_DIR` environment variable to be set.
+It copies the generated artefects from `npm run build` to the location where they can be picked up by Social Program Management.
+Any JavaScript or SCSS files that are updated are automatically generated when integrated with Social Program Management.
+
+```
+npm run test
+```
+
+This command runs the JavaScript unit tests for React components that you have created. Some sample tests are provided in the code base.
+
+```
+npm run coverage
+```
+
+This command generates a report on JavaScript code coverage. There is certain threshold that is specified for code coverage. If coverage falls below this level the report fails to be generated.
+
+```
+npm run gen-doc
+```
+
+This command generates the documentation for React components that are being developed. It is based on JSDoc, see [https://jsdoc.app/](https://jsdoc.app/).
+
+```
+npm run lint
+```
+
+This command enforces coding best practices for React components in JavaScript and SCSS.
+
+```
+npm run storybook
+```
+
+This command starts Storybook and show how to use the components with examples.
+
+```
+npm run deploy
+```
+
+This command copies the compiled JavaScript to the specified web client custom component for deployment.
