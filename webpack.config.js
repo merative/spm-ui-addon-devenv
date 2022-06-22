@@ -1,5 +1,5 @@
 const path = require("path");
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 
 
@@ -12,7 +12,7 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader'],
         include: path.resolve(__dirname, './packages/custom-carbon-addons/src/scss'),
-        //include: path.resolve(__dirname, '../../custom-carbon-addons/src/scss/index.scss'),
+        // include: path.resolve(__dirname, '../../custom-carbon-addons/src/scss/index.scss'),
       },
       {
         test: /\.(js|jsx)$/,
@@ -33,7 +33,11 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin(['RELATIVE_PATH_TO_BUNDLE', 'GRAPHQL_SERVER_URL', 'CUSTOM_COMPONENT_NAME', 'CSRF_TOKEN_REQUEST_HEADER', 'CSRF_TOKEN_ENPOINT'])
   ],
-  resolve: { extensions: ["*", ".js", ".jsx"] },
+  resolve: { extensions: ["*", ".js", ".jsx"], 
+    alias: {
+      devenv_pkg: path.resolve('./packages/carbon-addons-devenv')
+    }
+  },
   output: {
     path: path.resolve(__dirname, "dist/"),
     library: 'spmcustom',
