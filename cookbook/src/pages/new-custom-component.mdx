@@ -12,17 +12,17 @@ to develop custom Carbon add-on components.
 It contains two sample add-on components to help you to get started, which need a Java renderer and a GraphQL query to integrate them onto a UIM page.
 - The `custom-carbon-addons` package is where you must place all of your custom files, to ensure that upgrades do not affect your custom content.
 
-The following procedure creates a Carbon add-on component, called `addonX`, and integrates it onto a custom UIM page. The steps do not necessarily need to be done in this order, but this is currently the recommended order.
+The following procedure creates a Carbon add-on component, called `componentX`, and integrates it onto a custom UIM page. The steps do not necessarily need to be done in this order, but this is currently the recommended order.
 
 1. Implement a GraphQL query.
    The GraphQL query provides the data access between the service layer with the business logic for a new feature and the UI components on a custom page that presents the data to the user.
    For more information about how to implement a GraphQL query, see [https://www.ibm.com/docs/en/spm/8.0.1?topic=apis-graphql](https://www.ibm.com/docs/en/spm/8.0.1?topic=apis-graphql).
    GraphQL queries can be large and used to serve data for many carbon addons, or they can be more granular where they are used for a
-   specific addon, such as addonX.
+   specific addon, such as componentX.
 
 2. Implement the custom component in React by completing the following steps:
 
-    - Create a directory in the `react/addons` directory. For example, `addonX`.
+    - Create a directory in the `react` directory. For example, `componentX`.
     - Add the JavaScript files to the directory. Import Carbon components from the `carbon-components` node module
       when you need to compose new add-on components based on Carbon components.
     - Unit tests can be done in parallel to test the generated HTML output from the implemented component.
@@ -31,21 +31,23 @@ The following procedure creates a Carbon add-on component, called `addonX`, and 
    both Carbon and Social Program Management.
 
     - In the `scss` directory of the `custom-carbon-addon` directory, create an SCSS file for the component and
-      import it into the `index.scss` file. For example, `addonX.scss`.
+      import it into the `index.scss` file. For example, `componentX.scss`.
 
 4. Test the component in Storybook.
     Ensure that your components meet the business requirements by testing them in isolation before they are integrated into Social Program Management.
     - In the `stories` directory of the `custom-carbon-addon` package, add a separate directory for each carbon component.
 
-5. Implement a query provider in Apollo Client.
-    An Apollo Client query provider enables the cached data from GraphQL to be integrated with `addonX` implemented in React.
+5. Implement a Apollo Client data provider.
+    An Apollo Client data provider enables the cached data from GraphQL to be integrated with `componentX` implemented in React.
     Complete the following steps:
-    - Create a directory in the `apollo-client/hooks` directory. For example, `addonX`.
+    - Create a directory in the `apollo-client/component_hooks` directory. For example, `componentX`. There are several helper components
+      available from the carbon-addons-devenv package to help with this task; ApolloClientDataProvider, ApolloClientQueryProvider, and
+       ApolloClientHookTemplate.
     - If you don't already have a large GraphQL query that serves a number of components, create a query that
       accesses the data from the back-end by importing `gql` and `useQuery` from `@apollo/client`.
 
 6. Implement a Renderer function.
-    This is not necessarily needed, but is a convenience helper function to integrate an addon into a Java Renderer on a UIM page.
+    This is not necessarily needed, but is a convenience helper function to integrate an addon component into a Java Renderer on a UIM page.
     There is a `renderers` directory available in the `custom-carbon-addon` package that can be used to create renderer functions.
     There is also a helper function available called `Renderer.create()` to create a renderer function that can be used
-    on a Java Renderer to integrate the addon into UIM.
+    on a Java Renderer to integrate the addon component into UIM.
