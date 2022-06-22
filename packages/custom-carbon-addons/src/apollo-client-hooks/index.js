@@ -10,7 +10,7 @@
  */
 /* eslint import/no-unresolved: [2, { ignore: ['devenv_pkg*.'] }] */
 import { ApolloClientHooks } from 'devenv_pkg/src/apollo-client-hooks';
-import * as CustomApolloClientHooks from './component_hooks/components';
+import * as CustomApolloClientHooks from './hooks/components';
 
 
 // ApolloClientHooks object initially has the list of sample components to be renderered
