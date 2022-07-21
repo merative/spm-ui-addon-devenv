@@ -15,11 +15,11 @@
       path: /development-process
     - title: Command reference
       path: /command-reference
-- title: Creating custom pages
+- title: Creating a custom component
   pages:
     - title: Creating a custom Carbon add-on component
       path: /new-custom-component
-- title: Integrating with Java Renderers
+- title:  Rendering components on a UIM page
   pages:
     - title: Rendering components on a UIM page
       path: /spm-uim-integration
