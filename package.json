@@ -1,6 +1,6 @@
 {
   "name": "spm-ui-addon-devenv",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Enable the development of Carbon Components, and can be integrated with GraphQl and apollo client.",
   "main": "index.js",
   "husky": {
@@ -8,9 +8,15 @@
       "pre-commit": "npm run lint"
     }
   },
+  "subPackages": [
+    "packages/graphql-mocks"
+  ],
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
-    "clean": "rm -rf node_modules/",
+    "postinstall": "subpkg install",
+    "mock-graphql-service": "node packages/graphql-mocks/server.js",
+    "dev-with-mockgraphql": "export GRAPHQL_SERVER_URL=http://localhost:4000/graphql && npm run mock-graphql-service & npm run dev",
+    "clean": "rm -rf node_modules",
     "build": "gulp prod:spm",
     "dev": "gulp dev:spm",
     "deploy": "gulp deploy:spm",
@@ -37,6 +43,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.0.2",
+    "cross-env": "^7.0.2",
     "css-loader": "^1.0.0",
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^3.0.0",
@@ -60,11 +67,13 @@
     "sass-loader": "^10.0.3",
     "shelljs": "^0.8.5",
     "style-loader": "^0.23.0",
+    "subpkg": "^4.1.0",
     "webpack": "4.42.1",
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
+    "@apollo/client": "^3.2.5",
     "@carbon/grid": "^10.20.0",
     "@carbon/icon-helpers": "^10.13.0",
     "@carbon/icons": "^10.25.0",
@@ -76,15 +85,15 @@
     "carbon-components-react": "7.41.0",
     "carbon-icons": "^7.0.7",
     "classnames": "^2.2.6",
+    "core-js": "*",
+    "graphql": "^15.3.0",
+    "open": "^8.4.0",
+    "prop-types": "*",
     "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.13.1",
     "react-intl": "^2.8.0",
-    "react-app-polyfill": "^1.0.6",
-    "regenerator-runtime": "^0.13.7",
-    "prop-types": "*",
-    "@apollo/client": "^3.2.5",
-    "graphql": "^15.3.0",
-    "core-js": "*"
+    "regenerator-runtime": "^0.13.7"
   },
   "resolutions": {
     "immer": "9.0.6",

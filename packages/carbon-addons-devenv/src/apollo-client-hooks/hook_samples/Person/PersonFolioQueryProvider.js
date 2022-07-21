@@ -3,22 +3,26 @@
  *
  * PID 5725-H26
  *
- * Copyright IBM Corporation 2020. All Rights Reserved.
+ * Copyright IBM Corporation 2021,2022. All Rights Reserved.
  *
  * US Government Users Restricted Rights - Use, duplication or disclosure
  * restricted by GSA ADP Schedule Contract with IBM Corp.
  */
-
+/* eslint import/no-unresolved: [2, { ignore: ['devenv_pkg*.'] }] */
 import React from 'react';
 import PropTypes from 'prop-types';
-import PersonFolio  from '../../../react/component_samples/PersonFolio/PersonFolio';
-import ApolloClientQueryProvider from '../../core/ApolloClientQueryProvider';
+// NOTE: 
+// from custom-carbon-addons package reference to ApolloClientQueryProvider would be he following
+// import { ApolloClientQueryProvider } from 'devenv_pkg/src/apollo-client-hooks';
+import ApolloClientQueryProvider from 'devenv_pkg/src/apollo-client-hooks/core/ApolloClientQueryProvider';
+import PersonFolio  from 'devenv_pkg/src/react/component_samples/PersonFolio/PersonFolio';
 import { useGetPersons } from './PersonQuery';
 
 const PersonFolioQueryProvider = ({ configuration }) => {
-
+  const propertyName = 'persons';
   const { data } = useGetPersons();
-  const personToRender = (<>{data && data.persons.map(person => (
+  // 'persons' from graphql query is an array so return as list
+  const personToRender = (<>{data && data[propertyName].map(person => (
     <PersonFolio key={person.id} firstname={person.firstname} surname={person.surname} age={person.age}/>
    ))}</>);
 
