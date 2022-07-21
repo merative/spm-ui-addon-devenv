@@ -3,63 +3,22 @@ title: Development Process
 description: Development Process
 ---
 
-A Carbon add-on is a custom component that conforms to the IBM Carbon Design System guidelines. You can develop your own Carbon add-ons and use them and Carbon components in your custom views.
-To develop custom components, which you can place on UIM pages, you must do some front-end and back-end work.
+# Front-end development
 
-- The front end development is where user interface components are developed to present the data. For front-end development it is recommended to use React components from the Carbon Design System.
-  Some examples of these components are provided in the repository. You can do your front-end development in parallel with your back-end development or in isolation.
-  Become familiar with the development methodology and adhere to it as much as possible. The Carbon Design System provides design guidance for the development of user interface components based on the Carbon Design System and implemented in React.
-  For more information, see the [Carbon v10 website](https://v10.carbondesignsystem.com/) and the [Carbon v10 Storybook](https://v10-react.carbondesignsystem.com/?path=/story/getting-started--welcome).
-- The back-end data development is where you develop services (business logic) to create/update/get the data. GraphQL is recommended for the back-end data service, especially for data intensive screens, see [https://www.ibm.com/docs/en/spm/8.0.1?topic=apis-graphql](https://www.ibm.com/docs/en/spm/8.0.1?topic=apis-graphql).
+Use the standard Social Program Management client development environment (CDEJ) to create a UIM page and then use the Add-on Development environment to populate your UIM page with React JavaScript components. For more information about React development, see the [Create React App](https://github.com/facebook/create-react-app/blob/main/packages/cra-template/template/README.md) documentation.
 
-After the code is installed and configured, the following commands are available:
+You can use React components directly from the IBM Carbon Design System or, if you can't find what you need, create your own Carbon Add-on components in React. A Carbon add-on is a custom component that conforms to the IBM Carbon Design System guidelines. 
 
-```
-npm run build
-```
+Some example add-on components are provided in the repository. You can do your front-end development in parallel with your back-end development or in isolation.
 
-This command builds the deliverable artefacts from the installed codebase.
+## Getting started with Carbon React JS
 
-```
-npm run dev
-```
+The Carbon Design System provides design guidance for the development of user interface components based on the Carbon Design System and implemented in a number of frameworks, including React.
 
-This command tests the integration with SPM. It requires the `CLIENT_DIR` environment variable to be set.
-It copies the generated artefects from `npm run build` to the location where they can be picked up by Social Program Management.
-Any JavaScript or SCSS files that are updated are automatically generated when integrated with Social Program Management.
+If you are new to Carbon and React development, see the [Carbon v10 React tutorial](https://v10.carbondesignsystem.com/developing/react-tutorial/overview/) to get you started.
 
-```
-npm run test
-```
+For more information, see the [Carbon v10 website](https://v10.carbondesignsystem.com/) and the [Carbon v10 Storybook](https://v10-react.carbondesignsystem.com/?path=/story/getting-started--welcome).
+  
+# Back-end development
 
-This command runs the JavaScript unit tests for React components that you have created. Some sample tests are provided in the code base.
-
-```
-npm run coverage
-```
-
-This command generates a report on JavaScript code coverage. There is certain threshold that is specified for code coverage. If coverage falls below this level the report fails to be generated.
-
-```
-npm run gen-doc
-```
-
-This command generates the documentation for React components that are being developed. It is based on JSDoc, see [https://jsdoc.app/](https://jsdoc.app/).
-
-```
-npm run lint
-```
-
-This command enforces coding best practices for React components in JavaScript and SCSS.
-
-```
-npm run storybook
-```
-
-This command starts Storybook and show how to use the components with examples.
-
-```
-npm run deploy
-```
-
-This command copies the compiled JavaScript to the specified web client custom component for deployment.
+Using the Social Program Management server development environment and GraphQL functionality, implement the services (business logic) to create/update/get the data for your components. GraphQL is recommended for the back-end data service, especially for data intensive screens, see [https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql](https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql).

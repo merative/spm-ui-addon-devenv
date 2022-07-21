@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1252px" height="554px" viewBox="0 0 1252 554" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>SPM_UI_components_mock_backend v5 Copy 3</title>
+    <g id="SPM_UI_components_mock_backend-v5-Copy-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="1252" height="554"></rect>
+        <rect id="Background" stroke="#8D8D8D" fill="#F4F4F4" x="705.5" y="391.5" width="514" height="129"></rect>
+        <rect id="Background" stroke="#8D8D8D" fill="#F4F4F4" x="32.5" y="125.5" width="455" height="201"></rect>
+        <rect id="Background" stroke="#8D8D8D" x="15.5" y="15.8241309" width="489" height="328"></rect>
+        <rect id="Background" stroke="#8D8D8D" fill="#FFFFFF" x="49.5" y="165.5" width="421" height="144"></rect>
+        <rect id="Background" stroke="#8D8D8D" fill="#F4F4F4" x="66.5" y="220.5" width="185" height="72"></rect>
+        <text id="GraphQL-and-Apollo-C" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="22" fill="#161616">
+            <tspan x="82" y="251">GraphQL and Apollo </tspan>
+            <tspan x="82" y="273">Client Service</tspan>
+        </text>
+        <rect id="Background" stroke="#6929C4" fill="#6929C4" x="268.5" y="220.5" width="185" height="72"></rect>
+        <rect id="Background-Copy-5" stroke="#8D8D8D" x="688.5" y="15.5" width="547" height="522"></rect>
+        <text id="Renders-JS-component" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="16" font-weight="500" line-spacing="20" fill="#161616">
+            <tspan x="833.968" y="310">Renders JS</tspan>
+            <tspan x="826.256" y="330">components</tspan>
+        </text>
+        <text id="Node-script-copies-c" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="24" fill="#161616">
+            <tspan x="521" y="194">Node script </tspan>
+            <tspan x="521" y="218">copies compiled </tspan>
+            <tspan x="521" y="242">JavaScript</tspan>
+        </text>
+        <text id="Node.js" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="28" fill="#0F62FE">
+            <tspan x="32" y="101">Node.js</tspan>
+        </text>
+        <text id="Apache-Tomcat" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="28" fill="#0F62FE">
+            <tspan x="705" y="101">Apache Tomcat</tspan>
+        </text>
+        <rect id="Background-Copy-4" stroke="#8D8D8D" fill="#F4F4F4" x="705.5" y="125.5" width="514" height="107"></rect>
+        <text id="Custom-carbon-addons" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="22" fill="#161616">
+            <tspan x="66" y="198">Custom-carbon-addons package</tspan>
+        </text>
+        <rect id="Background" stroke="#8D8D8D" fill="#FFFFFF" x="721.5" y="142.5" width="149" height="72"></rect>
+        <text id="JSPX" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="22" fill="#161616">
+            <tspan x="737" y="184">JSPX</tspan>
+        </text>
+        <rect id="Background-Copy-8" stroke="#8D8D8D" fill="#FFFFFF" x="1053.5" y="142.5" width="149" height="72"></rect>
+        <text id="Service-Layer" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="22" fill="#161616">
+            <tspan x="1069" y="184">Service Layer</tspan>
+        </text>
+        <rect id="Background-Copy-7" stroke="#8D8D8D" fill="#FFFFFF" x="887.5" y="142.5" width="149" height="72"></rect>
+        <rect id="Background-Copy-7" fill="#6929C4" x="896" y="177" width="132" height="29"></rect>
+        <text id="SPM-CDEJ" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="22" fill="#161616">
+            <tspan x="903" y="167">SPM CDEJ</tspan>
+        </text>
+        <text id="Compiled-JS" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="22" fill="#FFFFFF">
+            <tspan x="907" y="197">Compiled JS</tspan>
+        </text>
+        <rect id="Background" stroke="#8D8D8D" fill="#FFFFFF" x="721.5" y="431.5" width="95" height="72"></rect>
+        <text id="UIM" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="22" fill="#161616">
+            <tspan x="737" y="473">UIM</tspan>
+        </text>
+        <rect id="Background-Copy-8" stroke="#8D8D8D" fill="#FFFFFF" x="1053.5" y="431.5" width="149" height="72"></rect>
+        <text id="GraphQL-APIs" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="22" fill="#161616">
+            <tspan x="1069" y="473">GraphQL APIs</tspan>
+        </text>
+        <rect id="Background-Copy-7" stroke="#8D8D8D" fill="#FFFFFF" x="887.5" y="431.5" width="149" height="72"></rect>
+        <text id="React-JavaScript-(JS" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="22" fill="#FFFFFF">
+            <tspan x="285" y="251">React JavaScript (JS)</tspan>
+            <tspan x="285" y="273">SASS (Scss) </tspan>
+        </text>
+        <text id="Source" fill="#161616" fill-rule="nonzero" font-family="IBMPlexSans, IBM Plex Sans" font-size="20" font-weight="normal" line-spacing="28">
+            <tspan x="49" y="151">Source</tspan>
+        </text>
+        <text id="Source" fill="#161616" fill-rule="nonzero" font-family="IBMPlexSans, IBM Plex Sans" font-size="20" font-weight="normal" line-spacing="28">
+            <tspan x="722" y="417">Source</tspan>
+        </text>
+        <text id="Java-Renderer" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="22" fill="#161616">
+            <tspan x="903" y="473">Java Renderer</tspan>
+        </text>
+        <line x1="963.5" y1="340.5" x2="963.5" y2="215.5" id="Line" stroke="#525252" stroke-linecap="square" stroke-linejoin="round"></line>
+        <path id="Line" d="M1061,340 L1061,423 L1065,423 L1060.5,432 L1056,423 L1060,423 L1060,340 L1061,340 Z" fill="#525252" fill-rule="nonzero"></path>
+        <line x1="964.5" y1="340.5" x2="1060.5" y2="340.5" id="Line" stroke="#525252" stroke-linecap="square"></line>
+        <path id="Line" d="M927.5,214 L932,223 L928,223 L928,432 L927,432 L927,223 L923,223 L927.5,214 Z" fill="#525252" fill-rule="nonzero"></path>
+        <path id="Line" d="M879,463 L888,467.5 L879,472 L879,468 L817,468 L817,467 L879,467 L879,463 Z" fill="#525252" fill-rule="nonzero"></path>
+        <line x1="453.5" y1="258.5" x2="906" y2="258.5" id="Line" stroke="#6929C4" stroke-width="3"></line>
+        <path id="Line" d="M904.5,206 L914,225 L906,225 L906,259.5 L903,259.5 L903,225 L895,225 L904.5,206 Z" fill="#6929C4" fill-rule="nonzero"></path>
+        <path id="Line" d="M1082.4977,214.000005 L1087.03912,222.979173 L1083.038,222.997 L1083.99999,431.497696 L1084.0023,431.997691 L1083.00231,432.002299 L1083.00001,431.502304 L1082.038,223.002 L1078.03922,223.020647 L1082.4977,214.000005 Z" fill="#525252" fill-rule="nonzero"></path>
+        <rect id="Rectangle" fill="#FFFFFF" x="1215" y="283" width="14" height="13"></rect>
+        <text id="JS-request-to-GraphQ" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="16" font-weight="500" line-spacing="20" fill="#161616">
+            <tspan x="973" y="310">JS request</tspan>
+            <tspan x="973" y="330">to GraphQL</tspan>
+        </text>
+        <rect id="Background-Copy-6" stroke="#0F62FE" fill="#0F62FE" x="688.5" y="15.5" width="547" height="49"></rect>
+        <text id="Java-and-UIM-IDE-(Ec" font-family="IBMPlexSans, IBM Plex Sans" font-size="24" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+            <tspan x="705" y="51">Java and UIM IDE (Eclipse and Tomcat)</tspan>
+        </text>
+        <rect id="Background" stroke="#0F62FE" fill="#0F62FE" x="15.5" y="15.5" width="489" height="49"></rect>
+        <text id="JavaScript-IDE-(Visu" font-family="IBMPlexSans, IBM Plex Sans" font-size="24" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+            <tspan x="32" y="51">JavaScript IDE (Visual Studio Code, Atom)</tspan>
+        </text>
+        <g id="Data-image_Final-Data-image" transform="translate(1158.000000, 321.000000)" fill-rule="nonzero">
+            <path d="M31,0 C13.8911085,0 0,3.40042918 0,7.55922747 L0,49.4407725 C0,53.6118026 13.8789659,57 31,57 C48.1210341,57 62,53.6118026 62,49.4407725 L62,7.55922747 C62,3.40042918 48.1210341,0 31,0 Z" id="Path" fill="#F4F4F4"></path>
+            <path d="M31,1.22317597 C49.213866,1.22317597 60.7857423,4.97832618 60.7857423,7.55922747 L60.7857423,49.4407725 C60.7857423,52.0216738 49.1895809,55.776824 31,55.776824 C12.8104191,55.776824 1.21425774,52.0216738 1.21425774,49.4407725 L1.21425774,7.55922747 C1.21425774,4.97832618 12.8225617,1.22317597 31,1.22317597 M31,0 C13.8911085,0 0,3.40042918 0,7.55922747 L0,49.4407725 C0,53.6118026 13.8789659,57 31,57 C48.1210341,57 62,53.6118026 62,49.4407725 L62,7.55922747 C62,3.38819742 48.1210341,0 31,0 Z" id="Shape" fill="#8D8D8D"></path>
+            <path d="M30.9939299,23 C15.9765028,23 0,20.1914894 0,15 L1.21401997,15 C1.21401997,18.2097264 13.4392011,21.7841945 30.9939299,21.7841945 C48.5486587,21.7841945 60.78598,18.2097264 60.78598,15 L62,15 C61.9878598,20.1914894 46.0234972,23 30.9939299,23 Z" id="Path" fill="#8D8D8D"></path>
+            <path d="M30.9916453,30 C15.9753252,30 0,27.2036474 0,22 L1.21393049,22 C1.21393049,25.2218845 13.4382105,28.7963526 30.9916453,28.7963526 C48.5450801,28.7963526 60.7814994,25.2218845 60.7814994,22 L61.9954299,22 C62.0015234,22.0809388 62.0015234,22.1622223 61.9954299,22.2431611 C61.4855791,27.2887538 45.7894579,30 30.9916453,30 Z" id="Path" fill="#8D8D8D"></path>
+            <path d="M30.9939299,15 C15.9765028,15 0,12.195122 0,7 L1.21401997,7 C1.21401997,10.2195122 13.4392011,13.7926829 30.9939299,13.7926829 C48.5486587,13.7926829 60.78598,10.2073171 60.78598,7 L62,7 C61.9878598,12.195122 46.0234972,15 30.9939299,15 Z" id="Path" fill="#8D8D8D"></path>
+        </g>
+        <path id="Line" d="M1168,215 L1168,319 L1172,319 L1167.5,328 L1163,319 L1167,319 L1167,215 L1168,215 Z" fill="#525252" fill-rule="nonzero"></path>
+        <rect id="Rectangle" fill="#FFFFFF" x="1174" y="256" width="15" height="34"></rect>
+        <text id="Data-Access-Service" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="18" fill="#161616">
+            <tspan x="1175" y="263">Data</tspan>
+            <tspan x="1175" y="281">Access </tspan>
+            <tspan x="1175" y="299">Service</tspan>
+        </text>
+        <text id="Mapped" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="18" fill="#161616">
+            <tspan x="826" y="460">Mapped</tspan>
+        </text>
+        <text id="Calls-server-facade" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="16" font-weight="500" line-spacing="20" fill="#161616">
+            <tspan x="1091" y="290">Calls</tspan>
+            <tspan x="1091" y="310">server</tspan>
+            <tspan x="1091" y="330">facade</tspan>
+        </text>
+    </g>
+</svg>
