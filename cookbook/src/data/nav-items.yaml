@@ -19,23 +19,21 @@
   pages:
     - title: Creating a custom Carbon add-on component
       path: /new-custom-component
-    - title: Adding Carbon components
-      path: /carbon-component
 - title: Integrating with Java Renderers
   pages:
-    - title: Integrating with the Java Renderer on a UIM page
+    - title: Rendering components on a UIM page
       path: /spm-uim-integration
 - title: Creating a GraphQL query
   pages:
     - title: Implement a GraphQL query
       path: /graphql-query
-- title: Integrating components with UIM
+# - title: Integrating components with UIM
+#  pages:
+#    - title: Integrating components with the UIM page
+#      path: /integrate-addon-in-uim
+- title: Building and deploying components
   pages:
-    - title: Integrating components with the UIM page
-      path: /integrate-addon-in-uim
-- title: Deploying components
-  pages:
-    - title: Deploying components
+    - title: Building and deploying components
       path: /deployment
   hasDivider: true
 - title: Feedback

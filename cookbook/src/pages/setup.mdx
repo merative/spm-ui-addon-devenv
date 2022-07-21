@@ -5,16 +5,16 @@ description: Setting up your development environment
 
 1. Download and install Node.js from [https://nodejs.org](https://nodejs.org). The installation includes the npm (Node package manager), which you can use to install your Node packages.
 2. Download and install your IDE. Microsoft Visual Studio Code [https://code.visualstudio.com/download](https://code.visualstudio.com/download) is the recommended IDE.  Install any needed extensions, such as ESLint or Prettier.
-3. Download the `main` branch of the SPM UI Addon Development Environment code from [https://github.com/IBM/spm-ui-addon-devenv](https://github.com/IBM/spm-ui-addon-devenv).
+3. Download the `main` branch of the SPM UI Addon Development Environment code from [https://github.com/merative/spm-ui-addon-devenv](https://github.com/merative/spm-ui-addon-devenv).
 
     You can choose one of the following options:
     1. Download as Zip. Select the Code drop-down menu and select the **Download Zip** option.
     2. Open with GitHub Desktop.
     3. Clone the repository.
-    If you have Git set up, you can clone the repository by opening a command prompt and running the command:
+    If you have Git set up, you can clone the repository by opening a command prompt and running the command:
 
     ```
-    git clone https://github.com/IBM/spm-ui-addon-devenv.git
+    git clone https://github.com/merative/spm-ui-addon-devenv.git
     ```
 
 4. Install the SPM UI Addon Development Environment on your computer by using npm. To install the code, change to the `spm-ui-addon-devenv` directory and run the command:
@@ -72,7 +72,7 @@ Where `server` is the domain name or IP address of the server and `port` is the 
 ## Security Configuration
 
 If you have enabled Cross-Site Request Forgery (CSRF) protection in Social Program Management, you must set the following environment variables for production (.env).
-For more information about configuring CSRF in a React environment, see [Enabling Cross-Site Request Forgery (CSRF) protection for Universal Access](https://www.ibm.com/docs/en/spm/8.0.1?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access).
+For more information about configuring CSRF in a React environment, see [Enabling Cross-Site Request Forgery (CSRF) protection for Universal Access](https://www.ibm.com/docs/en/spm/8.0.2?topic=sauara-enabling-cross-site-request-forgery-csrf-protection-universal-access).
 
 ### CSRF_TOKEN_ENPOINT
 

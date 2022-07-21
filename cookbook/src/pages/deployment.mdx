@@ -1,15 +1,29 @@
 ---
-title: Deploying components
-description: Deploying components
+title: Building and deploying components
+description: Building and deploying components
 ---
 
-When development is complete on your custom Carbon component, redeploy the component artefacts and place them under source control
+ During development, first build your component, then run a development build to pick up any changes you make during development.
+ 
+ When development is complete on your custom Carbon component, redeploy the component artifacts and place them under source control.
 
-1. Run the following command to to copy the generated compiled resources to your web client custom component.
+1. Build your component.
+
+   ``` 
+   npm run build
+   ```
+
+12. Run a development build to pick up any changes you make to the component.
+
+   ```
+   npm run dev
+   ```
+
+3. To redeploy the component artifacts, run the following command to copy the generated compiled resources to your web client custom component.
 
    ```
    npm run deploy
    ```
 
-2. Ensure that you place the component artefacts under source control.
-3. Deploy the application EAR file as usual.
+4. Ensure that you place the component artifacts under source control.
+5. Deploy the application EAR file as usual.

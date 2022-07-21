@@ -1,26 +1,26 @@
 ---
-title: Integrate with the Java Renderer on a UIM page
-description: Integrate with the Java Renderer on a UIM page
+title: Rendering components on a UIM page
+description: Rendering carbon components on a UIM page
 ---
 
-When your component is developed and adequately tested, it can be integrated with a Java Renderer.
+When your component is developed and adequately tested, you can integrate it with Social Program Management. The supported method of rendering Carbon components on a UIM page is by using a Java renderer.
 
-The only supported integration point of a Carbon component onto a UIM page is by using a Java renderer.
-This procedure assumes that a custom UIM page with a configured Java renderer exists, which is available to host a Carbon component so that it can be integrated and displayed to the user.
-For more information about configuring renderers, see [https://www.ibm.com/docs/en/spm/8.0.1?topic=widgets-configuring-renderers](https://www.ibm.com/docs/en/spm/8.0.1?topic=widgets-configuring-renderers).
+A custom UIM page with a configured Java renderer is needed to host a Carbon component so that it can be integrated and displayed to the user.
 
 Complete two basic steps to integrate the component into a Java renderer:
 
-1. In the renderer, create a HTML element to host the output from the Carbon component. This HTML element must have the `spm-custom-component` CSS class name. For example,
+1. Create a custom UIM page.
+2. Configure a Java renderer. For more information about configuring renderers, see [https://www.ibm.com/docs/en/spm/8.0.2?topic=widgets-configuring-renderers](https://www.ibm.com/docs/en/spm/8.0.2?topic=widgets-configuring-renderers).
+3. In the renderer, create a HTML element to host the output from the Carbon component. This HTML element must have the `spm-custom-component` CSS class name. For example,
 
     ```
     <div id="<someId>" class="spm-custom-component"> 
     ```
 
-2. Make a call to the `includeCarbonComponent()` function in the Java renderer framework to enable the integration of the component. For more information, see the the Java documentation.
+4. Make a call to the `includeCarbonComponent()` function in the Java renderer framework to enable the integration of the component. For more information, see the the Java documentation.
 
-An example of integrating the sample PersonFolio component into a domain Java renderer on a UIM page is shown.
-Note that "sampleRenderers" is used here but for a real custom example it would be "renderers" instead.
+An example of integrating the sample Person Folio component into a domain Java renderer on a UIM page is shown.
+Note that `"sampleRenderers"` is used, but for a real custom example, you would use "renderers" instead.
 
 ```
 // labels to be used within the Person Folio compoonent. Hardcoding to English here as this is for demo and no concerned with globalaization
