@@ -7,34 +7,34 @@
       path: /prerequisites
     - title: Set up your development environment
       path: /setup
+- title: Development process
+  pages:
     - title: Development environment
       path: /development-environment
-- title: Development Process
-  pages:
-    - title: Development Process
+    - title: Development process
       path: /development-process
-    - title: Command reference
-      path: /command-reference
-- title: Creating a custom component
+  hasDivider: true
+- title: Creating custom pages
   pages:
     - title: Creating a custom Carbon add-on component
       path: /new-custom-component
-- title:  Rendering components on a UIM page
-  pages:
     - title: Rendering components on a UIM page
       path: /spm-uim-integration
-- title: Creating a GraphQL query
-  pages:
-    - title: Implement a GraphQL query
+    - title: Creating a GraphQL query
       path: /graphql-query
 # - title: Integrating components with UIM
 #  pages:
 #    - title: Integrating components with the UIM page
 #      path: /integrate-addon-in-uim
-- title: Building and deploying components
-  pages:
     - title: Building and deploying components
       path: /deployment
+  hasDivider: true
+- title: Reference
+  pages:
+    - title: Environment variables
+      path: /environment-variables
+    - title: Command reference
+      path: /command-reference
   hasDivider: true
 - title: Feedback
   pages:
