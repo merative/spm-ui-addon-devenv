@@ -35,6 +35,8 @@
       path: /environment-variables
     - title: Command reference
       path: /command-reference
+    - title: Examples reference
+      path: /carbon-examples
   hasDivider: true
 - title: Feedback
   pages:
