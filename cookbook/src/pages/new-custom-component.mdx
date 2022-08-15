@@ -16,14 +16,17 @@ Complete the following steps to create a Carbon add-on component called `compone
 
     - In the `custom-carbon-addon/scss` directory, create an SCSS file for the component. For example, `componentX.scss`.
     - Import `ComponentX.scss` into the `index.scss` file. 
-4. Test the `componentX` component in Storybook. You can test components in isolation before you integrate them into Social Program Management.
-    - In the `stories` directory of the `custom-carbon-addon` package, create a directory for the component. For example, `custom-carbon-addon/stories/componentX`. Run `npm run storybook/` to test components.
 
-5. Implement a query provider in Apollo Client.
+4. Implement a query provider in Apollo Client.
     An Apollo Client query provider enables the cached data from GraphQL to be integrated with a React component.
     Complete the following steps:
-    - Create a directory in the `custom-carbon-addon/apollo-client-hooks/hooks` directory. For example, `componentX`.
+    - Create a directory in the `custom-carbon-addon/apollo-client-hooks/hooks` directory. For example, `componentX`. There are several helper
+      React components available from the carbon-addons-devenv package to help with this task; ApolloClientDataProvider, ApolloClientQueryProvider, and
+      ApolloClientHookTemplate.
     - Create a query that accesses data from the back-end by importing `gql` and `useQuery` from `@apollo/client`. If you already have a GraphQL query that serves a number of components, you can use that query.
+
+5. Test the `componentX` component in Storybook. You can test components in isolation before you integrate them into Social Program Management.
+    - In the `stories` directory of the `custom-carbon-addon` package, create a directory for the component. For example, `custom-carbon-addon/stories/componentX`. Run `npm run storybook/` to test components.
 
 6. Use the `Renderer.create()` helper function to implement a JavaScript Renderer function to integrate the component into a Java Renderer on the UIM page. You can place your renderer functions in the `custom-carbon-addon/renderers` directory.
 
