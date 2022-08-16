@@ -20,6 +20,14 @@ It copies the generated artefects from `npm run build` to the location where the
 Any JavaScript or SCSS files that are updated are automatically generated when integrated with Social Program Management.
 
 ```
+npm run dev-with-mockgraphql
+```
+
+This command tests the integration with Social Program Management as in the case of the `npm run dev` command but additionally it
+also prefers the data from the mock GraphQL service rather than from the real Rest Service when running in SPM. This command requires
+the same environmental setup as the npm run dev command.
+
+```
 npm run test
 ```
 

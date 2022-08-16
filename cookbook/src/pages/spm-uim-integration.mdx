@@ -10,36 +10,48 @@ A custom UIM page with a configured Java renderer is needed to host a Carbon com
 Complete two basic steps to integrate the component into a Java renderer:
 
 1. Create a custom UIM page.
-2. Configure a Java renderer. For more information about configuring renderers, see [https://www.ibm.com/docs/en/spm/8.0.2?topic=widgets-configuring-renderers](https://www.ibm.com/docs/en/spm/8.0.2?topic=widgets-configuring-renderers).
+2. Configure a Java renderer by doing the following:
+  - Create a new domain definition in your custom component in the EJBServer directory. For more information about configuring domain definitions see [https://www.ibm.com/docs/en/spm/8.0.2?topic=renderers-configuring-domain](https://www.ibm.com/docs/en/spm/8.0.2?topic=renderers-configuring-domain).
+  - Update the DomainsConfig.xml in your custom component in the webclient directory to map the new domain definition to a new Java renderer. If this file does not already
+    exist in your custom component you will need to create one. The following example snippet assumes you have created a new domain definition called
+    `CUSTOM_CARBON_COMPONENT_X`.
+    ```
+    <?xml version="1.0" encoding="ISO-8859-1"?>
+    <dc:domains xmlns:dc="http://www.curamsoftware.com/curam/util/common/domain-config">
+      <dc:domain name="CUSTOM_CARBON_COMPONENT_X">
+       <dc:plug-in name="view-renderer"
+                class="custom.CarbonComponentXViewRenderer"/>
+      </dc:domain>
+    </dc:domains>
+    ```
+  - Create the Java renderer. In this example you would create the Java Rendrerer CarbonComponentXViewRenderer.java
+    in the sub directory JavaSource/custom of the custom component of the webclient directory. This renderer should extend the
+    AbstractViewRenderer (curam.util.client.domain.render.view.AbstractViewRenderer) class.
+
 3. In the renderer, create a HTML element to host the output from the Carbon component. This HTML element must have the `spm-custom-component` CSS class name. For example,
 
     ```
     <div id="<someId>" class="spm-custom-component"> 
     ```
 
-4. Make a call to the `includeCarbonComponent()` function in the Java renderer framework to enable the integration of the component. For more information, see the the Java documentation.
+4. Make a call to the `includeCarbonComponent()` function in the this new renderer to enable the integration of the component. For more information, see the the Java documentation.
 
-An example of integrating the sample Person Folio component into a domain Java renderer on a UIM page is shown.
-Note that `"sampleRenderers"` is used, but for a real custom example, you would use "renderers" instead.
+Assuming we have a JavaScript function already as ComponentXRenderer, then the following code would be called from the render() method
+of the CarbonComponentXViewRenderer file.
 
 ```
-// labels to be used within the Person Folio compoonent. Hardcoding to English here as this is for demo and no concerned with globalaization
-final String labels =
-      "{firstnameLabel: 'First name', surnameLabel: 'Surname', ageLabel: 'Age'}";
+// labels to be used to pass translated labels into the carbon component.
+final String labels = "{}";
 // the id of the HTML element on the renderer that will host the HTML content from the Carbon component
-final String hostElementID = "PersonFolio";
-// extra configuration here needed. The logoId needed as a varibable to be passed into the query to retrieve a //logo
-final Map<String, String> extraConfig = new HashMap<String, String>();
-    map.put("logoId", String.valueOf(logoID));
+final String carbonWrapperDivID = "ComponentX";
+// map can be used for extra configuration that may be needed, such as passing argument to GraphQL queries
+final Map<String, String> map = new HashMap<String, String>();
 ```
 
 ```
-// making the call to integrate the PersonFolio component into the renderer using the 
-// PersonFolioRenderer helper function
-includeCarbonComponent(context, hostElementID, labels, "{}",
-      "window.spmcustom.sampleRenderers.PersonFolio.PersonFolioRenderer",
+// making the call to integrate the ComponentX component into the renderer via
+// the ComponentXRenderer JavaScript renderer function
+includeCarbonComponent(context, carbonWrapperDivID, labels, "{}",
+      "window.spmcustom.renderers.ComponentX.ComponentXRenderer",
       map);
 ```
-
-In this example, labels were hard-coded as globalization is not a concern.
-However, for properly translated labels, you must put them into a `*.properties` file and look them up using the `context.getDataAccessor()` function.

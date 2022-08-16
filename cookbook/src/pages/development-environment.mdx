@@ -22,7 +22,7 @@ The `carbon-addon-devenv` package contains the development environment to work w
 ```
 carbon-addon-devenv
 └───sample_renderers
-└───scr
+└───src
 └───stories
     PersonFolio.stories.js
 ```
@@ -48,4 +48,23 @@ custom-carbon-addons
     package.json_sample
 
 ```
+
+# graphql-mocks
+
+The `graphql-mocks` package is where you can place data for mock graphql queries. This package essentially provides a 
+lighweight mock GraphQL service that simulates the real GraphQL service from SPM.
+
+```
+graphql-mocks
+└───resolvers
+│   ─── data
+│   index.js
+└───typeDefs
+└───server.js
+    package.json
+
+```
+The `typeDefs` directory contains the GraphQL Object Type definitions while the 'resolvers' directory contains the resolver functions (also known as
+data fetcher functions in GraphQl paralance) that resolve to data values. The `data` directory is a subset of the resolvers directory and contains the
+raw data for the mock GraphQl service.
 
