@@ -3,26 +3,24 @@ title: Examples reference
 description: Examples of Carbon components
 ---
 
-### What is provided in the example Carbon components
+Some example Carbon component are provided in the `carbon-addons-devenv` package, which you can use as a reference or aid when starting to develop new Carbon components.
 
-There are some Carbon component examples already provided in the carbon-addons-devenv package which can be used
-as a reference or aid when starting development on new Carbon components. The examples provided have all that is required
-to be fully implemented and integrated in a Java Renderer on custom page:
-
- - The React component
- - Sass
- - Query provider in Apollo Client
- - JavaScript wrapper function
-
- There is also unit tests, a storybook wrapper, and JavaScript documentation example.
-
-### The list of example components provided
- The examples provided are:
   - PersonFolio
   - Logo
 
-### How can these example components be integrated in a Java renderer
-The following code snippets - which don't include the imports - demonstrate how these Carbon component examples can be integrated into a Java Renderer (respectively):
+These examples contain all that is needed to be fully implemented and integrated in a Java Renderer on a custom page:
+
+ - The React component
+ - Sass
+ - A query provider in Apollo Client
+ - A JavaScript wrapper function
+
+ Unit tests, a storybook wrapper, and a JavaScript documentation example are also provided.
+
+### Integrating components into a Java renderer
+The following code snippets, which don't include the imports, demonstrate how these Carbon component examples can be integrated into a Java Renderer (respectively).
+
+Integrating the PersonFolio example component:
 
 ```
 public class PersonFolioSampleRenderer extends AbstractViewRenderer {
@@ -58,6 +56,8 @@ public class PersonFolioSampleRenderer extends AbstractViewRenderer {
   }
 }
 ```
+
+Integrating the Logo example component:
 
 ```
 public class LogoSampleRenderer extends AbstractViewRenderer {
