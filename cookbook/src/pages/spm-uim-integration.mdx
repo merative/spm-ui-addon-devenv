@@ -11,8 +11,8 @@ Complete two basic steps to integrate the component into a Java renderer:
 
 1. Create a custom UIM page.
 2. Configure a Java renderer by doing the following:
-  - Create a new domain definition in your custom component in the EJBServer directory. For more information about configuring domain definitions see [https://www.ibm.com/docs/en/spm/8.0.2?topic=renderers-configuring-domain](https://www.ibm.com/docs/en/spm/8.0.2?topic=renderers-configuring-domain).
-  - Update the DomainsConfig.xml in your custom component in the webclient directory to map the new domain definition to a new Java renderer. If this file does not already
+    - Create a new domain definition in your custom component in the EJBServer directory. For more information about configuring domain definitions see [https://www.ibm.com/docs/en/spm/8.0.2?topic=renderers-configuring-domain](https://www.ibm.com/docs/en/spm/8.0.2?topic=renderers-configuring-domain). 
+    - Update the DomainsConfig.xml in your custom component in the webclient directory to map the new domain definition to a new Java renderer. If this file does not already
     exist in your custom component you will need to create one. The following example snippet assumes you have created a new domain definition called
     `CUSTOM_CARBON_COMPONENT_X`.
     ```
@@ -24,7 +24,7 @@ Complete two basic steps to integrate the component into a Java renderer:
       </dc:domain>
     </dc:domains>
     ```
-  - Create the Java renderer. In this example you would create the Java Rendrerer CarbonComponentXViewRenderer.java
+    - Create the Java renderer. In this example you would create the Java Rendrerer CarbonComponentXViewRenderer.java
     in the sub directory JavaSource/custom of the custom component of the webclient directory. This renderer should extend the
     AbstractViewRenderer (curam.util.client.domain.render.view.AbstractViewRenderer) class.
 
@@ -34,24 +34,22 @@ Complete two basic steps to integrate the component into a Java renderer:
     <div id="<someId>" class="spm-custom-component"> 
     ```
 
-4. Make a call to the `includeCarbonComponent()` function in the this new renderer to enable the integration of the component. For more information, see the the Java documentation.
-
-Assuming we have a JavaScript function already as ComponentXRenderer, then the following code would be called from the render() method
+4. Make a call to the `includeCarbonComponent()` function in the this new renderer to enable the integration of the component. For more information, see the the Java documentation. Assuming we have a JavaScript function already as ComponentXRenderer, then the following code would be called from the render() method
 of the CarbonComponentXViewRenderer file.
 
-```
-// labels to be used to pass translated labels into the carbon component.
-final String labels = "{}";
-// the id of the HTML element on the renderer that will host the HTML content from the Carbon component
-final String carbonWrapperDivID = "ComponentX";
-// map can be used for extra configuration that may be needed, such as passing argument to GraphQL queries
-final Map<String, String> map = new HashMap<String, String>();
-```
+   ```
+  // labels to be used to pass translated labels into the carbon component.
+  final String labels = "{}";
+  // the id of the HTML element on the renderer that will host the HTML content from the Carbon component
+  final String carbonWrapperDivID = "ComponentX";
+  // map can be used for extra configuration that may be needed, such as passing argument to GraphQL queries
+  final Map<String, String> map = new HashMap<String, String>();
+  ```
 
-```
-// making the call to integrate the ComponentX component into the renderer via
-// the ComponentXRenderer JavaScript renderer function
-includeCarbonComponent(context, carbonWrapperDivID, labels, "{}",
+  ```
+  // making the call to integrate the ComponentX component into the renderer via
+  // the ComponentXRenderer JavaScript renderer function
+  includeCarbonComponent(context, carbonWrapperDivID, labels, "{}",
       "window.spmcustom.renderers.ComponentX.ComponentXRenderer",
       map);
-```
+  ```
