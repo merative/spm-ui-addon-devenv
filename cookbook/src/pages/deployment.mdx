@@ -10,19 +10,15 @@ Build your components during development. If you run a development build, your c
    ``` 
    npm run build
    ```
-
-2. Run a development build to pick up any changes you make to the component.
+2. Run a development build to integrate the component with the web client application. Any changes you make while the development build is running are reflected in the application.
 
    ```
    npm run dev
    ```
-When development is complete on your custom Carbon component, redeploy the component artifacts, place them under source control, and deploy the appication EAR file.
-
-1. To redeploy the component artifacts, run the following command to copy the generated compiled resources to your web client custom component.
+1. When development is complete on your custom Carbon component, redeploy the component artifacts, place them under source control, and deploy the appication EAR file. To redeploy the component artifacts, run the following command to copy the generated compiled resources to your web client custom component.
 
    ```
    npm run deploy
    ```
-
 2. Ensure that you place the component artifacts under source control.
 3. Deploy the application EAR file as usual.

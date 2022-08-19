@@ -1,26 +1,26 @@
 ---
-title: Examples reference
-description: Examples of Carbon components
+title: Samples reference
+description: Samples reference
 ---
 
-Some example Carbon component are provided in the `carbon-addons-devenv` package, which you can use as a reference or aid when starting to develop new Carbon components.
+Some sample Carbon component are provided in the `carbon-addons-devenv` package, which you can use as a reference or aid when starting to develop new Carbon components.
 
   - PersonFolio
   - Logo
 
-These examples contain all that is needed to be fully implemented and integrated in a Java Renderer on a custom page:
+These samples contain all that is needed for Carbon components. They are ready to be fully implemented and integrated into a Java Renderer on a custom UIM page:
 
  - The React component
  - Sass
  - A query provider in Apollo Client
- - A JavaScript wrapper function
+ - A JavaScript renderer wrapper function
 
  Unit tests, a storybook wrapper, and a JavaScript documentation example are also provided.
 
 ### Integrating components into a Java renderer
-The following code snippets, which don't include the imports, demonstrate how these Carbon component examples can be integrated into a Java Renderer (respectively).
+The following code snippets, which don't include the imports, demonstrate how the PersonFolio and Logo sample components can be integrated into a Java Renderer. Configuring a Java render is described in [Rendering components on a UIM page](spm-uim-integration)
 
-Integrating the PersonFolio example component:
+An example of integrating the sample PersonFolio component into a domain Java renderer on a UIM page is shown.
 
 ```
 public class PersonFolioSampleRenderer extends AbstractViewRenderer {
@@ -57,7 +57,7 @@ public class PersonFolioSampleRenderer extends AbstractViewRenderer {
 }
 ```
 
-Integrating the Logo example component:
+An example of integrating the sample Logo component into a domain Java renderer on a UIM page is shown.
 
 ```
 public class LogoSampleRenderer extends AbstractViewRenderer {
