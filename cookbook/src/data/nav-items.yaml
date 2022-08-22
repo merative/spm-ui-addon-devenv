@@ -14,8 +14,8 @@
   pages:
     - title: Development process
       path: /development-process
-    - title: Building and deploying components
-      path: /deployment
+    - title: Building during development
+      path: /build
 - title: Creating custom pages
   pages:
     - title: Creating a custom Carbon add-on component
@@ -24,6 +24,8 @@
       path: /spm-uim-integration
     - title: Implementing a GraphQL query
       path: /graphql-query
+    - title: Deploying components
+      path: /deployment
 # - title: Integrating components with UIM
 #  pages:
 #    - title: Integrating components with the UIM page
