@@ -7,10 +7,10 @@ A GraphQL query provides the data access between the service layer with the busi
 
 GraphQL queries can be large and used to serve data for many components, or they can be more granular where they are used for a specific component, such as `componentX`.
 
-For more information about how to implement a GraphQL query, see [https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql](https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql).
+For more information about how to implement a GraphQL query, see [https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql](https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql).
 
 ### Mock GraphQL service
-While the REST Service provides the real data from the GraphQL queries in SPM, you can use a lightweight mock GraphQL service to enable rapid development almost exclusively on this front-end environment. For example, if you want to develop your Carbon components before the real GraphQL queries are available in Social Program Management, you can use the mock GraphQL service with Carbon components in Storybook or when testing the integration with SPM, or both.
+While the REST Service provides the real data from the GraphQL queries in SPM, you can use a lightweight mock GraphQL service to enable rapid development almost exclusively in the front-end environment. For example, if you want to develop your Carbon components before the real GraphQL queries are available in Social Program Management, you can use the mock GraphQL service with Carbon components in Storybook or when testing the integration with SPM, or both.
 
 To add mock data to the mock GraphQL service, complete the following steps. Refer to the provided examples in the directories for guidance. 
  - In the `typeDefs` directory, add a new GraphQL query type definition and update the `index.js` file in that directory to export it.

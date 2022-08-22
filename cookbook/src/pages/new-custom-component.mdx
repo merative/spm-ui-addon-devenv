@@ -3,8 +3,6 @@ title: Creating a custom Carbon add-on component
 description: Creating a custom Carbon add-on component
 ---
 
-This procedure assumes that you are already familiar with the design guidance from Carbon Design System and IBM Social Program Management.
-
 Complete the following steps to create a Carbon add-on component called `componentX` and integrate it onto a custom UIM page. The steps do not necessarily need to be done in this order, but this is currently the recommended order.
 
 1. Implement a custom React JavaScript component by completing the following steps:
@@ -28,5 +26,5 @@ Complete the following steps to create a Carbon add-on component called `compone
 5. Test the `componentX` component in Storybook. You can test components in isolation before you integrate them into Social Program Management.
     - In the `stories` directory of the `custom-carbon-addon` package, create a directory for the component. For example, `custom-carbon-addon/stories/componentX`. Run `npm run storybook/` to test components.
 
-6. Use the `Renderer.create()` helper function to implement a JavaScript Renderer function to integrate the component into a Java Renderer on the UIM page. You can place your renderer functions in the `custom-carbon-addon/renderers` directory.
+6. Use the `Renderer.create()` helper function to implement a JavaScript Renderer function to integrate the component into a Java Renderer on the UIM page. You can place your renderer functions in the `custom-carbon-addon/renderers` directory. For example, create the`CarbonComponentXViewRenderer` function.
 
