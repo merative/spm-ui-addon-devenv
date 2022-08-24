@@ -5,38 +5,39 @@ description: Development environment
 
 Among other files, the repository contains the following significant items. Depending on your operating system, you might need to show hidden files to see them all.
 
-```
-SPM-UI-ADDON-DEV
-└───.storybook          The stories for the sample components.
-└───cookbook            The developer documentation. 
-└───packages            The repository provides two packages.
-    └───carbon-addon-devenv
-    └───custom-carbon-addons
-    .env                The React environmental variable configuration file.
-```
+  ```
+  SPM-UI-ADDON-DEV
+  └───.storybook          The stories for the sample components. Add stories for your components here.
+  └───cookbook            The developer documentation source files.
+  └───packages            The repository provides these packages.
+      └───carbon-addon-devenv
+      └───custom-carbon-addons
+      └───graphql-mocks
+      .env                A starter React environment variable configuration file.
+  ```
 
-# carbon-addon-devenv
+# The `carbon-addon-devenv` package
 
 The `carbon-addon-devenv` package contains the development environment to work with Carbon components and to develop custom Carbon add-on components. It contains two sample add-on components to help you to get started, which need a Java renderer and a GraphQL query to integrate them onto a UIM page. 
 
-```
+  ```
 carbon-addon-devenv
 └───sample_renderers
 └───src
 └───stories
     PersonFolio.stories.js
-```
+  ```
 
 An `npm` file is provided for the following open source packages:
 
-- Carbon Design System, which is the IBM  open source design system. It consists of working code, design tools and resources, and human interface guidelines. For more information, see the [Carbon v10 website](https://v10.carbondesignsystem.com/).
+- Carbon Design System, which is an IBM open source design system. It consists of working code, design tools and resources, and human interface guidelines. For more information, see the [Carbon v10 website](https://v10.carbondesignsystem.com/).
 - React, which is an open source JavaScript library that enables developers to build human-centered user interfaces.
 - GraphQL, which is an open source data query language that enables developers to query and configure complex data queries that aggregate information from different database entities.
 - Apollo Client, which is an open source library that enables GraphQL developers to manage information state. Apollo Client provides the infrastructure for caching data.
 - Jest is a JavaScript testing framework that is designed to ensure the correctness of any JavaScript code base.
 - Enzyme is a JavaScript testing utility for React that makes it easier to test your React component's output.
 
-# custom-carbon-addons
+# The `custom-carbon-addons` package
 
 The `custom-carbon-addons` package is where you must place all of your custom files, to ensure that upgrades do not affect your custom content. 
 
@@ -49,22 +50,21 @@ custom-carbon-addons
 
 ```
 
-# graphql-mocks
+# The `graphql-mocks` package
 
 The `graphql-mocks` package is where you can place data for mock graphql queries. This package essentially provides a 
-lighweight mock GraphQL service that simulates the real GraphQL service from SPM.
+lightweight mock GraphQL service that simulates the real GraphQL service from SPM.
 
-```
+  ```
 graphql-mocks
 └───resolvers
-│   ─── data
+│   └─── data
 │   index.js
 └───typeDefs
 └───server.js
     package.json
 
-```
-The `typeDefs` directory contains the GraphQL Object Type definitions while the 'resolvers' directory contains the resolver functions (also known as
-data fetcher functions in GraphQl paralance) that resolve to data values. The `data` directory is a subset of the resolvers directory and contains the
-raw data for the mock GraphQl service.
-
+  ```
+The `resolvers` directory contains the resolver functions, also known as
+data fetcher functions in GraphQl terminology, that resolve to data values. The `data` subdirectory in the `resolvers` directory contains the
+raw data for the mock GraphQl service. The `typeDefs` directory contains the GraphQL Object Type definitions.

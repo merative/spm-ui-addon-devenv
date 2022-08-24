@@ -1,33 +1,35 @@
 - title: Overview
   pages:
      - path: /overview
-- title: Setting up
+- title: Setting up for development
   pages:
     - title: Prerequisites and supported software
       path: /prerequisites
     - title: Set up your development environment
       path: /setup
-- title: Development process
-  pages:
     - title: Development environment
       path: /development-environment
+  hasDivider: true
+- title: Development
+  pages:
     - title: Development process
       path: /development-process
-  hasDivider: true
+    - title: Building during development
+      path: /build
 - title: Creating custom pages
   pages:
     - title: Creating a custom Carbon add-on component
       path: /new-custom-component
     - title: Rendering components on a UIM page
       path: /spm-uim-integration
-    - title: Creating a GraphQL query
+    - title: Implementing a GraphQL query
       path: /graphql-query
+    - title: Deploying components
+      path: /deployment
 # - title: Integrating components with UIM
 #  pages:
 #    - title: Integrating components with the UIM page
 #      path: /integrate-addon-in-uim
-    - title: Building and deploying components
-      path: /deployment
   hasDivider: true
 - title: Reference
   pages:
@@ -35,8 +37,8 @@
       path: /environment-variables
     - title: Command reference
       path: /command-reference
-    - title: Examples reference
-      path: /carbon-examples
+    - title: Samples reference
+      path: /samples-reference
   hasDivider: true
 - title: Feedback
   pages:
