@@ -3,28 +3,40 @@ title: Creating a custom Carbon add-on component
 description: Creating a custom Carbon add-on component
 ---
 
-Complete the following steps to create a Carbon add-on component called `componentX` and integrate it onto a custom UIM page. The steps do not necessarily need to be done in this order, but this is currently the recommended order.
+When creating a custom Carbon component there is a series of steps you will need to undertake before it can be integrated into a custom UIM page. To create a Carbon add-on component called `componentX`, the following steps would need to be done. 
+They do not necessarily need to be done in this order, but this is currently the recommended order.
 
-1. Implement a custom React JavaScript component by completing the following steps:
-    - In the `custom-carbon-addons` package, create a directory for the component in the `react` directory. For example, `custom-carbon-addons/react/addons/componentX`.
-    - Create the JavaScript files for `componentX` in the directory. To create add-on components that are based on Carbon components, import the Carbon components from the `carbon-components` node module.
-    - You can do your unit tests in parallel to test the generated HTML output from the component.
+Overview of steps to create a Carbon component
+1. [x] [Implement a custom React JavaScript component](#(1)-implement-a-custom-react-javascript-component-by-completing-the-following-steps)
+1. [x] [Implement the look and feel of the component with Sass](#(2)-implement-the-look-and-feel-of-the-component-with-sass)
+1. [x] [Implement a query provider in Apollo Client](#(3)-implement-a-query-provider-in-apollo-client)
+1. [x] [Test the Carbon component in Storybook](#(4)-test-the-carbon-component-in-storybook)
+1. [x] [Create a JavaScript renderer function](#(5)-create-a-javascript-renderer-function)
 
-3. Implement the look and feel of the component with Sass. Ensure that you follow the Carbon and Social Program Management design guidance.
 
-    - In the `custom-carbon-addon/scss` directory, create an SCSS file for the component. For example, `componentX.scss`.
-    - Import `ComponentX.scss` into the `index.scss` file. 
+### (1) Implement a custom React JavaScript component by completing the following steps
+  - In the 'custom-carbon-addons' package, create a directory for the component in the `react` directory. For example, `custom-carbon-addons/react/addons/componentX`.
+  - Create the JavaScript files for `componentX` in the directory. To create add-on components that are based on Carbon components, import the Carbon components from the `carbon-components` node module.
+  - You can do your unit tests in parallel to test the generated HTML output from the component.
 
-4. Implement a query provider in Apollo Client.
-    An Apollo Client query provider enables the cached data from GraphQL to be integrated with a React component.
+### (2) Implement the look and feel of the component with Sass 
+Ensure that you follow the Carbon and Social Program Management design guidance.
+
+  - In the `custom-carbon-addon/scss` directory, create an SCSS file for the component. For example, `componentX.scss`.
+  - Import 'ComponentX.scss' into the `index.scss` file.
+
+### (3) Implement a query provider in Apollo Client 
+ An Apollo Client query provider enables the cached data from GraphQL to be integrated with a React component.
     Complete the following steps:
-    - Create a directory in the `custom-carbon-addon/apollo-client-hooks/hooks` directory. For example, `componentX`. There are several helper
+
+  - Create a directory in the `custom-carbon-addon/apollo-client-hooks/hooks` directory. For example, `componentX`. There are several helper
       React components available from the `carbon-addons-devenv` package to help with this task: ApolloClientDataProvider, ApolloClientQueryProvider, and
       ApolloClientHookTemplate.
-    - Create a query that accesses data from the back-end by importing `gql` and `useQuery` from `@apollo/client`. If you already have a GraphQL query that serves a number of components, you can use that query.
+  - Create a query that accesses data from the back-end by importing `gql` and `useQuery` from `@apollo/client`. If you already have a GraphQL query that serves a number of components, you can use that query.
 
-5. Test the `componentX` component in Storybook. You can test components in isolation before you integrate them into Social Program Management.
-    - In the `stories` directory of the `custom-carbon-addon` package, create a directory for the component. For example, `custom-carbon-addon/stories/componentX`. Run `npm run storybook/` to test components.
+### (4) Test the Carbon component in Storybook 
+To test `componentX` in storybook, you can test components in isolation before you integrate them into Social Program Management.
+  - In the `stories` directory of the `custom-carbon-addon` package, create a directory for the component. For example, `custom-carbon-addon/stories/componentX`. Run `npm run storybook/` to test components.
 
-6. Use the `Renderer.create()` helper function to implement a JavaScript Renderer function to integrate the component into a Java Renderer on the UIM page. You can place your renderer functions in the `custom-carbon-addon/renderers` directory. For example, create the`CarbonComponentXViewRenderer` function.
-
+### (5) Create a JavaScript renderer function
+You can use the `Renderer.create()` helper function to implement a JavaScript Renderer function to integrate the component into a Java Renderer on the UIM page. You can place your renderer functions in the `custom-carbon-addon/renderers` directory. For example, create the`CarbonComponentXViewRenderer` function.

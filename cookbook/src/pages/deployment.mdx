@@ -6,7 +6,7 @@ description: Deploying components
 When development is complete on your custom Carbon component, redeploy the component artifacts, place them under source control, and deploy the application EAR file.
 For more information about commands, see the [Command reference](command-reference). 
  
-1. Build your component.
+1. Build your component. This should ideally be run anytime you are adding new files to the repoistory.
 
    ``` 
    npm run build
@@ -16,5 +16,6 @@ For more information about commands, see the [Command reference](command-referen
    ```
    npm run deploy
    ```
-3. Ensure that you place the component artifacts under source control.
+
+3. Ensure that you place the generated artifacts in the custom component under source control.
 4. Deploy the application EAR file as usual.
