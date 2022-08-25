@@ -17,25 +17,25 @@ npm run dev
 
 This command tests the integration with Social Program Management. It requires the `CLIENT_DIR` environment variable to be set.
 It copies the generated artefects from `npm run build` to the location where they can be picked up by Social Program Management.
-Any JavaScript or SCSS files that are updated are automatically generated when integrated with Social Program Management.
+After you run the command, any JavaScript or SCSS files that are updated are automatically generated.
 
 ```
 export GRAPHQL_SERVER_URL=http://localhost:4000/graphql && npm run dev-with-mockgraphql
 ```
 
-This command is the same as the `npm run dev` command, but prioritizes the data from the mock GraphQL service over the real REST Service when running in SPM. The command requires the same environmental setup as the npm run dev command.
+This command is the same as the `npm run dev` command, but prioritizes the data from the mock GraphQL service over the real REST Service when running in SPM.  It requires the `CLIENT_DIR` environment variable to be set.
 
 ```
 npm run test
 ```
 
-This command runs the JavaScript unit tests for React components that you have created. Some sample tests are provided in the code base.
+This command runs the JavaScript unit tests for React components that you have created. Some sample tests are provided in the code base for guidance.
 
 ```
 npm run coverage
 ```
 
-This command generates a report on JavaScript code coverage. There is certain threshold that is specified for code coverage. If coverage falls below this level the report fails to be generated.
+This command generates a report on JavaScript code coverage. If coverage falls below a certain threshold that is specified for code coverage the report fails to be generated.
 
 ```
 npm run gen-doc

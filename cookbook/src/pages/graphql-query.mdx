@@ -3,16 +3,18 @@ title: Implement a GraphQL query
 description: Implement a GraphQL query
 ---
 
-A GraphQL query provides the data access between the service layer with the business logic for a new feature and the UI components on a custom page that presents the data to the user.
+A GraphQL query provides the data access between the service layer that contains the business logic for a feature and the UI components on a custom page that present the data to the user.
 
 GraphQL queries can be large and used to serve data for many components, or they can be more granular where they are used for a specific component, such as `componentX`.
 
-For more information about how to implement a GraphQL query, see [https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql](https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql).
+Implementing a GraphQL query is beyond the scope of this documentation, but you can complete the following steps to set up a lightweight mock GraphQL service. You can then develop and test your Carbon components before the GraphQL queries are available in Social Program Management.
 
-### Mock GraphQL service
-While the REST Service provides the real data from the GraphQL queries in SPM, you can use a lightweight mock GraphQL service to enable rapid development almost exclusively in the front-end environment. For example, if you want to develop your Carbon components before the real GraphQL queries are available in Social Program Management, you can use the mock GraphQL service with Carbon components in Storybook or when testing the integration with SPM, or both.
+For more information about how to implement a GraphQL query in Social Program Management, see [https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql](https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql).
 
-To add mock data to the mock GraphQL service, complete the following steps. Refer to the provided examples in the directories for guidance. 
+# Setting up the mock GraphQL service
+While the REST Service provides the real data from the GraphQL queries in Social Program Management, you can use a lightweight mock GraphQL service to enable rapid development almost exclusively in your front-end environment. To develop your Carbon components before the real GraphQL queries are available, you can use the mock GraphQL service with Carbon components in Storybook or when testing the integration with SPM, or both.
+
+To add mock data to the mock GraphQL service, complete the following steps in the `graphql-mocks` package. Refer to the provided examples in the directories for guidance. 
  - In the `typeDefs` directory, add a new GraphQL query type definition and update the `index.js` file in that directory to export it.
  - In the `resolvers` directory, add a new resolver and update the `index.js` in that directory to export it.
  - Add the data to the `resolvers/data` subdirectory and import the data in your new resolver.

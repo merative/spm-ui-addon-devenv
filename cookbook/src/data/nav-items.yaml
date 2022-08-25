@@ -18,6 +18,8 @@
       path: /build
 - title: Creating custom pages
   pages:
+    - title: Overview of creating pages
+      path: /custom-pages
     - title: Creating a custom Carbon add-on component
       path: /new-custom-component
     - title: Rendering components on a UIM page
