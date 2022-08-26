@@ -1,23 +1,10 @@
 ---
-title: Configuring your development environment
-description: Configuring your development environment
+title: Environment variables
+description: Environment variables
 ---
-
-Before you start to work with React components, you must set node environment variables in the `.env` and `.env.development` files.
-The `.env` file contains the environment variables for production. The `.env.development` file supersedes the environment variables in `.env` and sets specific environment variables for development.
+The following environment variables are available for the development environment.
 
 ## Basic configuration
-
-### GRAPHQL_SERVER_URL
-
-Specifies the relative location for the GraphQL server. For example, the following value sets the full URL for the GrpahQL server to `https://<server>:<port>/Rest/graphql`.
-If this value if not set, a default value of `/Rest/grpahql` is used.
-
-```
-GRAPHQL_SERVER_URL=/Rest/graphql
-```
-
-Where `server` is the domain name or IP address of the server and `port` is the port number for the application server.
 
 ### CLIENT_DIR
 
@@ -46,6 +33,17 @@ CUSTOM_COMPONENT_NAME=custom
 ```
 
 If omitted, the default value 'custom' is used.
+
+### GRAPHQL_SERVER_URL
+
+Specifies the relative location for the GraphQL server. For example, the following value sets the full URL for the GrpahQL server to `https://<server>:<port>/Rest/graphql`.
+If this value if not set, a default value of `/Rest/graphql` is used.
+
+```
+GRAPHQL_SERVER_URL=/Rest/graphql
+```
+
+Where `server` is the domain name or IP address of the server and `port` is the port number for the application server.
 
 ## Security Configuration
 

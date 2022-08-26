@@ -1,24 +1,22 @@
 ---
-title: Development Process
-description: Development Process
+title: Development process
+description: Development process
 ---
 
 # Front-end development
 
-Use the standard Social Program Management client development environment (CDEJ) to create a UIM page and then use the Add-on Development environment to populate your UIM page with React JavaScript components. For more information about React development, see the [Create React App](https://github.com/facebook/create-react-app/blob/main/packages/cra-template/template/README.md) documentation.
+- Use the React Add-on Development environment to develop React components. You can use React components directly from the IBM Carbon Design System or, if you can't find what you need, create your own Carbon Add-on components in React. A Carbon add-on is a custom component that conforms to the IBM Carbon Design System guidelines. Some sample add-on components are provided in the repository for reference. You can do your front-end development in parallel with your back-end development or in isolation.
 
-You can use React components directly from the IBM Carbon Design System or, if you can't find what you need, create your own Carbon Add-on components in React. A Carbon add-on is a custom component that conforms to the IBM Carbon Design System guidelines. 
+- Use the standard Social Program Management client development environment (CDEJ) to create UIM pages and create Java renderers to render your components on UIM pages in the web client application.
 
-Some example add-on components are provided in the repository. You can do your front-end development in parallel with your back-end development or in isolation.
-
-## Getting started with Carbon React JS
+## Getting started with Carbon React JavaScript development
 
 The Carbon Design System provides design guidance for the development of user interface components based on the Carbon Design System and implemented in a number of frameworks, including React.
 
-If you are new to Carbon and React development, see the [Carbon v10 React tutorial](https://v10.carbondesignsystem.com/developing/react-tutorial/overview/) to get you started.
+- For more information about IBM Carbon Design System, see the [Carbon v10 website](https://v10.carbondesignsystem.com/) and the [Carbon v10 Storybook](https://v10-react.carbondesignsystem.com/?path=/story/getting-started--welcome).
 
-For more information, see the [Carbon v10 website](https://v10.carbondesignsystem.com/) and the [Carbon v10 Storybook](https://v10-react.carbondesignsystem.com/?path=/story/getting-started--welcome).
+- If you are new to Carbon and React development, see [Carbon React Frameworks](https://v10.carbondesignsystem.com/developing/frameworks/react/) and the [Carbon v10 React tutorial](https://v10.carbondesignsystem.com/developing/react-tutorial/overview/), and the Facebook [Create React App](https://github.com/facebook/create-react-app/blob/main/packages/cra-template/template/README.md) documentation to get you started.
   
 # Back-end development
 
-Using the Social Program Management server development environment and GraphQL functionality, implement the services (business logic) to create/update/get the data for your components. GraphQL is recommended for the back-end data service, especially for data intensive screens, see [https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql](https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql).
+Using the Social Program Management server development environment and GraphQL functionality, implement domain definitions and the services (business logic) to create/update/get the data for your components. GraphQL is recommended for the back-end data service, especially for data intensive screens, see [https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql](https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-graphql).

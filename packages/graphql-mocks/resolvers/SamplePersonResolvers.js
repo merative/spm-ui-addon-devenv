@@ -1,5 +1,5 @@
 
-const { personsData } = require('./sampleData/samplePeopleData');
+const { personsData } = require('./data/samplePeopleData');
 
 const SamplePersonResolver = {
    Query: {

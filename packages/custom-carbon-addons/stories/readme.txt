@@ -1,0 +1,1 @@
+This directory is intended for stories of features that will be displayed in storybook.

@@ -1,6 +1,6 @@
 
 
-const { logoData } = require('./sampleData/sampleLogoData');
+const { logoData } = require('./data/sampleLogoData');
 
 const SampleLogoResolver = {
    Query: {

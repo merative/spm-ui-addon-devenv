@@ -1,0 +1,96 @@
+---
+title: Samples reference
+description: Samples reference
+---
+
+Some sample Carbon component are provided in the `carbon-addons-devenv` package, which you can use as a reference or aid when starting to develop new Carbon components.
+
+  - PersonFolio
+  - Logo
+
+These samples contain all that is needed for Carbon components:
+
+ - The React component
+ - Sass
+ - A query provider in Apollo Client
+ - A JavaScript renderer wrapper function
+
+ Unit tests, a storybook wrapper, and a JavaScript documentation example are also provided.
+
+The sample components are ready to be fully implemented and integrated into a custom UIM page by using a Java Renderer.
+
+### Examples of integrating components into a Java renderer
+For guidance, the following code snippets, which don't include the imports, demonstrate how the PersonFolio and Logo sample components can be integrated into a Java Renderer. Configuring a Java render is described in [Rendering components on a UIM page](spm-uim-integration)
+
+An example of integrating the sample PersonFolio component into a domain Java renderer on a UIM page is shown.
+
+```
+public class PersonFolioSampleRenderer extends AbstractViewRenderer {
+
+  /**
+   * Constructor.
+   */
+  public PersonFolioSampleRenderer() {}
+
+  /**
+   * */
+  @Override
+  public void render(final Field field, final DocumentFragment fragment,
+    final RendererContext context, final RendererContract contract)
+    throws ClientException, DataAccessException, PlugInException {
+
+    final Element carbonWrapperDiv =
+      fragment.getOwnerDocument().createElement("div");
+    final String carbonWrapperDivID = "CarbonWrapperDiv";
+    carbonWrapperDiv.setAttribute("id", carbonWrapperDivID);
+    HTMLUtils.appendComment(carbonWrapperDiv, "filler");
+    carbonWrapperDiv.setAttribute("class", "spm-custom-component");
+    fragment.appendChild(carbonWrapperDiv);
+    // label translations override default labels in Carbon component
+    // for properly translated labels, you must put them into a `*.properties` file and look them up using the `context.getDataAccessor()` function.
+    // final String labels =
+    //   "{firstnameLabel: \"Translated First name\", surnameLabel: \"Translated Surname\", ageLabel: \"Translated Age\"}";
+    final String labels = "{}";
+    final Map<String, String> map = new HashMap<String, String>();
+
+    includeCarbonComponent(context, carbonWrapperDivID, labels, "{}",
+      "window.spmcustom.sampleRenderers.PersonFolio.PersonFolioRenderer",
+      map);
+  }
+}
+```
+
+An example of integrating the sample Logo component into a domain Java renderer on a UIM page is shown.
+
+```
+public class LogoSampleRenderer extends AbstractViewRenderer {
+
+  /**
+   * Constructor.
+   */
+  public LogoSampleRenderer() {}
+
+  /**
+   * */
+  @Override
+  public void render(final Field field, final DocumentFragment fragment,
+    final RendererContext context, final RendererContract contract)
+    throws ClientException, DataAccessException, PlugInException {
+
+    final Element carbonWrapperDiv =
+      fragment.getOwnerDocument().createElement("div");
+    final String carbonWrapperDivID = "CarbonWrapperDiv";
+    carbonWrapperDiv.setAttribute("id", carbonWrapperDivID);
+    HTMLUtils.appendComment(carbonWrapperDiv, "filler");
+    carbonWrapperDiv.setAttribute("class", "spm-custom-component");
+    fragment.appendChild(carbonWrapperDiv);
+    final String labels = "{}";
+    final Map<String, String> map = new HashMap<String, String>();
+
+    map.put("logoId", "id_2");
+    includeCarbonComponent(context, carbonWrapperDivID, labels, "{}",
+      "window.spmcustom.sampleRenderers.Logo.LogoRenderer", map);
+  }
+}
+```
+

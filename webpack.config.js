@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require('webpack');
+const ReactDevToolsIFramePlugin = require('react-dev-tools-iframe-webpack-plugin');
 
 
 
@@ -31,7 +32,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.EnvironmentPlugin(['RELATIVE_PATH_TO_BUNDLE', 'GRAPHQL_SERVER_URL', 'CUSTOM_COMPONENT_NAME', 'CSRF_TOKEN_REQUEST_HEADER', 'CSRF_TOKEN_ENPOINT'])
+    new webpack.EnvironmentPlugin(['RELATIVE_PATH_TO_BUNDLE', 'GRAPHQL_SERVER_URL', 'CUSTOM_COMPONENT_NAME', 'CSRF_TOKEN_REQUEST_HEADER', 'CSRF_TOKEN_ENPOINT']),new ReactDevToolsIFramePlugin()
   ],
   resolve: { extensions: ["*", ".js", ".jsx"], 
     alias: {
