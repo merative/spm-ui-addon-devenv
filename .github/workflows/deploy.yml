@@ -19,17 +19,17 @@ jobs:
       - name: Install dependencies
         run: |
           pwd
-          cd packages/gatsby-docs
+          cd cookbook
           pwd
-          yarn install
-          yarn run gatsby --version
-          yarn gatsby build --prefix-paths
+          npm install
+          npm gatsby --version
+          npm gatsby build --prefix-paths
           echo Site built and ready to deploy!
       - name: Deploy to Github packages
         # only deploy when pushing to main
         if: ${{(github.event_name == 'push' || github.event_name == 'workflow_dispatch' ) && github.ref_name == 'main'}}
         run: |
-          cd packages/gatsby-docs/public
+          cd cookbook/public
           git config --global init.defaultBranch main
           pwd
           set -v
