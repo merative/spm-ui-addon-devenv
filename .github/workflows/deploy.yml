@@ -18,13 +18,12 @@ jobs:
           node-version: 15.0.1
       - name: Install dependencies
         run: |
-          CWD=$(pwd -P)
-          echo $CWD
           cd cookbook
+          set -v
           pwd
           npm install
           npm gatsby --version
-          npm gatsby build --prefix-paths
+          npm run build --prefix-paths
           echo Site built and ready to deploy!
       - name: Deploy to Github packages
         # only deploy when pushing to main
