@@ -23,7 +23,7 @@ jobs:
           pwd
           npm install
           npm gatsby --version
-          npm run build --prefix-paths
+          npm run build
           echo Site built and ready to deploy!
       - name: Deploy to Github packages
         # only deploy when pushing to main
