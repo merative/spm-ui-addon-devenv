@@ -6,7 +6,7 @@ console.log(`Using SITE_PREFIX: '${sitePrefix}'`)
 module.exports = {
   siteMetadata: {
     title: siteTitle,
-    description: 'IBM Curam Social Program Management UI Addon Development Environment',
+    description: 'Merative Social Program Management UI Addon Development Environment',
     keywords: 'ibm,curam,containers',
   },
   pathPrefix: sitePrefix,
