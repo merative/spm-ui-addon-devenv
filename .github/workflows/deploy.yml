@@ -18,7 +18,7 @@ jobs:
           node-version: 15.0.1
       - name: Install dependencies
         run: |
-          echo $PWD
+          run echo $PWD
           cd cookbook
           pwd
           npm install
