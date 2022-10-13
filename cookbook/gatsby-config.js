@@ -1,4 +1,4 @@
-const siteTitle = 'IBM Curam SPM UI Addon Development Environment'
+const siteTitle = 'Merative SPM UI Addon Development Environment'
 
 var sitePrefix = process.env.SITE_PREFIX || "/spm-ui-addon-devenv"
 console.log(`Using SITE_PREFIX: '${sitePrefix}'`)
@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: siteTitle,
     description: 'Merative Social Program Management UI Addon Development Environment',
-    keywords: 'ibm,curam,containers',
+    keywords: 'merative,curam,containers,',
   },
   pathPrefix: sitePrefix,
   plugins: [
