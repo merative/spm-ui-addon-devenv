@@ -74,6 +74,7 @@ const MerativeLogo = () => (
     enable-background="new 0 0 425 205"
     viewBox="0 0 425 205"
     xmlns="http://www.w3.org/2000/svg"
+    width="160"
   >
     <linearGradient
       id="a"
