@@ -3,11 +3,11 @@ import ResourceLinks from 'gatsby-theme-carbon/src/components/LeftNav/ResourceLi
 
 const links = [
   {
-    title: 'Github',
+    title: 'GitHub',
     href: 'https://github.com/merative/spm-ui-addon-devenv',
   },
   {
-    title: 'IBM Documentation',
+    title: 'Documentation',
     href: 'https://www.ibm.com/docs/en/spm/8.0.2',
   }
 ];

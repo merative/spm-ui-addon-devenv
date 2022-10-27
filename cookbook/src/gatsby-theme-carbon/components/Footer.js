@@ -101,7 +101,7 @@ const MerativeLogo = () => (
 const DefaultContent = ({ buildTime }) => (
   <>
     <p>
-      Last updated: {buildTime}
+      Docs last updated: {buildTime}
       <br />
       &copy; Merative US L.P. 2021, 2022
     </p>
