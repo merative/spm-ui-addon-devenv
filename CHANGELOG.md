@@ -15,4 +15,4 @@ For more information about Merative Social Program Management, visit the [docume
 
 For more information about server-side changes, see the [Merative Social Program Management release notes](https://www-01.ibm.com/support/docview.wss?uid=swg27037963) for your version.
 
-For more information about the IBM Carbon Design System, see https://www.carbondesignsystem.com/
+For more information about the IBM Carbon Design System v10, see [https://v10.carbondesignsystem.com/](https://v10.carbondesignsystem.com/)

@@ -28,6 +28,8 @@
       path: /graphql-query
     - title: Deploying components
       path: /deployment
+    - title: Extending the Case Overview
+      path: /extend-case-overview
 # - title: Integrating components with UIM
 #  pages:
 #    - title: Integrating components with the UIM page
