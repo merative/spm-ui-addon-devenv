@@ -16,9 +16,11 @@
       path: /development-process
     - title: Building during development
       path: /build
-- title: Creating custom pages
+- title: Customization
   pages:
-    - title: Overview of creating pages
+    - title: Overview of customization
+      path: /overview-customization
+    - title: Creating custom pages
       path: /custom-pages
     - title: Creating a custom Carbon add-on component
       path: /new-custom-component
@@ -28,7 +30,7 @@
       path: /graphql-query
     - title: Deploying components
       path: /deployment
-    - title: Extending the Case Overview
+    - title: Customizing the Case Overview
       path: /extend-case-overview
 # - title: Integrating components with UIM
 #  pages:
