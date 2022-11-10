@@ -1,5 +1,5 @@
 # Changelog
-## 1.1.0 - 11/11/2021 ![SPM 8.0.1](https://img.shields.io/badge/-SPM_8.0.1-green)[SPM 8.0.2](https://img.shields.io/badge/-SPM_8.0.2-green)
+## 1.1.0 - 11/11/2021 ![SPM 8.0.1,SPM 8.0.2](https://img.shields.io/badge/-SPM_8.0.1-green)
 ### Added
 
 This release has the following improvements: 
