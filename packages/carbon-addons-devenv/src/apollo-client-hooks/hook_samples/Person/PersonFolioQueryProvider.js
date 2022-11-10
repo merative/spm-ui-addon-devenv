@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 // from custom-carbon-addons package reference to ApolloClientQueryProvider would be he following
 // import { ApolloClientQueryProvider } from 'devenv_pkg/src/apollo-client-hooks';
 import ApolloClientQueryProvider from 'devenv_pkg/src/apollo-client-hooks/core/ApolloClientQueryProvider';
-import PersonFolio  from 'devenv_pkg/src/react/component_samples/PersonFolio/PersonFolio';
+import PersonFolio  from 'devenv_pkg/src/react/addons_samples/PersonFolio/PersonFolio';
 import { useGetPersons } from './PersonQuery';
 
 const PersonFolioQueryProvider = ({ configuration }) => {
