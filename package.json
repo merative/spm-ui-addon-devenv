@@ -12,6 +12,9 @@
     "packages/graphql-mocks"
   ],
   "scripts": {
+    "analyze-bundle": "mkdir reports & npm run bundle-stats && npm run bundle-report",
+    "bundle-report": "node_modules/.bin/webpack-bundle-analyzer --mode static ./reports/bundle-stats.json ./dist --open --report ./reports/bundle-size.html",
+    "bundle-stats": "webpack --profile --json > ./reports/bundle-stats.json",
     "preinstall": "npx npm-force-resolutions",
     "postinstall": "subpkg install",
     "mock-graphql-service": "node packages/graphql-mocks/server.js",
@@ -36,9 +39,9 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^6.3.8",
-    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-links": "^6.3.8",
-    "@storybook/react": "^6.3.8",
+    "@storybook/react": "^6.5.13",
     "@webpack-cli/serve": "^1.6.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^27.3.1",
@@ -58,18 +61,19 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.4",
     "eslint-plugin-react-hooks": "^4.1.2",
-    "react-dev-tools-iframe-webpack-plugin": "^1.0.2",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "husky": "^4.3.0",
     "jest": "^24.9.0",
     "jsdoc": "^3.6.7",
     "node-sass": "^6.0.1",
+    "react-dev-tools-iframe-webpack-plugin": "^1.0.2",
     "sass-loader": "^10.0.3",
     "shelljs": "^0.8.5",
     "style-loader": "^0.23.0",
     "subpkg": "^4.1.0",
     "webpack": "4.42.1",
+    "webpack-bundle-analyzer": "3.6.1",
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "^4.0.0"
   },
@@ -109,6 +113,12 @@
     "minimist": "1.2.6",
     "marked": "4.0.10",
     "ansi-html": "0.0.8",
-    "node-forge": "1.3.0"
+    "ansi-regex": "4.1.1",
+    "node-forge": "1.3.0",
+    "loader-utils": "1.4.1",
+    "ejs": "3.1.7",
+    "terser": "5.14.2",
+    "scss-tokenizer": "0.4.3",
+    "trim-newlines": "3.0.1"
   }
 }
