@@ -12,7 +12,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 /* eslint import/no-unresolved: [2, { ignore: ['devenv_pkg*.'] }] */
-import Logo  from 'devenv_pkg/src/react/component_samples/Logo/Logo';
+import Logo  from 'devenv_pkg/src/react/addons_samples/Logo/Logo';
 // NOTE: 
 // from custom-carbon-addons package reference to ApolloClientQueryProvider would be he following
 // import { ApolloClientQueryProvider } from 'devenv_pkg/src/apollo-client-hooks';
