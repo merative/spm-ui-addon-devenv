@@ -1,5 +1,5 @@
 import React from 'react';
-import PersonFolio from '../src/react/component_samples/PersonFolio/PersonFolio';
+import PersonFolio from '../src/react/addons_samples/PersonFolio/PersonFolio';
 
 
 // 👇 We create a “template” of how args map to rendering
