@@ -9,6 +9,7 @@ This release has the following improvements:
  - Enablement of the React Development Tools browser extension to view the composition of React components being used on a web page.
  - The provision of a tool that shows aa breakdown of the generated JavaScript files in terms
 of how much footprint (size in KB) each third party library contributes to their overall size.
+- The introduction of index_latest files as a mechanism to convey the most up to date template for index files. The index_latest can be diffed with your verion of the index.js or index.scss files to see any differences in the underlying directory structure.
 
 
 ### Removed 
