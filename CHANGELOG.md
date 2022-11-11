@@ -16,7 +16,7 @@ of how much footprint (size in KB) each third-party library contributes to their
 Not applicable
 
 ## More information
-For more information about the React Developer Tools browser extension, see [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+For more information about the React Developer Tools browser extension, see [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
 
 For more information about Merative™ Social Program Management, see the [documentation](https://curam-spm-devops.github.io/wh-support-docs/spm/pdf-documentation).
 
