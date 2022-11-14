@@ -1,6 +1,6 @@
 const siteTitle = 'Merative SPM UI Addon Development Environment'
 
-var sitePrefix = process.env.SITE_PREFIX || "/"
+var sitePrefix = process.env.SITE_PREFIX || "/spm-ui-addon-devenv"
 console.log(`Using SITE_PREFIX: '${sitePrefix}'`)
 
 module.exports = {

@@ -1,0 +1,44 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:      
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 15.0.1
+      - name: Install dependencies
+        run: |
+          cd cookbook
+          set -v
+          pwd
+          npm install
+          npm gatsby --version
+          npm run build
+          echo Site built and ready to deploy!
+      - name: Deploy to Github packages
+        # only deploy when pushing to main
+        if: ${{(github.event_name == 'push' || github.event_name == 'workflow_dispatch' ) && github.ref_name == 'main'}}
+        run: |
+          cd cookbook/public
+          git config --global init.defaultBranch main
+          pwd
+          set -v
+          git init
+          git config user.name ${{ github.actor }}
+          git config user.email ${{ github.actor }}@users.noreply.github.com
+          git add .
+          echo 'Add completed'.
+          git commit -m "Deploy commit: ${{ github.sha }}"
+          echo 'Commit completed.'
+          git push -f https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git main:gh-pages
+          echo 'Finished deploying the site.'
