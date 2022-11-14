@@ -13,7 +13,6 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader'],
         include: path.resolve(__dirname, './packages/custom-carbon-addons/src/scss'),
-        // include: path.resolve(__dirname, '../../custom-carbon-addons/src/scss/index.scss'),
       },
       {
         test: /\.(js|jsx)$/,
@@ -46,6 +45,10 @@ module.exports = {
     publicPath: "/dist/",
     filename: "spm-custom-carbon-addons-[name].bundle.js",
     chunkFilename: 'spm-custom-carbon-addons-[name].chunk.js',
+  },
+  watchOptions: {
+    poll: 400,
+    ignored: '**/node_modules',
   },
   devServer: {
     contentBase: path.join(__dirname, "public/"),
