@@ -24,42 +24,41 @@ require('dotenv').config();
  * before it is transpiled by Babel.
  */
 
-gulp.task('deploy:spm', () => {
+gulp.task('deploy:spm', async () => {
   if (process.env.CLIENT_DIR) {
     const customComponentName = process.env.CUSTOM_COMPONENT_NAME || "custom";
     const customComponentLocation = process.env.CLIENT_DIR + "/components/" + customComponentName + "/WebContent/CDEJ/jscript/SPMUIComponents";
-    shell.echo(`\n[INFO] Copying the generated files to custom component: ${customComponentLocation}
-    [INFO] Any changes to the files will automatically trigger a new bundle generation.`);
+    shell.echo(`\n[INFO] Copying the generated files to custom component: ${customComponentLocation}`);
     shell.exec(
       `webpack --mode=development --devtool=eval-source-map\
-      --output-path=${customComponentLocation} --watch=true --hide-modules=true\
-      --build-delimiter="\n\n[INFO] Bundle Generated into ${customComponentLocation} \n[INFO] Watching for file changes."`,
+      --output-path=${customComponentLocation}`,
       { fatal: true }
     );
+  } else {
+    throw new  Error("Env var CLIENT_DIR is not defined in the .env file. It should be set to the weblicent directory.")
   }
 });
 
 gulp.task('dev:spm', () => {
+  if (!process.env.CLIENT_DIR) {
+    throw new  Error("Env var CLIENT_DIR is not defined in the .env file. It should be set to the weblicent directory.")
+  }
   const cdejLocation = process.env.RELATIVE_PATH_TO_BUNDLE || "CDEJ/jscript/SPMUIComponents";
   const output =
     process.env.CLIENT_DIR + "/WebContent/" + cdejLocation ||
     path.resolve(__dirname, '/dist');
-  if (!process.env.CLIENT_DIR) {
-    shell.echo(
-      `\n[WARNING] Env var CLIENT_DIR not defined in the .env file.
-Using Default Output: ${output}`
-    );
-  }
 
   shell.echo(`\n[INFO] Generating the dev bundle to path: ${output}
 [INFO] Any changes to the files will automatically trigger a new bundle generation.`);
 
   shell.exec(
     `webpack --mode=development --devtool=eval-source-map\
-    --output-path=${output} --watch=true --hide-modules=true\
-    --build-delimiter="\n\n[INFO] Bundle Generated into ${output} \n[INFO] Watching for file changes."`,
+    --output-path=${output} --watch\
+   `,
     { fatal: true }
   );
+
+  shell.echo(`\n\n[INFO] Bundle Generated into ${output} \n[INFO] Watching for file changes`);
  
 });
 

@@ -1,0 +1,69 @@
+---
+title: Command reference
+description: Command reference
+---
+
+After the code is installed and configured, the following commands are available:
+
+```
+npm run build
+```
+
+This command builds the deliverable artefacts from the installed codebase. For more information, see [Building during development](build).
+
+```
+npm run dev
+```
+
+This command tests the integration with Social Program Management. It requires the `CLIENT_DIR` environment variable to be set.
+It copies the generated artefects from `npm run build` to the location where they can be picked up by Social Program Management.
+After you run the command, any JavaScript or SCSS files that are updated are automatically generated. For more information, see [Building during development](build).
+
+```
+export GRAPHQL_SERVER_URL=http://localhost:4000/graphql && npm run dev-with-mockgraphql
+```
+
+This command is the same as the `npm run dev` command, but prioritizes the data from the mock GraphQL service over the real REST Service when running in SPM.  It requires the `CLIENT_DIR` environment variable to be set.
+
+```
+npm run test
+```
+
+This command runs the JavaScript unit tests for React components that you have created. Some sample tests are provided in the code base for guidance.
+
+```
+npm run coverage
+```
+
+This command generates a report on JavaScript code coverage. If coverage falls below a certain threshold that is specified for code coverage the report fails to be generated.
+
+```
+npm run gen-doc
+```
+
+This command generates the documentation for React components that are being developed. It is based on JSDoc, see [https://jsdoc.app/](https://jsdoc.app/).
+
+```
+npm run lint
+```
+
+This command enforces coding best practices for React components in JavaScript and SCSS.
+
+```
+npm run analyze-bundle
+```
+
+This command generates a HTML report (reports/bundle-size.html) that shows a breakdown of each generated JavaScript file in terms
+of how much footprint (size in KB) each third-party library contributes to their overall size.
+
+```
+npm run storybook
+```
+
+This command starts Storybook, which shows how to use the components with examples.
+
+```
+npm run deploy
+```
+
+This command copies the compiled JavaScript to the specified web client custom component for deployment. For more information, see [Deploying components](deployment).

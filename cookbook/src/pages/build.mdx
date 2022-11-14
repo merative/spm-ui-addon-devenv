@@ -1,0 +1,27 @@
+---
+title: Building during development
+description: Building components during development
+---
+
+Build your components in your development environment during development. For more information about commands and command configuration, see the [Command reference](command-reference). 
+ 
+
+1. Build your component. Ideally, run this command each time you add new files to the repository.
+
+   ``` 
+   npm run build
+   ```
+
+2. Run a development build to integrate the component with the web client application. Any updates you make to existing files while the development build is running are reflected in the application. 
+
+   If you don't use the GraphQL mock service, use this command to run the development build. The GraphQL data from the REST Service is used.
+
+   ```
+   npm run dev
+   ```
+
+   If you use the GraphQL mock service, use this command to run the development build. The command is the same as the `npm run dev` command, but prioritizes the data from the mock GraphQL service over the real REST Service when running in Social Program Management.
+ 
+   ```
+   export GRAPHQL_SERVER_URL=http://localhost:4000/graphql && npm run dev-with-mockgraphql
+   ```

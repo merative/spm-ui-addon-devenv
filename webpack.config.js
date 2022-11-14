@@ -1,5 +1,6 @@
 const path = require("path");
-var webpack = require('webpack');
+const webpack = require('webpack');
+const ReactDevToolsIFramePlugin = require('react-dev-tools-iframe-webpack-plugin');
 
 
 
@@ -12,7 +13,6 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader'],
         include: path.resolve(__dirname, './packages/custom-carbon-addons/src/scss'),
-        //include: path.resolve(__dirname, '../../custom-carbon-addons/src/scss/index.scss'),
       },
       {
         test: /\.(js|jsx)$/,
@@ -31,9 +31,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.EnvironmentPlugin(['RELATIVE_PATH_TO_BUNDLE', 'GRAPHQL_SERVER_URL', 'CUSTOM_COMPONENT_NAME', 'CSRF_TOKEN_REQUEST_HEADER', 'CSRF_TOKEN_ENPOINT'])
+    new webpack.EnvironmentPlugin(['RELATIVE_PATH_TO_BUNDLE', 'GRAPHQL_SERVER_URL', 'CUSTOM_COMPONENT_NAME', 'CSRF_TOKEN_REQUEST_HEADER', 'CSRF_TOKEN_ENPOINT']),new ReactDevToolsIFramePlugin()
   ],
-  resolve: { extensions: ["*", ".js", ".jsx"] },
+  resolve: { extensions: ["*", ".js", ".jsx"], 
+    alias: {
+      devenv_pkg: path.resolve('./packages/carbon-addons-devenv')
+    }
+  },
   output: {
     path: path.resolve(__dirname, "dist/"),
     library: 'spmcustom',
@@ -41,6 +45,10 @@ module.exports = {
     publicPath: "/dist/",
     filename: "spm-custom-carbon-addons-[name].bundle.js",
     chunkFilename: 'spm-custom-carbon-addons-[name].chunk.js',
+  },
+  watchOptions: {
+    poll: 400,
+    ignored: '**/node_modules',
   },
   devServer: {
     contentBase: path.join(__dirname, "public/"),

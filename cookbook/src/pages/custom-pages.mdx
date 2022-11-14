@@ -1,0 +1,27 @@
+---
+title: Creating custom pages
+description: Creating custom pages
+---
+
+To get you started, see how you can implement a custom page that contains a Carbon component called `componentX`, and how to set up a GraphQL mock service to test your component with mock data.
+Refer to the provided samples in the code for guidance as you develop your new component.
+
+In general, you must complete the following tasks to create custom pages:
+
+In your JavaScript development environment:
+
+- Create a custom React JavaScript component and style it with Sass.
+- Implement a query provider in Apollo Client for GraphQL data.
+- Test the Carbon component in Storybook.
+- Create a JavaScript renderer helper function for a Java renderer.
+- If you want to use the mock GraphQL service, add mock data for your component.
+
+In your web client development environment:
+
+- Create a custom UIM page.
+- Create and configure a Java renderer.
+
+In your server development environment:
+
+- Create a domain definition for your custom component.
+- Implement a GraphQL query to provide data to your custom component. If you use the mock GraphQL service, you can test your component before you implement a GraphQL query.

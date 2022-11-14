@@ -3,13 +3,21 @@
  *
  * PID 5725-H26
  *
- * Copyright IBM Corporation 2020. All Rights Reserved.
+ * Copyright IBM Corporation 2021.2022. All Rights Reserved.
  *
  * US Government Users Restricted Rights - Use, duplication or disclosure
  * restricted by GSA ADP Schedule Contract with IBM Corp.
  */
 
-// renderers added here will be added to the window.spmcustom.renderers object
-// Note: the sample are added to the window.spmcustom.sampleRenderers object
+// NOTE: the sample renderers are added to the 'window.spmcustom.sampleRenderers' object
+// IMPORTANT: custom renderers added here will be added to the 'window.spmcustom.renderers' object
 
-export default { };
+// INSTRUCTIONS:
+// Just import your renderes like so
+// (assuming you have renderers with matching directory names of 'MyComponent1' and 'MyComponent2'):
+
+// Exporting (by uncommenting) these 2 renderers adds them to the 'window.spmcustom.renderers' list
+// import MyComponent1 from './MyComponent1';
+// import MyComponent2 from './MyComponent2';
+
+// export default { MyComponent1, MyComponent2 };

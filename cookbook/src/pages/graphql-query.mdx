@@ -1,0 +1,33 @@
+---
+title: Implement a GraphQL query
+description: Implement a GraphQL query
+---
+
+A GraphQL query provides the data access between the service layer that contains the business logic and the UI components on your custom page. GraphQL queries can be large and used to serve data for many components, or they can be more granular and used for a specific component, such as `componentX`.
+
+In Merative Social Program Management, the GraphQL infrastructure is built into the REST application and is deployed as part of the REST EAR. In your Tomcat development environment, build and deploy the GraphQL APIs to work on GraphQL queries.
+
+Alternatively, the UI Addon Development Environment provides a lightweight mock GraphQL service, so you can develop and test your Carbon components before the GraphQL queries are available.
+
+# Getting started with GraphQL
+
+Use the following guidance to familiarize yourself with GraphQL queries in Social Program Management. You can look at an existing GraphQL API and run some simple test queries to return data.
+
+1. You must enable GraphQL and GraphQL introspection by setting the `curam.graphql.endpoint.enabled` and `curam.graphql.introspection.enabled` system properties, see [Configuring GraphQL properties](https://www.ibm.com/docs/en/spm/8.0.2?topic=graphql-configuring-properties).
+2. Build the application in your Tomcat environment to make the GraphQL APIs available, see [Building and deploying GraphQL APIs on Tomcat](https://www.ibm.com/docs/en/spm/8.0.2?topic=apis-building-deploying-graphql-tomcat).
+3. View the available resources on an existing GraphQL API, such as the `readIntegratedCase` API, see [Viewing the GraphQL queries by using the GraphiQL IDE](https://www.ibm.com/docs/en/spm/8.0.2?topic=graphql-viewing-queries-by-using-graphiql-ide).
+4. Run some test queries to understand how to get the data you need from GraphQL APIs, see [Testing a GraphQL query by using the GraphiQL IDE](https://www.ibm.com/docs/en/spm/8.0.2?topic=graphql-testing-query-by-using-graphiql-ide). 
+
+# Creating GraphQL queries and GraphQL APIs
+
+When you understand how GraphQL queries work, you can create your own queries, see [Sending a GraphQL query from a client](https://www.ibm.com/docs/en/spm/8.0.2?topic=graphql-sending-query-from-client).
+
+For data that is not available through existing GraphQL APIs, create your own GraphQL APIs, see [Developing a GraphQL API](https://www.ibm.com/docs/en/spm/8.0.2?topic=graphql-developing-apis).
+
+# Setting up the mock GraphQL service
+While the REST Service provides the real data from the GraphQL queries in Social Program Management, you can use a lightweight mock GraphQL service to enable rapid development almost exclusively in your front-end environment. To develop your Carbon components before the real GraphQL queries are available, you can use the mock GraphQL service with Carbon components in Storybook or when testing the integration with SPM.
+
+To add mock data to the mock GraphQL service, complete the following steps in the `graphql-mocks` package. Refer to the provided examples in the directories for guidance. 
+ - In the `typeDefs` directory, add a new GraphQL query type definition and update the `index.js` file in that directory to export it.
+ - In the `resolvers` directory, add a new resolver and update the `index.js` in that directory to export it.
+ - Add the data to the `resolvers/data` subdirectory and import the data in your new resolver.

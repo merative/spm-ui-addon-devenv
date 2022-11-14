@@ -3,28 +3,17 @@
  *
  * PID 5725-H26
  *
- * Copyright IBM Corporation 2020. All Rights Reserved.
+ * Copyright IBM Corporation 2021,2022. All Rights Reserved.
  *
  * US Government Users Restricted Rights - Use, duplication or disclosure
  * restricted by GSA ADP Schedule Contract with IBM Corp.
  */
+/* eslint import/no-unresolved: [2, { ignore: ['devenv_pkg*.'] }] */
+import { ApolloClientHookTemplate } from 'devenv_pkg/src/apollo-client-hooks';
+import PersonDataProvider from './PersonDataProvider';
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import PersonFolioQueryProvider from './PersonFolioQueryProvider';
-import ApolloClientDataProvider from '../../core/ApolloClientDataProvider';
-
-const PeopleDataProvider = ({ configuration, apolloClient }) => {
-  return (
-    <ApolloClientDataProvider apolloClient={apolloClient} >
-      <PersonFolioQueryProvider configuration={configuration}/>
-    </ApolloClientDataProvider>
-  );
-};
-
-PeopleDataProvider.propTypes = {
-  configuration: PropTypes.object.isRequired,
-  apolloClient: PropTypes.object.isRequired
+const PersonComponentApolloClientHook = (container, config) => {
+  ApolloClientHookTemplate(container, config, PersonDataProvider);
 }
 
-export default PeopleDataProvider;
+export default PersonComponentApolloClientHook;

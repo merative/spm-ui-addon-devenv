@@ -1,38 +1,50 @@
 - title: Overview
   pages:
-    - path: /overview
-- title: Prerequisites
+     - path: /overview
+- title: Setting up for development
   pages:
     - title: Prerequisites and supported software
       path: /prerequisites
-- title: Setting up
-  pages:
-    - title: Setting up your development environment
+    - title: Set up your development environment
       path: /setup
-- title: Configuring
+    - title: Development environment
+      path: /development-environment
+  hasDivider: true
+- title: Development
   pages:
-    - title: Configuring your development environment
-      path: /configuring-dev-env
-- title: Development Process
-  pages:
-    - title: Development Process
+    - title: Development process
       path: /development-process
-- title: Creating custom components
+    - title: Building during development
+      path: /build
+- title: Customization
   pages:
+    - title: Overview of customization
+      path: /overview-customization
+    - title: Creating custom pages
+      path: /custom-pages
     - title: Creating a custom Carbon add-on component
       path: /new-custom-component
-- title: Integrating with Java Renderers
-  pages:
-    - title: Integrating with the Java Renderer on a UIM page
+    - title: Rendering components on a UIM page
       path: /spm-uim-integration
-- title: Integrating components with UIM
-  pages:
-    - title: Integrating components with the UIM page
-      path: /integrate-addon-in-uim
-- title: Deploying components
-  pages:
+    - title: Implementing a GraphQL query
+      path: /graphql-query
     - title: Deploying components
       path: /deployment
+    - title: Customizing the Case Overview
+      path: /extend-case-overview
+# - title: Integrating components with UIM
+#  pages:
+#    - title: Integrating components with the UIM page
+#      path: /integrate-addon-in-uim
+  hasDivider: true
+- title: Reference
+  pages:
+    - title: Environment variables
+      path: /environment-variables
+    - title: Command reference
+      path: /command-reference
+    - title: Samples reference
+      path: /samples-reference
   hasDivider: true
 - title: Feedback
   pages:

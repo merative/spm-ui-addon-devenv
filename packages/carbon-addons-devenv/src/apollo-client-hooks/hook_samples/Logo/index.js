@@ -3,28 +3,18 @@
  *
  * PID 5725-H26
  *
- * Copyright IBM Corporation 2020. All Rights Reserved.
+ * Copyright IBM Corporation 2020,2022. All Rights Reserved.
  *
  * US Government Users Restricted Rights - Use, duplication or disclosure
  * restricted by GSA ADP Schedule Contract with IBM Corp.
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import LogoQueryProvider from './LogoQueryProvider';
-import ApolloClientDataProvider from '../../core/ApolloClientDataProvider';
+/* eslint import/no-unresolved: [2, { ignore: ['devenv_pkg*.'] }] */
+import { ApolloClientHookTemplate } from 'devenv_pkg/src/apollo-client-hooks';
+import LogoDataProvider from './LogoDataProvider';
 
-const LogoDataProvider = ({ configuration, apolloClient }) => {
-  return (
-    <ApolloClientDataProvider apolloClient={apolloClient} >
-      <LogoQueryProvider configuration={configuration}/>
-    </ApolloClientDataProvider>
-  );
+const LogoComponentApolloClientHook = (container, configuration) => {
+  ApolloClientHookTemplate(container, configuration, LogoDataProvider);
 };
 
-LogoDataProvider.propTypes = {
-  configuration: PropTypes.object.isRequired,
-  apolloClient: PropTypes.object.isRequired
-}
-
-export default LogoDataProvider;
+export default LogoComponentApolloClientHook;

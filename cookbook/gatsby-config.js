@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: siteTitle,
     description: 'Merative Social Program Management UI Addon Development Environment',
-    keywords: 'merative,curam,containers,',
+    keywords: 'merative,curam,containers',
   },
   pathPrefix: sitePrefix,
   plugins: [
