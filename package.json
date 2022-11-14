@@ -14,7 +14,7 @@
   "scripts": {
     "analyze-bundle": "mkdir reports & npm run bundle-stats && npm run bundle-report",
     "bundle-report": "node_modules/.bin/webpack-bundle-analyzer --mode static ./reports/bundle-stats.json ./dist --open --report ./reports/bundle-size.html",
-    "bundle-stats": "webpack --profile --json > ./reports/bundle-stats.json",
+    "bundle-stats": "webpack --stats=detailed --json > ./reports/bundle-stats.json",
     "preinstall": "npx npm-force-resolutions",
     "postinstall": "subpkg install",
     "mock-graphql-service": "node packages/graphql-mocks/server.js",
