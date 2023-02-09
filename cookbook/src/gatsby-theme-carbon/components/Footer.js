@@ -104,6 +104,8 @@ const DefaultContent = ({ buildTime }) => (
       Docs last updated: {buildTime}
       <br />
       &copy; Merative US L.P. 2021, 2022
+      <br />
+      Merative is a trademark of Merative US L.P. in the United States and other countries.
     </p>
   </>
 );
