@@ -12,11 +12,11 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "follow-redirects": "1.14.7",
     "gatsby": "^2.24.14",
     "gatsby-theme-carbon": "^1.28.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "follow-redirects": "1.14.7"
+    "react-dom": "^17.0.1"
   },
   "resolutions": {
     "async": "3.2.2",

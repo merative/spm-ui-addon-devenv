@@ -8,7 +8,7 @@ const links = [
   },
   {
     title: 'Documentation',
-    href: 'https://www.ibm.com/docs/en/spm/8.0.2',
+    href: 'https://curam-spm-devops.github.io/wh-support-docs/spm/pdf-documentation',
   }
 ];
 
