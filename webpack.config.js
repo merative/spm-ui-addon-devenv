@@ -2,8 +2,6 @@ const path = require("path");
 const webpack = require('webpack');
 const ReactDevToolsIFramePlugin = require('react-dev-tools-iframe-webpack-plugin');
 
-
-
 module.exports = {
   entry: ['./public-path.js', "./packages/carbon-addons-devenv/src/index.js"],
   mode: "development",
@@ -11,7 +9,18 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+        loaders: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                includePaths: [ "node_modules" ]
+              },
+            },
+          },
+        ],
         include: path.resolve(__dirname, './packages/custom-carbon-addons/src/scss'),
       },
       {
