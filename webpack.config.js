@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(bower_components)/,
         loader: "babel-loader",
         options: { presets: ["@babel/env"] }
       },
