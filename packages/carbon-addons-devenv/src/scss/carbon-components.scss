@@ -16,6 +16,14 @@
   // @import 'carbon-components/scss/globals/scss/css--body';
   // @import 'carbon-components/scss/globals/grid/grid';
 
+// @use '@carbon/styles/scss/layout';
+@use '@carbon/styles/scss/spacing' as *;
+@use '@carbon/react/scss/themes';
+@use '@carbon/react/scss/theme' as * with (
+  $theme: themes.$g10
+);
+@use '@carbon/react';
+
   // //-------------------------
   // // 🍕 Components
   // //-------------------------
@@ -67,12 +75,11 @@
   // @import '@carbon/type/scss/classes';
   // @include carbon--type-classes();
 
-  // //-------------------------
-  // // ✨ Addons
-  // //-------------------------
+  //-------------------------
+  // ✨ Addons
+  //-------------------------
 
-
-  // @import './variables.scss';
+  @import './variables.scss';
   // @import './addons_samples/logo.scss';
-  // @import './addons_samples/personfolio.scss';
+  @import './addons_samples/personfolio.scss';
 

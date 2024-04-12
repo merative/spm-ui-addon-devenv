@@ -8,15 +8,17 @@
 // @use '@carbon/styles/scss/spacing';
 // @use '@carbon/react/scss/spacing';
 
-//@use '@carbon/react/scss/themes';
-// FIXME Might need this
-// @use '@carbon/react/scss/theme' with (
-//   $theme: themes.$g100,
+// @use '@carbon/themes';
+// @use '@carbon/styles';
+// @use '@carbon/react/scss/themes';
+
+// @use '@carbon/react/scss/theme' as * with (
+//   $theme: themes.$g10,
 // );
 
-@use '@carbon/react/scss/fonts';
+// @use '@carbon/react/scss/fonts';
 
-@use '@carbon/react';
+// @use '@carbon/react';
 // @use '@carbon/react' with (
   // $css--font-face: true,
   // $css--helpers: true,
@@ -46,6 +48,7 @@
 
 // FIXME Removed
 // $carbon--theme: $carbon--theme--g10;
+// $carbon--theme: $g10;
 // @include carbon--theme();
 
 // FIXME Removed

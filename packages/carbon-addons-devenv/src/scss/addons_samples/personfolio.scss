@@ -1,7 +1,7 @@
 .#{$prefix}--personfolio {
 
-    background-color: $ui-01;
-    color: $text-01;
+    background-color: $layer-01;
+    color: $text-primary;
     border-radius: 6px;
     border-width: 1px 1px 1px 1px;
     border-style: solid !important;
@@ -9,25 +9,24 @@
     margin-top: $spacing-05;
   
     &--child {
-        border-color: $support-01;
+        border-color: $support-error;
 
     }
   
     &--youngadult {
 
-        border-color: $support-02;
+        border-color: $support-success;
 
     }
   
     &--adult {
 
-      border-color: $support-03;
+      border-color: $support-warning;
     }
 
     &--senior {
 
-        border-color: $support-04;
+        border-color: $support-info;
       }
-  
-  }
-  
+
+}
