@@ -3,14 +3,16 @@
 // 🚀 Variables
 //-------------------------
 
-$css--font-face: true;
-$css--helpers: true;
-$css--body: true;
-$css--reset: true;
-$css--default-type: true;
-$css--plex: true;
-$css--use-experimental-grid: false;
-$css--use-experimental-grid-fallback: false;
+@use '@carbon/react' with (
+  $css--font-face: true,
+  $css--helpers: true,
+  $css--body: true,
+  $css--reset: true,
+  $css--default-type: true,
+  $css--plex: true,
+  $css--use-experimental-grid: false,
+  $css--use-experimental-grid-fallback: false,
+);
 
 //-------------------------
 // 🔄 Resets
