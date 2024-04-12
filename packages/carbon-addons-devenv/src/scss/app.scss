@@ -3,16 +3,30 @@
 // 🚀 Variables
 //-------------------------
 
-@use '@carbon/react' with (
-  $css--font-face: true,
-  $css--helpers: true,
-  $css--body: true,
-  $css--reset: true,
-  $css--default-type: true,
-  $css--plex: true,
-  $css--use-experimental-grid: false,
-  $css--use-experimental-grid-fallback: false,
-);
+//@use '@carbon/grid';
+//@use '@carbon/layout';
+// @use '@carbon/styles/scss/spacing';
+// @use '@carbon/react/scss/spacing';
+
+//@use '@carbon/react/scss/themes';
+// FIXME Might need this
+// @use '@carbon/react/scss/theme' with (
+//   $theme: themes.$g100,
+// );
+
+@use '@carbon/react/scss/fonts';
+
+@use '@carbon/react';
+// @use '@carbon/react' with (
+  // $css--font-face: true,
+  // $css--helpers: true,
+  // $css--body: true,
+  // $css--reset: true,
+  // $css--default-type: true,
+  // $css--plex: true,
+  // $css--use-experimental-grid: false,
+  // $css--use-experimental-grid-fallback: false,
+// );
 
 //-------------------------
 // 🔄 Resets
@@ -22,24 +36,26 @@
 // that they are positioned correctly in the compiled css
 // https://github.com/MohammadYounes/rtlcss/issues/113#issuecomment-379907981
 
-@import 'carbon-components/scss/globals/scss/css--reset';
+// FIXME Removed
+// @import 'carbon-components/scss/globals/scss/css--reset';
 
 
 //-------------------------
 // 🎨 Themes
 //-------------------------
 
-@import 'carbon-components/scss/globals/scss/theme';
+// FIXME Removed
+// $carbon--theme: $carbon--theme--g10;
+// @include carbon--theme();
 
-$carbon--theme: $carbon--theme--g10;
-@include carbon--theme();
+// FIXME Removed
+// // overwrite box-sizing from css--reset to original Curam styling
+// * {
+//   box-sizing: content-box;
+// }
 
-// overwrite box-sizing from css--reset to original Curam styling
-* {
-  box-sizing: content-box;
-}
-
-// Temporary until Carbon fix is applied for date picker opening event.
-html.spm-modal--html {
-  overflow: visible;
-}
+// FIXME Removed
+// // Temporary until Carbon fix is applied for date picker opening event.
+// html.spm-modal--html {
+//   overflow: visible;
+// }
