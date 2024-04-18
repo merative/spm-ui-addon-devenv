@@ -88,7 +88,6 @@
     "@carbon/type": "^11.26.0",
     "classnames": "^2.2.6",
     "core-js": "*",
-    "graphql": "^15.3.0",
     "open": "^8.4.0",
     "prop-types": "*",
     "react": "^16.13.1",
