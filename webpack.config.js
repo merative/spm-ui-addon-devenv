@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(bower_components)/,
         loader: "babel-loader",
         options: { presets: ["@babel/env"] }
       },
@@ -36,6 +36,10 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         loader: 'file-loader',
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader?limit=100000'
       },
     ]
   },
