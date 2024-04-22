@@ -26,7 +26,7 @@
     "test": "jest src/* --config ./config/jest.config.js",
     "gen-doc": "jsdoc -c ./config/jsdoc-config.json -d ./reports/doc",
     "coverage": "npm run test -- --coverage --coverageDirectory ./reports/coverage",
-    "lint": "./node_modules/.bin/eslint packages/custom-carbon-addons/src packages/carbon-addons-devenv/src",
+    "lint": "cross-env ./node_modules/.bin/eslint packages/custom-carbon-addons/src packages/carbon-addons-devenv/src",
     "start": "webpack-dev-server --mode development",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -88,7 +88,6 @@
     "@carbon/type": "^11.26.0",
     "classnames": "^2.2.6",
     "core-js": "*",
-    "graphql": "^15.3.0",
     "open": "^8.4.0",
     "prop-types": "*",
     "react": "^16.13.1",
