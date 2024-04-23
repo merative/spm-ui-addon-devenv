@@ -4,26 +4,27 @@ description: Setting up your development environment
 ---
 
 1. Download and install Node.js from [https://nodejs.org](https://nodejs.org). The installation includes the npm (Node package manager), which you can use to install your Node packages.
-2. Download and install your IDE. Microsoft Visual Studio Code [https://code.visualstudio.com/download](https://code.visualstudio.com/download) is the recommended IDE.  Install any needed extensions, such as ESLint or Prettier.
+2. Download and install your IDE. Microsoft Visual Studio Code [https://code.visualstudio.com/download](https://code.visualstudio.com/download) is the recommended IDE. Install any needed extensions, such as ESLint or Prettier.
 3. Download the `main` branch of the SPM UI Addon Development Environment code from [https://github.com/merative/spm-ui-addon-devenv](https://github.com/merative/spm-ui-addon-devenv).
 
-    You can choose one of the following options:
-    1. Download as Zip. Select the Code drop-down menu and select the **Download Zip** option.
-    2. Open with GitHub Desktop.
-    3. Clone the repository.
-    If you have Git set up, you can clone the repository by opening a command prompt and running the command:
+   You can choose one of the following options:
 
-     ```
-     git clone https://github.com/merative/spm-ui-addon-devenv.git
-     ```
+   1. Download as Zip. Select the Code drop-down menu and select the **Download Zip** option.
+   2. Open with GitHub Desktop.
+   3. Clone the repository.
+      If you have Git set up, you can clone the repository by opening a command prompt and running the command:
 
-1. Install the SPM UI Addon Development Environment on your computer by using npm. To install the code, change to the `spm-ui-addon-devenv` directory and run the command:
+   ```
+   git clone https://github.com/merative/spm-ui-addon-devenv.git
+   ```
 
-    ```
-    npm ci
-    ```
+4. Install the SPM UI Addon Development Environment on your computer by using npm. To install the code, change to the `spm-ui-addon-devenv` directory and run the command:
 
-2. You can now open the repository in your IDE. For example, Microsoft Visual Studio Code.
+   ```
+   npm ci
+   ```
 
-3. Configure your React development environment variables. Before you start to work with React components, you must set node environment variables in the `.env` file.
-Update the `.env` file, which sets the environment variables for production builds. For information about the enviroment variables to set in these files, see [Environment variables](environment-variables).
+5. You can now open the repository in your IDE. For example, Microsoft Visual Studio Code.
+
+6. Configure your React development environment variables. Before you start to work with React components, you must set node environment variables in the `.env` file.
+   Update the `.env` file, which sets the environment variables for production builds. For information about the enviroment variables to set in these files, see [Environment variables](environment-variables).

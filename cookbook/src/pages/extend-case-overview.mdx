@@ -8,55 +8,55 @@ The Case Overview provides an Entitlements card by default, which is rendered wi
 The following guidance assumes that you have developed some Carbon components and want to extend the Case Overview page. For more information about developing custom Carbon components, see [Creating a custom Carbon add-on component](/new-custom-component.md).
 
 1. On the server, create a new domain definition for your custom component in the EJBServer custom component directory. For example, CUSTOM_CASEOVERVIEW.
-  For more information about configuring domain definitions, see [Configuring a domain definition](https://www.ibm.com/docs/en/spm/8.0.2?topic=workflow-configuring-domain-definition).
+   For more information about configuring domain definitions, see [Configuring a domain definition](https://www.ibm.com/docs/en/spm/8.0.2?topic=workflow-configuring-domain-definition).
 
 2. Update the `DomainsConfig.xml` file in your custom component in the `webclient` directory to map the new domain definition to a new Java renderer. If the `DomainsConfig.xml` file does not exist in your custom component, you must create it. For example:
 
-    ```XML
-    <dc:domains xmlns:dc="http://www.curamsoftware.com/curam/util/common/ domain-config">
-      <dc:domain name="CUSTOM_CASEOVERVIEW">
-       <dc:plug-in name="view-renderer"
-                class="custom.CustomCaseOverviewRenderer"/>
-         </dc:domain>
-    </dc:domains>
-    ```
+   ```XML
+   <dc:domains xmlns:dc="http://www.curamsoftware.com/curam/util/common/ domain-config">
+     <dc:domain name="CUSTOM_CASEOVERVIEW">
+      <dc:plug-in name="view-renderer"
+               class="custom.CustomCaseOverviewRenderer"/>
+        </dc:domain>
+   </dc:domains>
+   ```
 
 3. Implement a custom Java renderer, for example `CustomCaseOverviewRenderer`, by extending the existing `CaseOverviewRenderer` Java renderer as shown in the following example. This example extends the Case Overview page with the `ComponentX` component.
 
    In your custom Java renderer, you render both the existing components and the custom components. You create an HTML element for the custom components and call a JavaScript renderer function to integrate the custom components into the renderer.
 
-    ```java
-    public void render(final Field field, final DocumentFragment fragment,
-        final RendererContext context, final RendererContract contract)
-        throws ClientException, DataAccessException, PlugInException {
-    
-        // render the OOTB Case overview UI
-        final DocumentFragment baseFragment =
-          fragment.getOwnerDocument().createDocumentFragment();
-        super.render(field, baseFragment, context, contract);
-        fragment.appendChild(baseFragment);
-    
-       // create a HTML element to render the custom carbon component
-       // and extend the OOTB Carbon components
-        final Element carbonWrapperDiv =
-          fragment.getOwnerDocument().createElement("div");
-        final String carbonWrapperDivID = "CarbonWrapperDiv";
-        carbonWrapperDiv.setAttribute("id", carbonWrapperDivID);
-        HTMLUtils.appendComment(carbonWrapperDiv, "filler");
-        carbonWrapperDiv.setAttribute("class", "spm-custom-component");
-    
-        // append the new element to the fragment
-        fragment.appendChild(carbonWrapperDiv);
-        // placeholder in case overview before content is rendered
-        HTMLUtils.appendComment(carbonWrapperDiv.getPreviousSibling(), "filler");
- 
-        // render the custom Carbon component into the new HTML element
-        // For example, to render a custom Carbon ComponentX it would be the following
-        final Map<String, String> map = new HashMap<String, String>();
-        // Make a call to integrate ComponentX into the renderer by using
-        // the ComponentXRenderer JavaScript renderer function
-       includeCarbonComponent(context, carbonWrapperDivID, "{}", "{}",
-         "window.spmcustom.renderers.ComponentX.ComponentXRenderer",
-           map);
-     }
-     ```
+   ```java
+   public void render(final Field field, final DocumentFragment fragment,
+       final RendererContext context, final RendererContract contract)
+       throws ClientException, DataAccessException, PlugInException {
+
+       // render the OOTB Case overview UI
+       final DocumentFragment baseFragment =
+         fragment.getOwnerDocument().createDocumentFragment();
+       super.render(field, baseFragment, context, contract);
+       fragment.appendChild(baseFragment);
+
+      // create a HTML element to render the custom carbon component
+      // and extend the OOTB Carbon components
+       final Element carbonWrapperDiv =
+         fragment.getOwnerDocument().createElement("div");
+       final String carbonWrapperDivID = "CarbonWrapperDiv";
+       carbonWrapperDiv.setAttribute("id", carbonWrapperDivID);
+       HTMLUtils.appendComment(carbonWrapperDiv, "filler");
+       carbonWrapperDiv.setAttribute("class", "spm-custom-component");
+
+       // append the new element to the fragment
+       fragment.appendChild(carbonWrapperDiv);
+       // placeholder in case overview before content is rendered
+       HTMLUtils.appendComment(carbonWrapperDiv.getPreviousSibling(), "filler");
+
+       // render the custom Carbon component into the new HTML element
+       // For example, to render a custom Carbon ComponentX it would be the following
+       final Map<String, String> map = new HashMap<String, String>();
+       // Make a call to integrate ComponentX into the renderer by using
+       // the ComponentXRenderer JavaScript renderer function
+      includeCarbonComponent(context, carbonWrapperDivID, "{}", "{}",
+        "window.spmcustom.renderers.ComponentX.ComponentXRenderer",
+          map);
+    }
+   ```
