@@ -10,7 +10,7 @@ import ApolloClientConfig from './core/ApolloClientConfig';
 import ApolloClientDataProvider from './core/ApolloClientDataProvider';
 import ApolloClientQueryProvider from './core/ApolloClientQueryProvider';
 import Renderer from '../../sample_renderers/Renderer';
-import settings from '../react';
+import { settings } from '../react';
 
 /**
  * Contains a list of all the custom appolo client hooks with components
