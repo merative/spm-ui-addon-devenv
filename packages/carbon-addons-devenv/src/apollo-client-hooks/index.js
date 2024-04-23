@@ -2,15 +2,15 @@
  * Copyright Merative US L.P. 2020
  */
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import PersonComponentApolloClientHook from './hook_samples/Person';
-import LogoComponentApolloClientHook from './hook_samples/Logo';
-import ApolloClientConfig from './core/ApolloClientConfig';
-import ApolloClientDataProvider from './core/ApolloClientDataProvider';
-import ApolloClientQueryProvider from './core/ApolloClientQueryProvider';
-import Renderer from '../../sample_renderers/Renderer';
-import settings from '../react';
+import React from "react";
+import ReactDOM from "react-dom";
+import PersonComponentApolloClientHook from "./hook_samples/Person";
+import LogoComponentApolloClientHook from "./hook_samples/Logo";
+import ApolloClientConfig from "./core/ApolloClientConfig";
+import ApolloClientDataProvider from "./core/ApolloClientDataProvider";
+import ApolloClientQueryProvider from "./core/ApolloClientQueryProvider";
+import Renderer from "../../sample_renderers/Renderer";
+import { settings } from "../react";
 
 /**
  * Contains a list of all the custom appolo client hooks with components
@@ -21,19 +21,29 @@ import settings from '../react';
  */
 const ApolloClientHookTemplate = (container, configuration, DataProvider) => {
   const apolloClient = ApolloClientConfig.getConfig(configuration);
-  
+
   ReactDOM.render(
     React.createElement(DataProvider, {
       apolloClient,
-      configuration
+      configuration,
     }),
-    container
+    container,
   );
 };
 
 // sample apollo client compponents used
-const SampleApolloClientHooks = { LogoComponentApolloClientHook, PersonComponentApolloClientHook };
+const SampleApolloClientHooks = {
+  LogoComponentApolloClientHook,
+  PersonComponentApolloClientHook,
+};
 
 // ApolloClientHookTemplate,  ApolloClientDataProvider, ApolloClientQueryProvider, Renderer are all apollo client helper objects that
 // need to be referened in custom-carbon-addons package
-export { SampleApolloClientHooks as ApolloClientHooks, ApolloClientHookTemplate, ApolloClientDataProvider, ApolloClientQueryProvider, Renderer, settings };
+export {
+  SampleApolloClientHooks as ApolloClientHooks,
+  ApolloClientHookTemplate,
+  ApolloClientDataProvider,
+  ApolloClientQueryProvider,
+  Renderer,
+  settings,
+};
