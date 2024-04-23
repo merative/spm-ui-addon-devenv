@@ -1,2 +1,3 @@
-node_modules/**
+cookbook/src/gatsby-theme-carbon/**
 dist/**
+node_modules/**

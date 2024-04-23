@@ -1,6 +1,6 @@
 - title: Overview
   pages:
-     - path: /overview
+    - path: /overview
 - title: Setting up for development
   pages:
     - title: Prerequisites and supported software
@@ -32,10 +32,10 @@
       path: /deployment
     - title: Customizing the Case Overview
       path: /extend-case-overview
-# - title: Integrating components with UIM
-#  pages:
-#    - title: Integrating components with the UIM page
-#      path: /integrate-addon-in-uim
+  # - title: Integrating components with UIM
+  #  pages:
+  #    - title: Integrating components with the UIM page
+  #      path: /integrate-addon-in-uim
   hasDivider: true
 - title: Reference
   pages:

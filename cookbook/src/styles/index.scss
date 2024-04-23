@@ -1,6 +1,6 @@
 // This is where your application styles could go.
 
-[class*='PageHeader-module--page-header'] {
+[class*="PageHeader-module--page-header"] {
   height: auto !important;
   min-height: 13rem;
   max-height: 15rem;
@@ -8,7 +8,7 @@
 }
 
 @media (min-width: 99rem) {
-  [class*='PageHeader-module--text'] {
+  [class*="PageHeader-module--text"] {
     font-size: 4rem !important;
   }
 }
@@ -22,39 +22,39 @@
   line-height: 1.2rem;
 }
 
-[class*='Tabs-module--panel'] {
+[class*="Tabs-module--panel"] {
   padding-bottom: 1rem;
   max-width: calc(67% + 1rem);
 }
 
-[class*='Tabs-module--panel'] ul.bx--list--unordered {
+[class*="Tabs-module--panel"] ul.bx--list--unordered {
   width: 100%;
 }
 
-[class*='Tabs-module--panel'] ul.bx--list--unordered li,
-[class*='Tabs-module--panel'] div.bx--row p {
+[class*="Tabs-module--panel"] ul.bx--list--unordered li,
+[class*="Tabs-module--panel"] div.bx--row p {
   font-size: 14px;
 }
 
-[class*='Tabs-module--panel'] ul + pre {
+[class*="Tabs-module--panel"] ul + pre {
   margin-top: 1rem;
 }
 
 @media (min-width: 66rem) {
-  [class*='Tabs-module--panel'] {
+  [class*="Tabs-module--panel"] {
     padding-bottom: 1rem;
     max-width: 75%;
   }
-  [class*='Markdown-module--list'] {
+  [class*="Markdown-module--list"] {
     max-width: 90%;
     margin-bottom: 10px;
   }
 
-  [class*='Tabs-module--panel'] [class*='Code-module--row'] {
+  [class*="Tabs-module--panel"] [class*="Code-module--row"] {
     width: 100%;
   }
 
-  [class*='Markdown-module--list'].bx--list--nested {
+  [class*="Markdown-module--list"].bx--list--nested {
     width: calc(100% - 1rem);
     margin-bottom: 10px;
   }
@@ -70,54 +70,83 @@
     max-width: 90%;
   }
 
-  li [class*='InlineNotification-module--notification'].bx--col-md-6.bx--col-lg-8 {
+  li
+    [class*="InlineNotification-module--notification"].bx--col-md-6.bx--col-lg-8 {
     display: block;
     flex: 0 0 100%;
     max-width: 100%;
   }
 
   h3#global-properties + div.bx--row table.page-table tbody tr td:nth-child(1),
-  h3#liberty-runtime + div.bx--row + div.bx--row table.page-table tbody tr td:nth-child(1),
-  h3#batch-jobs + div.bx--row + div.bx--row table.page-table tbody tr td:nth-child(1) {
+  h3#liberty-runtime
+    + div.bx--row
+    + div.bx--row
+    table.page-table
+    tbody
+    tr
+    td:nth-child(1),
+  h3#batch-jobs
+    + div.bx--row
+    + div.bx--row
+    table.page-table
+    tbody
+    tr
+    td:nth-child(1) {
     width: 35%;
   }
 
-  h3#ibm-mq + div.bx--row + div.bx--row table.page-table tbody tr td:nth-child(1),
-  h3#static-content-server + div.bx--row table.page-table tbody tr td:nth-child(1),
+  h3#ibm-mq
+    + div.bx--row
+    + div.bx--row
+    table.page-table
+    tbody
+    tr
+    td:nth-child(1),
+  h3#static-content-server
+    + div.bx--row
+    table.page-table
+    tbody
+    tr
+    td:nth-child(1),
   h3#xml-server + div.bx--row table.page-table tbody tr td:nth-child(1),
-  h3#universal-access-react-app-optional + div.bx--row table.page-table tbody tr td:nth-child(1) {
+  h3#universal-access-react-app-optional
+    + div.bx--row
+    table.page-table
+    tbody
+    tr
+    td:nth-child(1) {
     width: 30%;
   }
 }
 
 @media (max-width: 66rem) {
-  [class*='Tabs-module--panel'] {
+  [class*="Tabs-module--panel"] {
     max-width: 100%;
   }
-  [class*='Tabs-module--panel'] [class*='Code-module--row'] {
+  [class*="Tabs-module--panel"] [class*="Code-module--row"] {
     width: 100%;
   }
 }
 
 // Hide SideBar and Footer when printing
 @media print {
-  [class*='LeftNavWrapper-module--expanded'] {
+  [class*="LeftNavWrapper-module--expanded"] {
     display: none;
   }
-  [class*='Footer-module--footer'] {
+  [class*="Footer-module--footer"] {
     display: none;
   }
 }
 
-[class*='Code-module--row'] {
+[class*="Code-module--row"] {
   width: 70%;
 }
 
-[class*='Markdown-module--list'] {
+[class*="Markdown-module--list"] {
   width: 77.5%;
 }
 
-li [class*='Code-module--container'] {
+li [class*="Code-module--container"] {
   width: 100%;
 }
 
@@ -129,17 +158,17 @@ li [class*='Code-module--container'] {
   width: 86%;
 }
 
-[class*='InlineNotification-module--notification'].bx--col-md-6.bx--col-lg-8 {
+[class*="InlineNotification-module--notification"].bx--col-md-6.bx--col-lg-8 {
   display: block;
   flex: 0 0 80%;
   max-width: 80%;
 }
 
-[class*='Markdown-module--list-item'] .bx--row {
+[class*="Markdown-module--list-item"] .bx--row {
   max-width: 100%;
 }
 
-[class*='Caption-module--caption'] {
+[class*="Caption-module--caption"] {
   max-width: 95%;
 }
 

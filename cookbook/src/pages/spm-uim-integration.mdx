@@ -11,40 +11,46 @@ Complete the following steps to integrate the component into a Java renderer:
 
 1. Create a custom UIM page in your web client custom components directory.
 2. Create a Java renderer in the web client custom component directory. Refer to the PersonFolio and Logo samples for guidance, see [Samples reference](samples-reference).
-   - For this example, create the `CarbonComponentXViewRenderer.java` Java renderer in the `JavaSource/custom` subdirectory. The renderer extends the
-    `AbstractViewRenderer`` (curam.util.client.domain.render.view.AbstractViewRenderer) class.
-   - Make a call to the `includeCarbonComponent()` function to call the custom component. For more information about the `includeCarbonComponent()` function, see the    the Java documentation. Call the following code from the `render()` method:
-     ```
-      // making the call to integrate the ComponentX component into the renderer via
-      // the ComponentXRenderer JavaScript renderer function
-      includeCarbonComponent(context, carbonWrapperDivID, labels, "{}",
-      "window.spmcustom.renderers.ComponentX.ComponentXRenderer",
-      map);
-    ```
-    You can specify the following code variables as optional configuration:
 
-     ```
-     // labels to be used to pass translated labels into the carbon component.
-     final String labels = "{}";
-     // the id of the HTML element on the renderer that will host the HTML content from the Carbon component
-     final String carbonWrapperDivID = "ComponentX";
-     // map can be used for extra configuration that may be needed, such as passing argument to GraphQL queries
-     final Map<String, String> map = new HashMap<String, String>();
-    ```
-2. Configure your Java renderer by doing the following:
-    - On the server, create a `CUSTOM_CARBON_COMPONENT_X` domain definition for your custom component in the the `EJBServer` custom component directory. For more information about configuring domain definitions see [https://www.ibm.com/docs/en/spm/8.0.2?topic=workflow-configuring-domain-definition ](https://www.ibm.com/docs/en/spm/8.0.2?topic=workflow-configuring-domain-definition). 
+    - For this example, create the `CarbonComponentXViewRenderer.java` Java renderer in the `JavaSource/custom` subdirectory. The renderer extends the
+      `AbstractViewRenderer`` (curam.util.client.domain.render.view.AbstractViewRenderer) class.
+    - Make a call to the `includeCarbonComponent()` function to call the custom component. For more information about the `includeCarbonComponent()` function, see the the Java documentation. Call the following code from the `render()` method:
+
+```
+// making the call to integrate the ComponentX component into the renderer via
+// the ComponentXRenderer JavaScript renderer function
+includeCarbonComponent(context, carbonWrapperDivID, labels, "{}",
+"window.spmcustom.renderers.ComponentX.ComponentXRenderer",
+map);
+```
+
+You can specify the following code variables as optional configuration:
+
+```
+// labels to be used to pass translated labels into the carbon component.
+final String labels = "{}";
+// the id of the HTML element on the renderer that will host the HTML content from the Carbon component
+final String carbonWrapperDivID = "ComponentX";
+// map can be used for extra configuration that may be needed, such as passing argument to GraphQL queries
+final Map<String, String> map = new HashMap<String, String>();
+```
+
+3. Configure your Java renderer by doing the following:
+    - On the server, create a `CUSTOM_CARBON_COMPONENT_X` domain definition for your custom component in the the `EJBServer` custom component directory. For more information about configuring domain definitions see [https://www.ibm.com/docs/en/spm/8.0.2?topic=workflow-configuring-domain-definition](https://www.ibm.com/docs/en/spm/8.0.2?topic=workflow-configuring-domain-definition).
     - Update the `DomainsConfig.xml` file in your custom component in the webclient directory to map the new domain definition to the new Java renderer. If this file does not exist in your custom component, you must create it. For example:
-       ```
-       <?xml version="1.0" encoding="ISO-8859-1"?>
-       <dc:domains xmlns:dc="http://www.curamsoftware.com/curam/util/common/domain-config">
-         <dc:domain name="CUSTOM_CARBON_COMPONENT_X">
-          <dc:plug-in name="view-renderer"
-                   class="custom.CarbonComponentXViewRenderer"/>
-         </dc:domain>
-       </dc:domains>
-       ```
-    - In the renderer, create a HTML element to host the output from the Carbon component. This HTML element must have the `spm-custom-component` CSS class name. For example:
 
-     ```
-     <div id="<someId>" class="spm-custom-component">
-     ```
+```
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<dc:domains xmlns:dc="http://www.curamsoftware.com/curam/util/common/domain-config">
+  <dc:domain name="CUSTOM_CARBON_COMPONENT_X">
+  <dc:plug-in name="view-renderer"
+            class="custom.CarbonComponentXViewRenderer"/>
+  </dc:domain>
+</dc:domains>
+```
+
+4. In the renderer, create a HTML element to host the output from the Carbon component. This HTML element must have the `spm-custom-component` CSS class name. For example:
+
+```
+<div id="<someId>" class="spm-custom-component">
+```
