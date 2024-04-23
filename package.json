@@ -66,6 +66,7 @@
     "husky": "^4.3.0",
     "jest": "^24.9.0",
     "jsdoc": "^3.6.7",
+    "prettier": "^3.2.5",
     "react-dev-tools-iframe-webpack-plugin": "^1.0.2",
     "sass": "^1.74.1",
     "sass-loader": "^10.0.3",
