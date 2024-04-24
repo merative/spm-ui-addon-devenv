@@ -1,5 +1,5 @@
 /*
- * Copyright Merative US L.P. 2021, 2022
+ * Copyright Merative US L.P. 2021, 2024
  */
 import React from "react";
 import PropTypes from "prop-types";

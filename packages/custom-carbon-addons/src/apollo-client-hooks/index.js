@@ -1,5 +1,5 @@
 /*
- * Copyright Merative US L.P. 2021
+ * Copyright Merative US L.P. 2021, 2024
  */
 // eslint-disable-next-line import/no-unresolved
 import { ApolloClientHooks } from "devenv_pkg/src/apollo-client-hooks";
