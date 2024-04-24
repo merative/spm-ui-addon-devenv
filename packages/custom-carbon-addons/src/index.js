@@ -1,9 +1,8 @@
 /*
- * Copyright Merative US L.P. 2021
+ * Copyright Merative US L.P. 2021, 2024
  */
 
-/* eslint import/no-unresolved: [2, { ignore: ['devenv_pkg*.'] }] */
-import { renderers, sampleRenderers }  from 'devenv_pkg/src';
+// eslint-disable-next-line import/no-unresolved
+import { renderers, sampleRenderers } from "devenv_pkg/src";
 
-// eslint-disable-next-line import/prefer-default-export
 export { renderers, sampleRenderers };

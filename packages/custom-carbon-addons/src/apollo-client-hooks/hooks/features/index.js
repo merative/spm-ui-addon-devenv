@@ -1,6 +1,5 @@
-/* eslint-disable import/prefer-default-export */
 /*
- * Copyright Merative US L.P. 2022
+ * Copyright Merative US L.P. 2022, 2024
  */
 
 // INSTRUCTIONS:

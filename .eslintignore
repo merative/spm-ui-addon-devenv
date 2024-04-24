@@ -1,3 +1,6 @@
+cookbook/public/**
 cookbook/src/gatsby-theme-carbon/**
 dist/**
 node_modules/**
+reports/**
+storybook-static/**

@@ -1,12 +1,9 @@
-
-
-/* eslint-disable  no-console */
-const path = require('path');
-const gulp = require('gulp');
-const shell = require('shelljs');
+const path = require("path");
+const gulp = require("gulp");
+const shell = require("shelljs");
 
 // Load env vars from the .env file.
-require('dotenv').config();
+require("dotenv").config();
 
 /*
  * This task generates a development bundle to the specified output folder.
@@ -24,29 +21,36 @@ require('dotenv').config();
  * before it is transpiled by Babel.
  */
 
-gulp.task('deploy:spm', async () => {
+gulp.task("deploy:spm", async () => {
   if (process.env.CLIENT_DIR) {
     const customComponentName = process.env.CUSTOM_COMPONENT_NAME || "custom";
-    const customComponentLocation = process.env.CLIENT_DIR + "/components/" + customComponentName + "/WebContent/CDEJ/jscript/SPMUIComponents";
-    shell.echo(`\n[INFO] Copying the generated files to custom component: ${customComponentLocation}`);
+    const customComponentLocation = `${process.env.CLIENT_DIR}/components/${customComponentName}/WebContent/CDEJ/jscript/SPMUIComponents`;
+    shell.echo(
+      `\n[INFO] Copying the generated files to custom component: ${customComponentLocation}`,
+    );
     shell.exec(
       `webpack --mode=development --devtool=eval-source-map\
       --output-path=${customComponentLocation}`,
-      { fatal: true }
+      { fatal: true },
     );
   } else {
-    throw new  Error("Env var CLIENT_DIR is not defined in the .env file. It should be set to the weblicent directory.")
+    throw new Error(
+      "Env var CLIENT_DIR is not defined in the .env file. It should be set to the weblicent directory.",
+    );
   }
 });
 
-gulp.task('dev:spm', () => {
+gulp.task("dev:spm", () => {
   if (!process.env.CLIENT_DIR) {
-    throw new  Error("Env var CLIENT_DIR is not defined in the .env file. It should be set to the weblicent directory.")
+    throw new Error(
+      "Env var CLIENT_DIR is not defined in the .env file. It should be set to the weblicent directory.",
+    );
   }
-  const cdejLocation = process.env.RELATIVE_PATH_TO_BUNDLE || "CDEJ/jscript/SPMUIComponents";
+  const cdejLocation =
+    process.env.RELATIVE_PATH_TO_BUNDLE || "CDEJ/jscript/SPMUIComponents";
   const output =
-    process.env.CLIENT_DIR + "/WebContent/" + cdejLocation ||
-    path.resolve(__dirname, '/dist');
+    `${process.env.CLIENT_DIR}/WebContent/${cdejLocation}` ||
+    path.resolve(__dirname, "/dist");
 
   shell.echo(`\n[INFO] Generating the dev bundle to path: ${output}
 [INFO] Any changes to the files will automatically trigger a new bundle generation.`);
@@ -55,22 +59,19 @@ gulp.task('dev:spm', () => {
     `webpack --mode=development --devtool=eval-source-map\
     --output-path=${output} --watch\
    `,
-    { fatal: true }
+    { fatal: true },
   );
 
-  shell.echo(`\n\n[INFO] Bundle Generated into ${output} \n[INFO] Watching for file changes`);
- 
+  shell.echo(
+    `\n\n[INFO] Bundle Generated into ${output} \n[INFO] Watching for file changes`,
+  );
 });
 
-gulp.task('prod:spm', (done) => {
-  const output = path.resolve(__dirname, '/dist');
-  
+gulp.task("prod:spm", (done) => {
+  const output = path.resolve(__dirname, "/dist");
+
   shell.echo(`\n[INFO] Generating the dev bundle to path: ${output}.`);
 
-  shell.exec(
-    `webpack --mode production`,
-    { fatal: true}
-  );
+  shell.exec(`webpack --mode production`, { fatal: true });
   done();
 });
-
