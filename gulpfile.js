@@ -1,4 +1,3 @@
-/* eslint-disable  no-console */
 const path = require("path");
 const gulp = require("gulp");
 const shell = require("shelljs");
