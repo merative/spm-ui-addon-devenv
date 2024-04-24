@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 /*
  * Copyright Merative US L.P. 2022
  */
