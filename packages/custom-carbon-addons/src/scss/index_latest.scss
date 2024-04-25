@@ -1,17 +1,17 @@
-@import 'devenv_pkg/src/scss/app.scss';
+@import "devenv_pkg/src/scss/app.scss";
 
 .spm-custom-component {
   //-------------------------
   // Variable overrides
-  //------------------------- 
-  @import './variables.scss';
+  //-------------------------
+  @import "./variables.scss";
   //-------------------------
   // Carbon-Components
-  //------------------------- 
-  @import 'devenv_pkg/src/scss/carbon-components.scss';
+  //-------------------------
+  @import "devenv_pkg/src/scss/carbon-components.scss";
   //-------------------------
   // Custom addons scss here
-  //------------------------- 
+  //-------------------------
   // Sample component addons
   // add your custom styling here from scss files in the addons directory
   // e.g @import './addons/componentX.scss';
