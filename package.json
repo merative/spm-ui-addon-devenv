@@ -9,7 +9,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,json,css,md}": [
+    "*.{js,jsx,json,css,scss,md,mdx}": [
       "prettier --write"
     ],
     "*.{js,jsx}": [
