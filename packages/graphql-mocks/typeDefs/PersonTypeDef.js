@@ -1,16 +1,16 @@
-const gql = require('graphql-tag');
+const gql = require("graphql-tag");
 
 const PersonTypeDef = gql`
-type Query {
-  persons: [Person],
-}
+  type Query {
+    persons: [Person]
+  }
 
-type Person {
-  id: String
-  firstname: String
-  surname: String
-  age: Int
-}
+  type Person {
+    id: String
+    firstname: String
+    surname: String
+    age: Int
+  }
 `;
 
-module.exports = PersonTypeDef
+module.exports = PersonTypeDef;

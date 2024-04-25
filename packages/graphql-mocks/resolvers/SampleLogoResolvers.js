@@ -1,11 +1,9 @@
-
-
-const { logoData } = require('./data/sampleLogoData');
+const { logoData } = require("./data/sampleLogoData");
 
 const SampleLogoResolver = {
-   Query: {
-     logo: logoData,     
-   }
- }
+  Query: {
+    logo: logoData,
+  },
+};
 
-module.exports =  SampleLogoResolver
+module.exports = SampleLogoResolver;
