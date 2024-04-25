@@ -2,13 +2,13 @@
  * Copyright Merative US L.P. 2021
  */
 
-import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+import { ApolloClient, createHttpLink, InMemoryCache } from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
 let csrfToken;
 
 class ApolloClientConfig {
-  static serverURL = process.env.GRAPHQL_SERVER_URL || '/Rest/graphql';
+  static serverURL = process.env.GRAPHQL_SERVER_URL || "/Rest/graphql";
 
   static csrfTokenHeader = process.env.CSRF_TOKEN_REQUEST_HEADER;
 
@@ -24,9 +24,9 @@ class ApolloClientConfig {
    */
   static getCSRFRequestHeaderName = () => {
     return process.env.CSRF_TOKEN_REQUEST_HEADER;
-  }
-  
-   /**
+  };
+
+  /**
    * Gets the CSRF token by making a call to the configured REST endpoint.
    *
    * @static
@@ -34,13 +34,13 @@ class ApolloClientConfig {
    * @memberof ApolloClientConfig
    * @private
    */
-  static getCSRFToken = async  () => {  
+  static getCSRFToken = async () => {
     const response = await fetch(this.csrfTokenEndpoint, {});
     const token = await response.headers.get(this.csrfTokenHeader);
     return token;
-  }
+  };
 
- /**
+  /**
    * Gets the http endpoint for GraphQL with basic configuration.
    *
    * @static
@@ -67,8 +67,8 @@ class ApolloClientConfig {
       headers: {
         ...headers,
         [this.csrfTokenHeader]: crfToken ? `${crfToken}` : "",
-      }
-    }
+      },
+    };
   };
 
   /**
@@ -79,8 +79,8 @@ class ApolloClientConfig {
    * @memberof ApolloClientConfig
    * @private
    */
-  static getCSRFLink = () => {  
-    return setContext(async(_, { headers }) => {
+  static getCSRFLink = () => {
+    return setContext(async (_, { headers }) => {
       // return the headers to the context so httpLink can read them
       if (!csrfToken) {
         csrfToken = await this.getCSRFToken();
@@ -89,8 +89,7 @@ class ApolloClientConfig {
     });
   };
 
-
-   /**
+  /**
    * Gets the Apollo Client configuration depdending on the configuration from the renderers.
    *
    * @static
@@ -100,15 +99,16 @@ class ApolloClientConfig {
    */
   static getConfig = (configuration) => {
     const { security } = configuration;
-    const isCsrfEnabled = security && security.csrf && security.csrf.enabled === 'true';
+    const isCsrfEnabled =
+      security && security.csrf && security.csrf.enabled === "true";
     const httpLink = this.getHttpLink();
-  return new ApolloClient({
-    link: isCsrfEnabled ? this.getCSRFLink().concat(httpLink) : httpLink,
-    headers: {
-      'Accept-Language': configuration.locale,
-    },
-    cache: new InMemoryCache()
-   });
-  }
+    return new ApolloClient({
+      link: isCsrfEnabled ? this.getCSRFLink().concat(httpLink) : httpLink,
+      headers: {
+        "Accept-Language": configuration.locale,
+      },
+      cache: new InMemoryCache(),
+    });
+  };
 }
 export default ApolloClientConfig;

@@ -2,7 +2,7 @@
  * Copyright Merative US L.P. 2020
  */
 
-import React from 'react';
+import React from "react";
 
 const InlContext = React.createContext({
   labels: undefined,

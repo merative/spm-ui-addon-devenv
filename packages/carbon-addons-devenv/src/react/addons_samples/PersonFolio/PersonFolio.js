@@ -2,19 +2,19 @@
  * Copyright Merative US L.P. 2021
  */
 
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 
-import cx from 'classnames';
-import InlContext from '../../core/InlContext';
-import settings from '../../core/settings';
+import cx from "classnames";
+import InlContext from "../../core/InlContext";
+import settings from "../../core/settings";
 
 /**
-  * An Example component.
-  * <p>
-  * A PersonFolio component that renders a list of people.
-  * @namespace PersonFolio
-  */
+ * An Example component.
+ * <p>
+ * A PersonFolio component that renders a list of people.
+ * @namespace PersonFolio
+ */
 
 /**
  * @typedef {Object} PersonFolio
@@ -27,58 +27,63 @@ import settings from '../../core/settings';
  */
 const PersonFolio = ({ children, className, age, ...other }) => {
   const { labels } = useContext(InlContext);
-    const styleClass = cx(
-      `${settings.prefix}--personfolio`,
-      {
-        [`${settings.prefix}--personfolio--child`]: age < 18,
-        [`${settings.prefix}--personfolio--youngadult`]: age >= 18 && age < 25,
-        [`${settings.prefix}--personfolio--adult`]: age >= 25 && age < 65,
-        [`${settings.prefix}--personfolio--senior`]: age >= 65,
-      },
-      className
-    );
+  const styleClass = cx(
+    `${settings.prefix}--personfolio`,
+    {
+      [`${settings.prefix}--personfolio--child`]: age < 18,
+      [`${settings.prefix}--personfolio--youngadult`]: age >= 18 && age < 25,
+      [`${settings.prefix}--personfolio--adult`]: age >= 25 && age < 65,
+      [`${settings.prefix}--personfolio--senior`]: age >= 65,
+    },
+    className,
+  );
 
-    const {firstname, surname} = other;
-    const firstnameLabel = labels && labels.firstnameLabel || "First name";
-    const surnameLabel = labels && labels.surnameLabel || "Surname";
-    const ageLabel = labels && labels.ageLabel || "Age";
-    return (
-        // the renderer usually sets the 'data-testid' attribute but where
-        // there is a large composition of components it may need to be added at this level
-      <div className={styleClass} {...other}>
-          <p data-testid="personfolio_firstnameLabel">{firstnameLabel}:  {firstname}</p>
-          <p data-testid="personfolio_surnnameLabel">{surnameLabel}:  {surname}</p>
-          <p data-testid="personfolio_ageLabel">{ageLabel}: {age}</p>
-        {children}
-      </div>
-    );
-  };
+  const { firstname, surname } = other;
+  const firstnameLabel = (labels && labels.firstnameLabel) || "First name";
+  const surnameLabel = (labels && labels.surnameLabel) || "Surname";
+  const ageLabel = (labels && labels.ageLabel) || "Age";
+  return (
+    // the renderer usually sets the 'data-testid' attribute but where
+    // there is a large composition of components it may need to be added at this level
+    <div className={styleClass} {...other}>
+      <p data-testid="personfolio_firstnameLabel">
+        {firstnameLabel}: {firstname}
+      </p>
+      <p data-testid="personfolio_surnnameLabel">
+        {surnameLabel}: {surname}
+      </p>
+      <p data-testid="personfolio_ageLabel">
+        {ageLabel}: {age}
+      </p>
+      {children}
+    </div>
+  );
+};
 
-  PersonFolio.propTypes = {
-    /**
-     * Pass in the image that will be rendered within the Logo.
-     */
-    children: PropTypes.node,
-    
-    /**
-     * Additional styling
-     */
-    className: PropTypes.string,
- 
-    /**
-     * Additional styling
-     */
-     age: PropTypes.number,
-
-  };
-  
-  PersonFolio.defaultProps = {
-    className: undefined,
-    children: undefined,
-    age: undefined,
-  };
+PersonFolio.propTypes = {
+  /**
+   * Pass in the image that will be rendered within the Logo.
+   */
+  children: PropTypes.node,
 
   /**
+   * Additional styling
+   */
+  className: PropTypes.string,
+
+  /**
+   * Additional styling
+   */
+  age: PropTypes.number,
+};
+
+PersonFolio.defaultProps = {
+  className: undefined,
+  children: undefined,
+  age: undefined,
+};
+
+/**
  * Group
  * @typedef {Object} PortFolio
  * @memberof PortFolio
