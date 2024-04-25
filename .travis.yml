@@ -2,8 +2,7 @@ language: node_js
 node_js:
   - "12"
 
-before_install:
-  cd cookbook
+before_install: cd cookbook
 
 install:
   - npm install -g markdownlint-cli

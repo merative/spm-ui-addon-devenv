@@ -1,4 +1,4 @@
-import '../packages/custom-carbon-addons/src/scss/index.scss';
+import "../packages/custom-carbon-addons/src/scss/index.scss";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,4 +8,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
