@@ -32,7 +32,7 @@ For more information about the IBM Carbon Design System v10, see [https://v10.ca
 
 ### Added
 
-# This initial release enables the rapid development of custom application pages based on IBM Carbon components.
+This initial release enables the rapid development of custom application pages based on IBM Carbon components.
 
 ### Removed
 
