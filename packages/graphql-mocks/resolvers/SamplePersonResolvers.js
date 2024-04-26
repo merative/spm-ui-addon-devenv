@@ -1,10 +1,9 @@
-
-const { personsData } = require('./data/samplePeopleData');
+const { personsData } = require("./data/samplePeopleData");
 
 const SamplePersonResolver = {
-   Query: {
-     persons: personsData,     
-   }
- }
+  Query: {
+    persons: personsData,
+  },
+};
 
-module.exports = SamplePersonResolver
+module.exports = SamplePersonResolver;

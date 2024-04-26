@@ -2,23 +2,23 @@
  * Copyright Merative US L.P. 2021
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import cx from 'classnames';
-import settings from '../../core/settings';
+import React from "react";
+import PropTypes from "prop-types";
+import cx from "classnames";
+import settings from "../../core/settings";
 
- /**
-  * Example component.
-  * <p>
-  * A logo component that renders an image within a circle. A typical usage pattern for this component
-  *  would be for the avatar of a person.
-  * @namespace Logo
-  */
+/**
+ * Example component.
+ * <p>
+ * A logo component that renders an image within a circle. A typical usage pattern for this component
+ *  would be for the avatar of a person.
+ * @namespace Logo
+ */
 
 /**
  * @typedef {Object} Logo
  * @memberof Logo
- * @property {node} children Child node(s). This is required. An 'img' node i a typical child node 
+ * @property {node} children Child node(s). This is required. An 'img' node i a typical child node
  * @property {string} className CSS class name to be added to class list. This is optional.
  * @property {string} size The size of logo. Accepted values are 'small', 'mdeium', or 'large'.
  * This is optional and the default is medium.
@@ -29,16 +29,16 @@ const Logo = ({ children, className, imageName, size, ...other }) => {
   const styleClass = cx(
     `${settings.prefix}--logo`,
     {
-      [`${settings.prefix}--logo--large`]: size === 'large',
-      [`${settings.prefix}--logo--medium`]: size === 'medium',
-      [`${settings.prefix}--logo--small`]: size === 'small',
+      [`${settings.prefix}--logo--large`]: size === "large",
+      [`${settings.prefix}--logo--medium`]: size === "medium",
+      [`${settings.prefix}--logo--small`]: size === "small",
     },
-    className
+    className,
   );
   const pathToImage = `../Images/${imageName}`;
   return (
     <div className={styleClass} {...other}>
-      {imageName ? (<img src={pathToImage} alt="a logo" />) : <>{children}</>}
+      {imageName ? <img src={pathToImage} alt="a logo" /> : <>{children}</>}
     </div>
   );
 };
@@ -57,13 +57,13 @@ Logo.propTypes = {
   /**
    * Specify an optional size for the Logo. Defaults to 'medium'
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
 };
 
 Logo.defaultProps = {
-  size: 'medium',
+  size: "medium",
   className: undefined,
-  imageName: undefined
+  imageName: undefined,
 };
 
 export default Logo;

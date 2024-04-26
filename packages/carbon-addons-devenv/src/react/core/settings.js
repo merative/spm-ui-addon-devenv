@@ -1,6 +1,5 @@
-
 const settings = {
-  prefix: 'bx',
+  prefix: "bx",
 };
 
 module.exports = settings;

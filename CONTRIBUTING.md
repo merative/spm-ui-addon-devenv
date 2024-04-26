@@ -1,3 +1,5 @@
 # spm-ui-components
+
 ## Contributing In General
-Contributions are not supported at the moment. 
+
+Contributions are not supported at the moment.

@@ -1,33 +1,25 @@
 .#{$prefix}--personfolio {
+  background-color: $ui-01;
+  color: $text-01;
+  border-radius: 6px;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid !important;
+  padding: $spacing-05;
+  margin-top: $spacing-05;
 
-    background-color: $ui-01;
-    color: $text-01;
-    border-radius: 6px;
-    border-width: 1px 1px 1px 1px;
-    border-style: solid !important;
-    padding: $spacing-05;
-    margin-top: $spacing-05;
-  
-    &--child {
-        border-color: $support-01;
-
-    }
-  
-    &--youngadult {
-
-        border-color: $support-02;
-
-    }
-  
-    &--adult {
-
-      border-color: $support-03;
-    }
-
-    &--senior {
-
-        border-color: $support-04;
-      }
-  
+  &--child {
+    border-color: $support-01;
   }
-  
+
+  &--youngadult {
+    border-color: $support-02;
+  }
+
+  &--adult {
+    border-color: $support-03;
+  }
+
+  &--senior {
+    border-color: $support-04;
+  }
+}
