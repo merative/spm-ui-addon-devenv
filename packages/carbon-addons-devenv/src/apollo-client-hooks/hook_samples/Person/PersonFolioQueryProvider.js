@@ -4,7 +4,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 // NOTE:
-// from custom-carbon-addons package reference to ApolloClientQueryProvider would be he following
+// If you want to use ApolloClientQueryProvider in the custom-carbon-addons package use the following import:
 // import { ApolloClientQueryProvider } from 'devenv_pkg/src/apollo-client-hooks';
 // eslint-disable-next-line import/no-unresolved
 import ApolloClientQueryProvider from "devenv_pkg/src/apollo-client-hooks/core/ApolloClientQueryProvider";

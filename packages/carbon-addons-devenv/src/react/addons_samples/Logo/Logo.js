@@ -1,5 +1,5 @@
 /*
- * Copyright Merative US L.P. 2021
+ * Copyright Merative US L.P. 2021, 2024
  */
 
 import React from "react";
@@ -10,17 +10,17 @@ import settings from "../../core/settings";
 /**
  * Example component.
  * <p>
- * A logo component that renders an image within a circle. A typical usage pattern for this component
- *  would be for the avatar of a person.
+ * A logo component that renders an image within a circle. A typical usage pattern for this
+ * component would be for the avatar of a person.
  * @namespace Logo
  */
 
 /**
  * @typedef {Object} Logo
  * @memberof Logo
- * @property {node} children Child node(s). This is required. An 'img' node i a typical child node
+ * @property {node} children Child node(s). This is required. An 'img' node is a typical child node.
  * @property {string} className CSS class name to be added to class list. This is optional.
- * @property {string} size The size of logo. Accepted values are 'small', 'mdeium', or 'large'.
+ * @property {string} size The size of the logo. Accepted values are 'small', 'medium', or 'large'.
  * This is optional and the default is medium.
  * @property {Object} other Addtional properties that can be added to the rendered logo. The attributes
  * will be passed straigh through and added to the rendered ouput.
@@ -55,7 +55,7 @@ Logo.propTypes = {
 
   imageName: PropTypes.string,
   /**
-   * Specify an optional size for the Logo. Defaults to 'medium'
+   * Specify an optional size for the Logo. Defaults to 'medium'.
    */
   size: PropTypes.oneOf(["small", "medium", "large"]),
 };

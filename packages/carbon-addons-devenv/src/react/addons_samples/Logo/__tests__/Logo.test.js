@@ -1,5 +1,5 @@
 /*
- * Copyright Merative US L.P. 2020
+ * Copyright Merative US L.P. 2020, 2024
  */
 
 import { mount } from "enzyme";
@@ -46,7 +46,6 @@ describe("Logo tests", () => {
     // check that the root div exists
     expect(logoDiv.exists()).toBeTruthy();
     // check class name on root div
-
     const divAtts = logoDiv.at(0).props();
     expect(Object.keys(divAtts).length).toBe(3);
 
