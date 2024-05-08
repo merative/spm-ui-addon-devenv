@@ -1,7 +1,6 @@
-import "../../custom-carbon-addons/src/scss/index.scss";
-import "regenerator-runtime/runtime";
-import { renderers, sampleRenderers } from "./staticExports";
+/*
+ * Copyright Merative US L.P. 2021, 2024
+ */
+import sampleRenderers from "../sample_renderers";
 
-import { requireCustomCarbonAddons } from "./dynamicExports";
-
-export default { requireCustomCarbonAddons, renderers, sampleRenderers };
+export default sampleRenderers;

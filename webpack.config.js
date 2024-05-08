@@ -3,7 +3,10 @@ const webpack = require("webpack");
 const ReactDevToolsIFramePlugin = require("react-dev-tools-iframe-webpack-plugin");
 
 module.exports = {
-  entry: ["./public-path.js", "./packages/carbon-addons-devenv/src/index.js"],
+  entry: [
+    "./public-path.js",
+    "./packages/carbon-addons-entrypoint/src/index.js",
+  ],
   mode: "development",
   module: {
     rules: [
@@ -59,12 +62,12 @@ module.exports = {
     extensions: ["*", ".js", ".jsx"],
     alias: {
       devenv_pkg: path.resolve("./packages/carbon-addons-devenv"),
+      custom_pkg: path.resolve("./packages/custom-carbon-addons"),
     },
   },
   output: {
     path: path.resolve(__dirname, "dist/"),
     library: "spmcustom",
-    libraryExport: "default",
     publicPath: "/dist/",
     filename: "spm-custom-carbon-addons-[name].bundle.js",
     chunkFilename: "spm-custom-carbon-addons-[name].chunk.js",
