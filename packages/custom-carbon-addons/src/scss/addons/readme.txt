@@ -1,1 +1,1 @@
-Add your custom SCSS files to this directory
+Add your custom SCSS files to this directory and import them in index.scss.

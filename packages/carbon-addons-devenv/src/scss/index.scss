@@ -1,5 +1,9 @@
-@import "./app.scss";
+@use "@carbon/themes/scss/themes" as *;
+@use "@carbon/themes";
 
 .spm-custom-component {
-  @import "./carbon-components.scss";
+  @import "./prefix.scss";
+  @import "./variables.scss";
+  @import "./addons_samples/logo.scss";
+  @import "./addons_samples/personfolio.scss";
 }
