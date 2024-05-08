@@ -24,10 +24,10 @@ module.exports = {
             },
           },
         ],
-        include: path.resolve(
-          __dirname,
-          "./packages/custom-carbon-addons/src/scss",
-        ),
+        include: [
+          path.resolve(__dirname, "./packages/carbon-addons-devenv/src/scss"),
+          path.resolve(__dirname, "./packages/custom-carbon-addons/src/scss"),
+        ],
       },
       {
         test: /\.(js|jsx)$/,
