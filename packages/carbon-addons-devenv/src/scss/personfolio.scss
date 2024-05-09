@@ -1,25 +1,25 @@
 .#{$prefix}--personfolio {
-  background-color: $ui-01;
-  color: $text-01;
+  background-color: themes.get("layer-01");
+  color: themes.get("text-primary");
   border-radius: 6px;
   border-width: 1px 1px 1px 1px;
   border-style: solid !important;
-  padding: $spacing-05;
-  margin-top: $spacing-05;
+  padding: themes.get("spacing-05");
+  margin-top: themes.get("spacing-05");
 
   &--child {
-    border-color: $support-01;
+    border-color: themes.get("support-error");
   }
 
   &--youngadult {
-    border-color: $support-02;
+    border-color: themes.get("support-success");
   }
 
   &--adult {
-    border-color: $support-03;
+    border-color: themes.get("support-warning");
   }
 
   &--senior {
-    border-color: $support-04;
+    border-color: themes.get("support-info");
   }
 }
