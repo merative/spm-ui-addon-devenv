@@ -10,7 +10,7 @@ The steps do not need to be done in this order, but it is currently the recommen
    - In the `custom-carbon-addons` package, create a directory for the component in the `react` directory. For example, `custom-carbon-addons/src/react/addons/componentX`.
    - Create the JavaScript files for `componentX` in the directory. To create add-on components that are based on Carbon components, import the Carbon components from the `carbon-components` node module.
    - You can do your unit tests in parallel to test the generated HTML output from the component.
-2. Implement the look and feel of the component with Sass. Ensure that you follow the Carbon and Social Program Management design guidance.
+2. Implement the look and feel of the component with Sass. Ensure that you follow the Carbon and Cúram design guidance.
    - In the `custom-carbon-addon/src/scss/addons` directory, create an SCSS file for the component. For example, `componentX.scss`.
    - Import `componentX.scss` into the `index.scss` file.
 3. Implement a query provider in Apollo Client. An Apollo Client query provider enables the cached data from GraphQL to be integrated with a React component. Complete the following steps:
@@ -18,6 +18,6 @@ The steps do not need to be done in this order, but it is currently the recommen
    - Create the JavaScript files for your query provider with reference to the samples in `carbon-addons-devenv/src/apollo-client-hooks/hooks/hook_samples`.
      Use the `ApolloClientDataProvider`, `ApolloClientQueryProvider`, and `ApolloClientHookTemplate` React helper components in `carbon-addons-devenv/src/apollo-client-hooks/hooks/core` to help with this task.
    - Create a query that accesses data from the back-end by importing `gql` and `useQuery` from `@apollo/client`. If you already have a GraphQL query that serves a number of components, you can use that query.
-4. Test the Carbon component in Storybook. To test `componentX` in storybook, you can test components in isolation before you integrate them into Social Program Management.
+4. Test the Carbon component in Storybook. To test `componentX` in storybook, you can test components in isolation before you integrate them into Cúram.
    - In the `stories` directory of the `custom-carbon-addon` package, create a directory for the component. For example, `custom-carbon-addon/stories/componentX`. Run `npm run storybook` to test components.
 5. Create a JavaScript renderer function. You can use the `Renderer.create()` helper function to implement a JavaScript Renderer function to integrate the component into a Java Renderer on the UIM page. You can place your renderer functions in the `custom-carbon-addon/renderers` directory. For example, create the`CarbonComponentXViewRenderer` function.

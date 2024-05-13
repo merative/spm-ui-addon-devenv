@@ -22,11 +22,11 @@ Not applicable
 
 For more information about the React Developer Tools browser extension, see [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
 
-For more information about Merative™ Social Program Management, see the [documentation](https://curam-spm-devops.github.io/wh-support-docs/spm/pdf-documentation).
+For more information about Cúram, see the [documentation](https://curam-spm-devops.github.io/wh-support-docs/spm/pdf-documentation).
 
-For more information about server-side changes, see the [Merative Social Program Management release notes](https://www-01.ibm.com/support/docview.wss?uid=swg27037963) for your version.
+For more information about server-side changes, see the [Cúram release notes](https://www-01.ibm.com/support/docview.wss?uid=swg27037963) for your version.
 
-For more information about the IBM Carbon Design System v10, see [https://v10.carbondesignsystem.com/](https://v10.carbondesignsystem.com/).
+For more information about the IBM Carbon Design System, see [https://carbondesignsystem.com/](https://carbondesignsystem.com/).
 
 ## 1.0.0 - 26/11/2021 ![SPM 8.0.1](https://img.shields.io/badge/-SPM_8.0.1-green)
 
