@@ -32,9 +32,9 @@ describe("personfolio tests", () => {
     // check child nodes
     expect(portFolioDiv.at(0).children().length).toBe(3);
     // 1st node
-    testParagraphElement(portFolioDiv.at(0).childAt(0), "First name:  Dave");
+    testParagraphElement(portFolioDiv.at(0).childAt(0), "First name: Dave");
     // 2nd node
-    testParagraphElement(portFolioDiv.at(0).childAt(1), "Surname:  Bloggs");
+    testParagraphElement(portFolioDiv.at(0).childAt(1), "Surname: Bloggs");
     // 3rd node
     testParagraphElement(portFolioDiv.at(0).childAt(2), "Age: 12");
   });
@@ -54,9 +54,9 @@ describe("personfolio tests", () => {
     // check child nodes
     expect(portFolioDiv.at(0).children().length).toBe(3);
     // 1st node
-    testParagraphElement(portFolioDiv.at(0).childAt(0), "First name:  Jerry");
+    testParagraphElement(portFolioDiv.at(0).childAt(0), "First name: Jerry");
     // 2nd node
-    testParagraphElement(portFolioDiv.at(0).childAt(1), "Surname:  Bloggs");
+    testParagraphElement(portFolioDiv.at(0).childAt(1), "Surname: Bloggs");
     // 3rd node
     testParagraphElement(portFolioDiv.at(0).childAt(2), "Age: 70");
   });

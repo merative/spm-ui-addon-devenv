@@ -9,11 +9,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,json,css,scss,md,mdx}": [
+    "**/*.{js,jsx,json,css,scss,md,mdx}": [
       "prettier --write"
     ],
-    "*.{js,jsx}": [
-      "eslint --fix"
+    "**/*.{js,jsx}": [
+      "eslint --fix",
+      "npm run test"
     ]
   },
   "subPackages": [
