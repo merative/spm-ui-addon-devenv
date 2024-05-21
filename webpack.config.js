@@ -28,7 +28,6 @@ module.exports = {
       },
       {
         test: /\.(js|jsx)$/,
-        exclude: /(bower_components)/,
         loader: "babel-loader",
         options: { presets: ["@babel/env"] },
       },
