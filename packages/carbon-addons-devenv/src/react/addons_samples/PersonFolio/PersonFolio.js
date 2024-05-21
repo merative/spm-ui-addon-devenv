@@ -1,5 +1,5 @@
 /*
- * Copyright Merative US L.P. 2021
+ * Copyright Merative US L.P. 2021, 2024
  */
 
 import React, { useContext } from "react";
@@ -49,7 +49,7 @@ const PersonFolio = ({ children, className, age, ...other }) => {
       <p data-testid="personfolio_firstnameLabel">
         {firstnameLabel}: {firstname}
       </p>
-      <p data-testid="personfolio_surnnameLabel">
+      <p data-testid="personfolio_surnameLabel">
         {surnameLabel}: {surname}
       </p>
       <p data-testid="personfolio_ageLabel">

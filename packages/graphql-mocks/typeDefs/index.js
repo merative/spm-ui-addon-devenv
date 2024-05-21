@@ -2,10 +2,10 @@ const PersonTypeDef = require("./PersonTypeDef");
 const LogoTypeDef = require("./LogoTypeDef");
 
 const TypeDefs = [
-  // Sample tyepDefs here
+  // Sample typeDefs here
   PersonTypeDef,
   LogoTypeDef,
-  // add custom ones here
+  // Add custom typeDefs here
 ];
 
 module.exports = {

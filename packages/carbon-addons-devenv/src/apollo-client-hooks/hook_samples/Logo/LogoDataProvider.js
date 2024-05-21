@@ -4,7 +4,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 // NOTE:
-// from custom-carbon-addons package reference to ApolloClientDataProvider  would be he following
+// If you want to use ApolloClientDataProvider in the custom-carbon-addons package use the following import:
 // import { ApolloClientDataProvider } from 'devenv_pkg/src/apollo-client-hooks';
 // eslint-disable-next-line import/no-unresolved
 import ApolloClientDataProvider from "devenv_pkg/src/apollo-client-hooks/core/ApolloClientDataProvider";
