@@ -15,15 +15,15 @@ This command builds the deliverable artefacts from the installed codebase. For m
 npm run dev
 ```
 
-This command tests the integration with Social Program Management. It requires the `CLIENT_DIR` environment variable to be set.
-It copies the generated artefects from `npm run build` to the location where they can be picked up by Social Program Management.
+This command tests the integration with Cúram. It requires the `CLIENT_DIR` environment variable to be set.
+It copies the generated artefects from `npm run build` to the location where they can be picked up by Cúram.
 After you run the command, any JavaScript or SCSS files that are updated are automatically generated. For more information, see [Building during development](build).
 
 ```
 export GRAPHQL_SERVER_URL=http://localhost:4000/graphql && npm run dev-with-mockgraphql
 ```
 
-This command is the same as the `npm run dev` command, but prioritizes the data from the mock GraphQL service over the real REST Service when running in SPM. It requires the `CLIENT_DIR` environment variable to be set.
+This command is the same as the `npm run dev` command, but prioritizes the data from the mock GraphQL service over the real REST Service when running in Cúram. It requires the `CLIENT_DIR` environment variable to be set.
 
 ```
 npm run test

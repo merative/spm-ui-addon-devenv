@@ -1,11 +1,10 @@
-const siteTitle = "Merative SPM UI Addon Development Environment";
+const siteTitle = "Cúram UI Addon Development Environment";
 const sitePrefix = process.env.SITE_PREFIX || "/spm-ui-addon-devenv";
 
 module.exports = {
   siteMetadata: {
     title: siteTitle,
-    description:
-      "Merative Social Program Management UI Addon Development Environment",
+    description: "Cúram UI Addon Development Environment",
     keywords: "merative,curam,containers",
   },
   pathPrefix: sitePrefix,
