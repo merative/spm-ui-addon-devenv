@@ -1,5 +1,24 @@
 # Changelog
 
+## 2.0.0 - TBD ![SPM 8.0.1 and later](https://img.shields.io/badge/-SPM_8.0.1%20and%20later-green)
+
+### Added
+
+- IBM Carbon Design System has been upgraded to version 11. You will need to follow the [Carbon 11 upgrade guide](https://carbondesignsystem.com/migrating/guide/overview/) for any custom components you have.
+- Upgraded supported version of NodeJS 12 & 14 -> 18 & 20.
+- Upgraded node-sass -> sass.
+- Added code formatting on commit.
+- Added linting on commit.
+- Unit tests now run on every commit.
+- Fixed build warning caused by missing exports.
+- Fixed errors in documentation.
+- Updated documentation with Curam supported versions.
+- Rearchitected package structure to avoid circular dependencies.
+
+### Removed
+
+Not applicable
+
 ## 1.1.0 - 11/11/2022 ![SPM 8.0.2,SPM 8.0.1](https://img.shields.io/badge/-SPM_8.0.2-green)
 
 ### Added
