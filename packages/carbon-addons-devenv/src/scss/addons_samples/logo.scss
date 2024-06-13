@@ -1,5 +1,5 @@
 .#{$prefix}--logo {
-  box-shadow: inset 0 0 0 2px $layer-01;
+  box-shadow: inset 0 0 0 2px themes.get("layer-01");
   border-radius: $border-radius-round;
   font-weight: 500;
   overflow: hidden;

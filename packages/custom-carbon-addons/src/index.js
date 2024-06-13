@@ -1,8 +1,7 @@
 /*
  * Copyright Merative US L.P. 2021, 2024
  */
+import "./scss/index.scss";
+import renderers from "../renderers";
 
-// eslint-disable-next-line import/no-unresolved
-import { renderers, sampleRenderers } from "devenv_pkg/src";
-
-export { renderers, sampleRenderers };
+export default renderers;
