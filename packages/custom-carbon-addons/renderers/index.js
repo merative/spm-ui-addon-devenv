@@ -14,3 +14,8 @@
 // import MyComponent2 from './MyComponent2';
 
 // export default { MyComponent1, MyComponent2 };
+
+import Alan1Renderer from "./Alan1Renderer";
+import Alan2Renderer from "./Alan2Renderer";
+
+export default { Alan1Renderer, Alan2Renderer };
