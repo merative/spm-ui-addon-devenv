@@ -1,5 +1,5 @@
 const settings = {
-  prefix: "bx",
+  prefix: "cds",
 };
 
 module.exports = settings;

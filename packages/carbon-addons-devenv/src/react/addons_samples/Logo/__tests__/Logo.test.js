@@ -50,7 +50,7 @@ describe("Logo tests", () => {
     expect(Object.keys(divAtts).length).toBe(3);
 
     expect(logoDiv.at(0).props().className).toBe(
-      "bx--logo bx--logo--large settings.prefix--logo--extraextra",
+      `${settings.prefix}--logo ${settings.prefix}--logo--large settings.prefix--logo--extraextra`,
     );
     expect(logoDiv.at(0).props().id).toBe("logo_123");
     // this is the child nodes not an attribute

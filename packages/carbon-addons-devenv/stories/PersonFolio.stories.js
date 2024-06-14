@@ -1,5 +1,6 @@
 import React from "react";
 import PersonFolio from "../src/react/addons_samples/PersonFolio/PersonFolio";
+import settings from "../src/react/core/settings";
 
 // 👇 We create a “template” of how args map to rendering
 const Template = (args) => (
@@ -38,27 +39,27 @@ Senior.args = {
 export const PersonFolioStory = () => {
   return (
     <div className="spm-custom-component">
-      <div className="bx--grid">
-        <div className="bx--row">
-          <div className="bx--col">
+      <div className={`${settings.prefix}--grid`}>
+        <div className={`${settings.prefix}--row`}>
+          <div className={`${settings.prefix}--col`}>
             <PersonFolio firstname="Dave" surname="Bloggs" age="12" />
           </div>
         </div>
 
-        <div className="bx--row">
-          <div className="bx--col">
+        <div className={`${settings.prefix}--row`}>
+          <div className={`${settings.prefix}--col`}>
             <PersonFolio firstname="Mary" surname="Bloggs" age="24" />
           </div>
         </div>
 
-        <div className="bx--row">
-          <div className="bx--col">
+        <div className={`${settings.prefix}--row`}>
+          <div className={`${settings.prefix}--col`}>
             <PersonFolio firstname="Ann" surname="Bloggs" age="47" />
           </div>
         </div>
 
-        <div className="bx--row">
-          <div className="bx--col">
+        <div className={`${settings.prefix}--row`}>
+          <div className={`${settings.prefix}--col`}>
             <PersonFolio firstname="Peter" surname="Smith" age="73" />
           </div>
         </div>

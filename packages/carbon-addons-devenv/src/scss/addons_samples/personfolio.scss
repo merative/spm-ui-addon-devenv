@@ -6,6 +6,7 @@
   border-style: solid !important;
   padding: themes.get("spacing-05");
   margin-top: themes.get("spacing-05");
+  font-family: "Helvetica";
 
   &--child {
     border-color: themes.get("support-error");
