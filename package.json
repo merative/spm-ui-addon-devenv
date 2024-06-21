@@ -127,8 +127,5 @@
     "ejs": "3.1.7",
     "trim-newlines": "3.0.1",
     "scss-tokenizer": "0.4.3"
-  },
-  "jest": {
-    "testEnvironment": "jsdom"
   }
 }
