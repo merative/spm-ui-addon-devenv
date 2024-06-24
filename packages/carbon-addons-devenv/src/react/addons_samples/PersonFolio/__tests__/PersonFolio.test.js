@@ -2,6 +2,7 @@
  * Copyright Merative US L.P. 2021
  */
 
+import "jsdom-global/register";
 import { mount } from "enzyme";
 import React from "react";
 import PersonFolio from "../PersonFolio";
