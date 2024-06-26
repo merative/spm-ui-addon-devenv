@@ -21,9 +21,9 @@
     "packages/graphql-mocks"
   ],
   "scripts": {
-    "analyze-bundle": "mkdir reports & npm run bundle-stats && npm run bundle-report",
-    "bundle-report": "node_modules/.bin/webpack-bundle-analyzer --mode static ./reports/bundle-stats.json ./dist --open --report ./reports/bundle-size.html",
-    "bundle-stats": "webpack --stats=detailed --json > ./reports/bundle-stats.json",
+    "analyze-bundle": "mkdir reports && npm run bundle-stats && npm run bundle-report",
+    "bundle-report": "cross-env node_modules/.bin/webpack-bundle-analyzer ./reports/bundle-stats.json ./dist --mode static --report ./reports/bundle-size.html",
+    "bundle-stats": "cross-env webpack --stats=detailed --json > ./reports/bundle-stats.json",
     "preinstall": "npx npm-force-resolutions",
     "postinstall": "subpkg install",
     "mock-graphql-service": "node packages/graphql-mocks/server.js",
@@ -85,7 +85,7 @@
     "shelljs": "^0.8.5",
     "style-loader": "^0.23.0",
     "webpack": "4.42.1",
-    "webpack-bundle-analyzer": "3.6.1",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "4.10.0",
     "webpack-dev-server": "^4.0.0"
   },
