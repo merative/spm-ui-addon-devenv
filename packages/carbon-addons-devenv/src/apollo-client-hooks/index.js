@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import PersonComponentApolloClientHook from "./hook_samples/Person";
 import LogoComponentApolloClientHook from "./hook_samples/Logo";
 import ApolloClientConfig from "./core/ApolloClientConfig";
@@ -21,13 +21,12 @@ import { settings } from "../react";
  */
 const ApolloClientHookTemplate = (container, configuration, DataProvider) => {
   const apolloClient = ApolloClientConfig.getConfig(configuration);
-
-  ReactDOM.render(
+  const root = createRoot(container);
+  root.render(
     React.createElement(DataProvider, {
       apolloClient,
       configuration,
     }),
-    container,
   );
 };
 

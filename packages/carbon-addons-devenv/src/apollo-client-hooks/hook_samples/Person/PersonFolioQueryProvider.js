@@ -6,9 +6,9 @@ import PropTypes from "prop-types";
 // NOTE:
 // If you want to use ApolloClientQueryProvider in the custom-carbon-addons package use the following import:
 // import { ApolloClientQueryProvider } from 'devenv_pkg/src/apollo-client-hooks';
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line importPlugin/no-unresolved
 import ApolloClientQueryProvider from "devenv_pkg/src/apollo-client-hooks/core/ApolloClientQueryProvider";
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line importPlugin/no-unresolved
 import PersonFolio from "devenv_pkg/src/react/addons_samples/PersonFolio/PersonFolio";
 import { useGetPersons } from "./PersonQuery";
 

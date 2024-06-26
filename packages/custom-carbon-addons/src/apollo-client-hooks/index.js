@@ -1,7 +1,7 @@
 /*
  * Copyright Merative US L.P. 2021, 2024
  */
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line importPlugin/no-unresolved
 import { ApolloClientHooks } from "devenv_pkg/src/apollo-client-hooks";
 import * as CustomApolloClientHooks from "./hooks/components";
 
@@ -14,5 +14,5 @@ const updatedApolloClientHooks = {
   ...CustomApolloClientHooks,
 };
 
-// eslint-disable-next-line import/prefer-default-export
+// eslint-disable-next-line importPlugin/prefer-default-export
 export { updatedApolloClientHooks as ApolloClientHooks };

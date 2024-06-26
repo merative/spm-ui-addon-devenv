@@ -4,6 +4,7 @@
 
 module.exports = {
   rootDir: '../',
+  testEnvironment: 'jsdom',
   collectCoverageFrom: [
     '<rootDir>/packages/**/src/**/*.js',
     '!<rootDir>/packages/**/src/apollo-client-hooks/**/*.js',

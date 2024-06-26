@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import Logo from "./Logo";
 
 const getWrapper = (iframeWindow, containerID) => {
@@ -8,12 +8,11 @@ const getWrapper = (iframeWindow, containerID) => {
 
 const render = ({ inputId, iframeWindow = window, logo, size }) => {
   const container = getWrapper(iframeWindow, inputId);
-
-  ReactDOM.render(
+  const root = createRoot(container);
+  root.render(
     <Logo size={size}>
       <img src={logo} alt="small logo" />
     </Logo>,
-    container,
   );
 };
 
