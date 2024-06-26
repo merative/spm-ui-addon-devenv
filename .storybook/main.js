@@ -2,10 +2,15 @@ const custom = require("../webpack.config.js");
 
 module.exports = {
   stories: [
-    "../packages/**/*.stories.mdx",
+    "../packages/**/*.mdx",
     "../packages/**/*.stories.@(js|jsx|ts|tsx)",
   ],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-webpack5-compiler-babel",
+  ],
+
   webpackFinal: (config) => {
     return {
       ...config,
@@ -16,6 +21,16 @@ module.exports = {
         ...config.resolve,
         ...custom.resolve,
       },
+      core: {
+        disableTelemetry: true,
+      },
     };
   },
+
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
+  },
+
+  docs: {},
 };
