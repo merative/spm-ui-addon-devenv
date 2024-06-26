@@ -58,7 +58,7 @@
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.0.2",
     "cross-env": "^7.0.2",
-    "css-loader": "^1.0.0",
+    "css-loader": "^3.6.0",
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^3.0.0",
     "enzyme": "^3.11.0",
@@ -87,9 +87,9 @@
     "shelljs": "^0.8.5",
     "storybook": "^8.1.10",
     "style-loader": "^0.23.0",
-    "webpack": "4.42.1",
+    "webpack": "^5.92.1",
     "webpack-bundle-analyzer": "^4.10.2",
-    "webpack-cli": "5.1.4",
+    "webpack-cli": "4.10.0",
     "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {

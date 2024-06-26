@@ -21,9 +21,6 @@ module.exports = {
         ...config.resolve,
         ...custom.resolve,
       },
-      core: {
-        disableTelemetry: true,
-      },
     };
   },
 
