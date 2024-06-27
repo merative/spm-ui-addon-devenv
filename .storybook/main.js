@@ -10,7 +10,6 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-webpack5-compiler-babel",
   ],
-
   webpackFinal: (config) => {
     return {
       ...config,
@@ -23,11 +22,12 @@ module.exports = {
       },
     };
   },
-
+  core: {
+    disableTelemetry: true,
+  },
   framework: {
     name: "@storybook/react-webpack5",
     options: {},
   },
-
   docs: {},
 };

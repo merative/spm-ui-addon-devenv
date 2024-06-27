@@ -47,6 +47,7 @@ export default [
   },
   {
     files: [
+      ".storybook/*",
       "config/jest-setup.js",
       "config/jest.config.js",
       "packages/carbon-addons-devenv/src/apollo-client-hooks/core/ApolloClientConfig.js",
