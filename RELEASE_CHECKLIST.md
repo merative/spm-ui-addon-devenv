@@ -16,5 +16,6 @@
    - Navigate to http://localhost:8000
    - Verify documentation is correct
 4. License checker
-   - See (FIXME link to npm-license-report repo) for steps to generate the new license file
-   - Create ticket (FIXME link) for release management to review any new licenses
+   - See [npm-license-report](https://github.com/wh-spm-scratch/npm-license-report?tab=readme-ov-file#npm-license-report) repo for steps to generate the new license file
+   - Go to [Release Management issues github](https://github.com/WH-GovSPM-Doc/SPM-Release-Management/issues/new/choose) and create a new "Unsupported asset release" PR
+   - Fill in the above PR
