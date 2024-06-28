@@ -108,8 +108,10 @@
     "@carbon/react": "^1.55.0",
     "@carbon/styles": "^1.55.0",
     "@carbon/type": "^11.26.0",
+    "braces": "^3.0.3",
     "classnames": "^2.2.6",
     "core-js": "*",
+    "follow-redirects": "^1.15.6",
     "open": "^8.4.0",
     "prop-types": "*",
     "react": "^18.3.1",
@@ -117,7 +119,8 @@
     "react-dom": "^18.3.1",
     "react-intl": "^6.6.8",
     "regenerator-runtime": "^0.13.7",
-    "subpkg": "^4.1.0"
+    "subpkg": "^4.1.0",
+    "ws": "^8.17.1"
   },
   "resolutions": {
     "immer": "9.0.6",
