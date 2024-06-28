@@ -1,6 +1,5 @@
 const path = require("path");
 const webpack = require("webpack");
-const ReactDevToolsIFramePlugin = require("react-dev-tools-iframe-webpack-plugin");
 
 module.exports = {
   entry: [
@@ -12,7 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        loaders: [
+        use: [
           "style-loader",
           "css-loader",
           {
@@ -44,7 +43,10 @@ module.exports = {
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        loader: "url-loader?limit=100000",
+        loader: "url-loader",
+        options: {
+          limit: 100000,
+        },
       },
     ],
   },
@@ -56,7 +58,6 @@ module.exports = {
       "CSRF_TOKEN_REQUEST_HEADER",
       "CSRF_TOKEN_ENPOINT",
     ]),
-    new ReactDevToolsIFramePlugin(),
   ],
   resolve: {
     extensions: ["*", ".js", ".jsx"],

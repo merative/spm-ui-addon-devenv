@@ -77,12 +77,6 @@ PersonFolio.propTypes = {
   age: PropTypes.number,
 };
 
-PersonFolio.defaultProps = {
-  className: undefined,
-  children: undefined,
-  age: undefined,
-};
-
 /**
  * Group
  * @typedef {Object} PortFolio

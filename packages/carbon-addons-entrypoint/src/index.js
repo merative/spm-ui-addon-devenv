@@ -4,9 +4,9 @@
 
 import "regenerator-runtime/runtime";
 
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line importPlugin/no-unresolved
 import sampleRenderers from "devenv_pkg/src";
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line importPlugin/no-unresolved
 import renderers from "custom_pkg/src";
 
 /* Imports Carbon Addons dynamically */

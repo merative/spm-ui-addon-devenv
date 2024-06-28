@@ -25,7 +25,13 @@ import settings from "../../core/settings";
  * @property {Object} other Addtional properties that can be added to the rendered logo. The attributes
  * will be passed straigh through and added to the rendered ouput.
  */
-const Logo = ({ children, className, imageName, size, ...other }) => {
+const Logo = ({
+  children,
+  className,
+  imageName,
+  size = "medium",
+  ...other
+}) => {
   const styleClass = cx(
     `${settings.prefix}--logo`,
     {
@@ -47,7 +53,7 @@ Logo.propTypes = {
   /**
    * Pass in the image that will be rendered within the Logo
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   /**
    * Additional styling
    */
@@ -58,12 +64,6 @@ Logo.propTypes = {
    * Specify an optional size for the Logo. Defaults to 'medium'.
    */
   size: PropTypes.oneOf(["small", "medium", "large"]),
-};
-
-Logo.defaultProps = {
-  size: "medium",
-  className: undefined,
-  imageName: undefined,
 };
 
 export default Logo;
