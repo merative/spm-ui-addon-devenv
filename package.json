@@ -24,7 +24,6 @@
     "analyze-bundle": "mkdir reports && npm run bundle-stats && npm run bundle-report",
     "bundle-report": "cross-env node_modules/.bin/webpack-bundle-analyzer ./reports/bundle-stats.json ./dist --mode static --report ./reports/bundle-size.html",
     "bundle-stats": "cross-env webpack --stats=detailed --json > ./reports/bundle-stats.json",
-    "preinstall": "npx npm-force-resolutions",
     "postinstall": "subpkg install",
     "mock-graphql-service": "node packages/graphql-mocks/server.js",
     "dev-with-mockgraphql": "export GRAPHQL_SERVER_URL=http://localhost:4000/graphql && npm run mock-graphql-service & npm run dev",
@@ -121,24 +120,5 @@
     "regenerator-runtime": "^0.13.7",
     "subpkg": "^4.1.0",
     "ws": "^8.17.1"
-  },
-  "resolutions": {
-    "immer": "9.0.6",
-    "set-value": "4.0.1",
-    "glob-parent": "5.1.2",
-    "trim": "0.0.3",
-    "prismjs": "1.27.0",
-    "async": "3.2.2",
-    "ssri": "6.0.2",
-    "node-fetch": "2.6.7",
-    "follow-redirects": "1.14.7",
-    "minimist": "1.2.6",
-    "marked": "4.0.10",
-    "ansi-html": "0.0.8",
-    "ansi-regex": "4.1.1",
-    "node-forge": "1.3.0",
-    "ejs": "3.1.7",
-    "trim-newlines": "3.0.1",
-    "scss-tokenizer": "0.4.3"
   }
 }
