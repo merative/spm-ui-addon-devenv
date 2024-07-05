@@ -14,6 +14,7 @@
 - Fixed errors in documentation.
 - Updated documentation with Curam supported versions.
 - Rearchitected package structure to avoid circular dependencies.
+- Changed install command from `npm ci` to `npm install`.
 
 ### Removed
 
