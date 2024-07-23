@@ -6,9 +6,6 @@ import React from "react";
 import PropTypes from "prop-types";
 // eslint-disable-next-line importPlugin/no-unresolved
 import Logo from "devenv_pkg/src/react/addons_samples/Logo/Logo";
-// NOTE:
-// If you want to use ApolloClientQueryProvider in the custom-carbon-addons package use the following import:
-// import { ApolloClientQueryProvider } from 'devenv_pkg/src/apollo-client-hooks';
 // eslint-disable-next-line importPlugin/no-unresolved
 import ApolloClientQueryProvider from "devenv_pkg/src/apollo-client-hooks/core/ApolloClientQueryProvider";
 import { useGetLogo } from "./LogoQuery";
