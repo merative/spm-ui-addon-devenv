@@ -10,21 +10,24 @@ Apache Software License 2.0
 The Software includes some or all of the following obtained under the Apache License Version 2.0:
 
 	@ampproject/remapping
+	@carbon/elements
 	@carbon/colors
 	@carbon/feature-flags
 	@carbon/grid
 	@carbon/icon-helpers
 	@carbon/icons-react
-	@carbon/icon
+	@carbon/icons
 	@carbon/layout
 	@carbon/motion
 	@carbon/pictograms-react
 	@carbon/react
 	@carbon/styles
+	@carbon/telemetry
 	@carbon/themes
 	@carbon/type
 	@humanwhocodes/config-array
 	@humanwhocodes/module-importer
+	@ibm/telemetry-js
 	@jsdoc/salty
 	@webassemblyjs/leb128
 	@xtuc/long
@@ -207,7 +210,7 @@ The Software includes some or all of the following obtained under the BSD 3-Clau
 
 	@humanwhocodes/object-schema: Copyright (c) 2019 Human Who Codes. All rights reserved.
 	@sinonjs/commons: Copyright (c) 2018 Sinon.JS. All rights reserved.
-        @sinonjs/fake-timers: Copyright (c) 2010-2014, Christian Johansen, christian@cjohansen.no. All rights reserved.
+    @sinonjs/fake-timers: Copyright (c) 2010-2014, Christian Johansen, christian@cjohansen.no. All rights reserved.
 	@xtuc/ieee754: Copyright (c) 2023 Feross. All rights reserved.
 	abab: Copyright (c) 2019 W3C and Jeff Carpenter. All rights reserved.
 	babel-plugin-istanbul: Copyright (c) 2016, Istanbul Code Coverage. All rights reserved.
@@ -215,12 +218,14 @@ The Software includes some or all of the following obtained under the BSD 3-Clau
 	esquery: Copyright (c) 2013, Joel Feenstra. All rights reserved.
 	flat: Copyright (c) 2014, Hugh Kennedy. All rights reserved.
 	hoist-non-react-statics: Copyright (c) 2015, Yahoo! Inc. All rights reserved.
+	ieee754:  Copyright 2008 Fair Oaks Labs,  Inc.
 	intl-messageformat: Copyright (c) 2008 Fair Oaks Labs, Inc. All rights reserved.
 	istanbul-lib-coverage: Copyright (c) 2012-2015 Yahoo! Inc. All rights reserved.
 	istanbul-lib-instrument: Copyright (c) 2012-2015 Yahoo! Inc. All rights reserved.
 	istanbul-lib-report: Copyright (c) 2012-2015 Yahoo! Inc. All rights reserved.
 	istanbul-lib-source-maps: Copyright (c) 2015 Yahoo! Inc. All rights reserved.
 	istanbul-reports: Copyright (c) 2012-2015 Yahoo! Inc. All rights reserved.
+	joi:  Copyright (c) 2012-2022,  Project contributors.
 	license-checker: Copyright (c) Copyright 2012 Yahoo Inc. All rights reserved.
 	makeerror: Copyright (c) 2014, Naitik Shah. All rights reserved.
 	node-forge: Copyright (c) 2010, Digital Bazaar, Inc. All rights reserved.
@@ -228,6 +233,7 @@ The Software includes some or all of the following obtained under the BSD 3-Clau
 	react-intl: Copyright (c) 2019 Oath Inc. All rights reserved.
 	serialize-javascript: Copyright (c) 2014 Yahoo! Inc. All rights reserved.
 	shelljs: Copyright (c) 2012, Artur Adib <arturadib@gmail.com>. All rights reserved.
+	signedsource: Copyright (c) 2013-present, Facebook, Inc.
 	source-map-js: Copyright (c) 2009-2011, Mozilla Foundation and contributors. All rights reserved.
 	source-map: Copyright (c) 2009-2011, Mozilla Foundation and contributors. All rights reserved.
 	sprintf-js: Copyright (c) 2007-present, Alexandru Mărășteanu <hello@alexei.ro>. All rights reserved.
@@ -313,6 +319,23 @@ The Software includes some or all of the following obtained under the MIT Licens
   @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining	 - Copyright (c) 2014-present Sebastian McKenzie and other contributors
   @babel/plugin-bugfix-v8-static-class-fields-redefine-readonly	 - Copyright (c) 2014-present Sebastian McKenzie and other contributors
   @babel/plugin-proposal-private-property-in-object	 - Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/eslint-parser	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/helper-explode-assignable-expression	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-async-generator-functions	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-class-properties	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-class-static-block	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-dynamic-import	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-export-namespace-from	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-json-strings	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-logical-assignment-operators	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-nullish-coalescing-operator	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-numeric-separator	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-object-rest-spread	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-optional-catch-binding	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-optional-chaining	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-private-methods	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-proposal-unicode-property-regex	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
+  @babel/plugin-transform-runtime	 Copyright (c) 2014-present Sebastian McKenzie and other contributors
   @babel/plugin-syntax-async-generators	 - Copyright (c) 2014-present Sebastian McKenzie and other contributors
   @babel/plugin-syntax-bigint	 - Copyright (c) 2014-present Sebastian McKenzie and other contributors
   @babel/plugin-syntax-class-properties	 - Copyright (c) 2014-present Sebastian McKenzie and other contributors
@@ -2416,7 +2439,7 @@ The Software includes some or all of the following obtained under the Python Sof
 You may obtain a copy of the License at:
 https://docs.python.org/3/license.html
 
-difflib  - Copyright © 2001-2012 Python Software Foundation; All Rights Reserved
+@ewoudenberg/difflib  - Copyright © 2001-2012 Python Software Foundation; All Rights Reserved
 Source: https://github.com/ewoudenberg/difflib.js
 
 
@@ -2433,6 +2456,38 @@ The Netherlands.  All rights reserved.
 Source: https://github.com/nodeca/argparse
 
 
+===========================================================
+Blue Oak Model License 1.0.0
+===========================================================
+
+The Software includes some or all of the following obtained under the Blue Oak Model License 1.0.0.
+You may obtain a copy of the License at:
+https://blueoakcouncil.org/license/1.0.0
+
+jackspeak
+https://github.com/isaacs/jackspeak/
+Modifications: None
+
+
+
+path-scurry
+Source: https://github.com/isaacs/path-scurry
+Modifications: None
+
+
+===========================================================
+SIL Open Font License (OFL) version 1.1
+===========================================================
+
+The Software includes some or all of the following obtained under the SIL Open Font License (OFL) version 1.1.
+You may obtain a copy of the License at:
+http://scripts.sil.org/OFL
+
+
+@ibm/plex
+Copyright © 2017 IBM Corp. with Reserved Font Name "Plex"
+Source: https://github.com/IBM/plex
+Modifications: None
 
 ===========================================================
 ***********************************************************
