@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0 - TBD ![SPM 8.0.1 and later](https://img.shields.io/badge/-SPM_8.0.1%20and%20later-green)
+## 2.0.0 - TBD ![SPM 8.1.0 and later](https://img.shields.io/badge/-SPM_8.1.0%20and%20later-green)
 
 ### Added
 
