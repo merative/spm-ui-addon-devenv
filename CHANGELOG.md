@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0 - TBD ![SPM 8.1.0 and later](https://img.shields.io/badge/-SPM_8.1.0%20and%20later-green)
+## 2.0.0 - TBD ![Cúram 8.1.0 and later](https://img.shields.io/badge/-Cúram_8.1.0%20and%20later-green)
 
 ### Added
 
@@ -20,7 +20,7 @@
 
 Not applicable
 
-## 1.1.0 - 11/11/2022 ![SPM 8.0.2,SPM 8.0.1](https://img.shields.io/badge/-SPM_8.0.2-green)
+## 1.1.0 - 11/11/2022 ![Cúram 8.0.2,Cúram 8.0.1](https://img.shields.io/badge/-Cúram_8.0.2-green)
 
 ### Added
 
@@ -48,7 +48,7 @@ For more information about server-side changes, see the [Cúram release notes](h
 
 For more information about the IBM Carbon Design System, see [https://carbondesignsystem.com/](https://carbondesignsystem.com/).
 
-## 1.0.0 - 26/11/2021 ![SPM 8.0.1](https://img.shields.io/badge/-SPM_8.0.1-green)
+## 1.0.0 - 26/11/2021 ![Cúram 8.0.1](https://img.shields.io/badge/-Cúram_8.0.1-green)
 
 ### Added
 

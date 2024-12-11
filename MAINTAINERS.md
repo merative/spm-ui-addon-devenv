@@ -1,3 +1,4 @@
 # MAINTAINERS
 
-Barry O Sullivan - barry.osullivan@ie.ibm.com
+- Barry O'Sullivan - barry.osullivan@merative.com
+- Alan Bergin - alan.bergin@merative.com
