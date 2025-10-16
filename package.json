@@ -120,5 +120,8 @@
     "regenerator-runtime": "^0.13.7",
     "subpkg": "^4.1.0",
     "ws": "^8.17.1"
+  },
+  "overrides": {
+    "postcss": "^8.4.31"
   }
 }
