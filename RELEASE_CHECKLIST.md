@@ -19,3 +19,13 @@
    - See [npm-license-report](https://github.com/wh-spm-scratch/npm-license-report?tab=readme-ov-file#npm-license-report) repo for steps to generate the new license file
    - Go to [Release Management issues github](https://github.com/WH-GovSPM-Doc/SPM-Release-Management/issues/new/choose) and create a new "Unsupported asset release" PR
    - Fill in the above PR
+5. Create a tag
+    - `git tag -a 1.0.0 -m "1.0.0"`
+    - `git push --tags`
+6. In GitHub:
+    - Click "Releases"
+    - Click "Draft new release"
+    - Select the tag
+    - The release title should be the same as the tag, e.g. "1.0.0"
+    - Fill in the description
+    - Click "Publish release"
