@@ -21,7 +21,7 @@
    - Fill in the above PR
 5. Create a tag
     - `git tag -a 1.0.0 -m "1.0.0"`
-    - `git push --tags`
+    - `git push origin 1.0.0`
 6. In GitHub:
     - Click "Releases"
     - Click "Draft new release"
